@@ -13,6 +13,8 @@ class Index extends Controller
     }
     public function index()
     {
+        
+        echo '看到这个，说明你成功了';exit;
         $admin= Admin::find(1);
         //dump($admin->append(['status_text'])->toArray());
         //dump($admin->append(['name'])->toArray());
