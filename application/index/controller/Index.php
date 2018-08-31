@@ -1,12 +1,11 @@
 <?php
 namespace app\index\controller;
 
-use think\Controller;
 use think\Db;
 use app\index\model\Admin;
 use think\Request;
 
-class Index extends Controller
+class Index extends Common
 {
     public function __construct(\think\App $app = null) {
         parent::__construct($app);
@@ -32,4 +31,5 @@ class Index extends Controller
     public function demo(){
         return func_get_args();
     }
+    
 }
