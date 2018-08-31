@@ -20,7 +20,7 @@ class Common extends Controller{
     public function __construct(\think\App $app = null) {
         parent::__construct($app);
         if(session(config('USER_AUTH_KEY')==NULL)||empty(session(config('USER_AUTH_KEY')))){
-            $this->redirect('Auth/index');
+            redirect('Auth/index');
         }        
         //权限验证
         if(strtolower(request()->controller())!='index'){
