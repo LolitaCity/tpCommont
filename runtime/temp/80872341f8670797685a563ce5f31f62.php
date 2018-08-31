@@ -1,4 +1,4 @@
-<?php /*a:1:{s:59:"E:\phpstudy\WWW\tp5\application\index\view\index\index.html";i:1535678485;}*/ ?>
+<?php /*a:1:{s:59:"E:\phpstudy\WWW\tp5\application\index\view\index\index.html";i:1535705492;}*/ ?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -40,6 +40,6 @@ and open the template in the editor.
             无声无息间，感动的是你我。<br/><br/>
             
         </div>
-        <div style="width:50%; margin: 0 auto;margin-top: 2%"><a target="_blank" href="http://www.miitbeian.gov.cn" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img class="media-object" src="/static/img/waba.png" style="float:left;">粤公网安备 C20180830-0187 号</a></div>
+        <div style="width:50%; margin: 0 auto;margin-top: 2%"><a target="_blank" href="http://www.miitbeian.gov.cn" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img class="media-object" src="/static/admin/img/waba.png" style="float:left;">粤公网安备 C20180830-0187 号</a></div>
     </body>
 </html>

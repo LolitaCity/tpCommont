@@ -3893,3 +3893,202 @@
 [ info ] [ VIEW ] E:\phpstudy\WWW\tp5\application\admin\view\auth\index.html [ array (
 ) ]
 [ error ] [0]致命错误: Call to undefined function captcha_src()[E:\phpstudy\WWW\tp5\runtime\temp\4cc98161fcbac4a864fb02191325463c.php:44]
+---------------------------------------------------------------
+[ 2018-08-31T16:46:28+08:00 ] 10.0.0.97 GET dev.tp5_1.com/admin/auth/index.html
+[运行时间：0.040003s] [吞吐率：25.00req/s] [内存消耗：1,438.08kb] [文件加载：68]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=4ckcqvbppv6bmfmvhcti9fp222',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\phpstudy\WWW\tp5\application\admin\view\auth\index.html [ array (
+) ]
+[ error ] [0]致命错误: Call to undefined function captcha_src()[E:\phpstudy\WWW\tp5\runtime\temp\4cc98161fcbac4a864fb02191325463c.php:44]
+---------------------------------------------------------------
+[ 2018-08-31T16:47:13+08:00 ] 10.0.0.97 GET dev.tp5_1.com/admin/auth/index.html
+[运行时间：0.045003s] [吞吐率：22.22req/s] [内存消耗：1,437.54kb] [文件加载：68]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=4ckcqvbppv6bmfmvhcti9fp222',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\phpstudy\WWW\tp5\application\admin\view\auth\index.html [ array (
+) ]
+[ error ] [0]致命错误: Call to undefined function captcha_src()[E:\phpstudy\WWW\tp5\runtime\temp\4cc98161fcbac4a864fb02191325463c.php:44]
+---------------------------------------------------------------
+[ 2018-08-31T16:47:17+08:00 ] 10.0.0.97 GET dev.tp5_1.com/
+[运行时间：0.037002s] [吞吐率：27.03req/s] [内存消耗：1,333.56kb] [文件加载：64]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4ckcqvbppv6bmfmvhcti9fp222',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [1]Class 'app\index\controller\Common' not found[E:\phpstudy\WWW\tp5\application\index\controller\Index.php:8]
+---------------------------------------------------------------
+[ 2018-08-31T16:47:35+08:00 ] 10.0.0.97 GET dev.tp5_1.com/
+[运行时间：0.038002s] [吞吐率：26.31req/s] [内存消耗：1,333.56kb] [文件加载：64]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4ckcqvbppv6bmfmvhcti9fp222',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [1]Class 'app\index\controller\Common' not found[E:\phpstudy\WWW\tp5\application\index\controller\Index.php:8]
+---------------------------------------------------------------
+[ 2018-08-31T16:48:05+08:00 ] 10.0.0.97 GET dev.tp5_1.com/admin/
+[运行时间：0.032002s] [吞吐率：31.25req/s] [内存消耗：1,375.20kb] [文件加载：66]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=4ckcqvbppv6bmfmvhcti9fp222',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-31T16:48:05+08:00 ] 10.0.0.97 GET dev.tp5_1.com/admin/auth/index.html
+[运行时间：0.041002s] [吞吐率：24.39req/s] [内存消耗：1,437.54kb] [文件加载：68]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=4ckcqvbppv6bmfmvhcti9fp222',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\phpstudy\WWW\tp5\application\admin\view\auth\index.html [ array (
+) ]
+[ error ] [0]致命错误: Call to undefined function captcha_src()[E:\phpstudy\WWW\tp5\runtime\temp\4cc98161fcbac4a864fb02191325463c.php:44]
+---------------------------------------------------------------
+[ 2018-08-31T16:48:50+08:00 ] 10.0.0.97 GET dev.tp5_1.com/admin/auth/index.html
+[运行时间：0.064004s] [吞吐率：15.62req/s] [内存消耗：1,531.52kb] [文件加载：66]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=4ckcqvbppv6bmfmvhcti9fp222',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\phpstudy\WWW\tp5\application\admin\view\auth\index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-08-31T16:50:57+08:00 ] 10.0.0.97 GET dev.tp5_1.com/
+[运行时间：0.038002s] [吞吐率：26.31req/s] [内存消耗：1,340.97kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4ckcqvbppv6bmfmvhcti9fp222',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\phpstudy\WWW\tp5\application\index\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-08-31T16:50:57+08:00 ] 10.0.0.97 GET dev.tp5_1.com/static/img/waba.png
+[运行时间：0.035002s] [吞吐率：28.57req/s] [内存消耗：1,324.50kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4ckcqvbppv6bmfmvhcti9fp222',
+  'referer' => 'http://dev.tp5_1.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-31T16:51:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/
+[运行时间：0.045002s] [吞吐率：22.22req/s] [内存消耗：1,456.71kb] [文件加载：64]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=4ckcqvbppv6bmfmvhcti9fp222',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\phpstudy\WWW\tp5\application\index\view\index\index.html [ array (
+) ]

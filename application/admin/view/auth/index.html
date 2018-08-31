@@ -40,7 +40,7 @@
                         <p>
                             <label>验证码：</label>
                             <input class="code" id="captcha" name="captcha" type="text" size="5"/>
-                            <span><img src="{:captcha_src()}"  alt="" onclick="this.src='{:captcha_src()}?d='+Math.random();" width="75" height="24"/></span>
+                            <span><img src=""  alt="" onclick="this.src='?d='+Math.random();" width="75" height="24"/></span>
                             <input type="hidden" name='captcha_exists' value="1" id='captcha_exitst'>
                         </p>
                     {/eq}

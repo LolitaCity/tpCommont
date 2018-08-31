@@ -1,4 +1,4 @@
-<?php /*a:1:{s:58:"E:\phpstudy\WWW\tp5\application\admin\view\auth\index.html";i:1535703572;}*/ ?>
+<?php /*a:1:{s:58:"E:\phpstudy\WWW\tp5\application\admin\view\auth\index.html";i:1535705329;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -41,7 +41,7 @@
                         <p>
                             <label>验证码：</label>
                             <input class="code" id="captcha" name="captcha" type="text" size="5"/>
-                            <span><img src="<?php echo captcha_src(); ?>"  alt="" onclick="this.src='<?php echo captcha_src(); ?>?d='+Math.random();" width="75" height="24"/></span>
+                            <span><img src=""  alt="" onclick="this.src='?d='+Math.random();" width="75" height="24"/></span>
                             <input type="hidden" name='captcha_exists' value="1" id='captcha_exitst'>
                         </p>
                     <?php endif; ?>
