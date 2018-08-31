@@ -1,0 +1,1980 @@
+---------------------------------------------------------------
+[ 2018-08-28T09:56:45+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/Index/routes
+[ error ] [8192]Non-static method think\Route::rule() should not be called statically
+---------------------------------------------------------------
+[ 2018-08-28T09:56:47+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/Index/routes
+[ error ] [8192]Non-static method think\Route::rule() should not be called statically
+---------------------------------------------------------------
+[ 2018-08-28T09:57:02+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/Index/routes
+[ error ] [8192]Non-static method think\Route::rule() should not be called statically
+---------------------------------------------------------------
+[ 2018-08-28T10:00:57+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/Index/routes
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,175.05kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:01:00+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/Index/routes
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,175.05kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:01:05+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/Index/routes
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,174.86kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:01:07+08:00 ] 10.0.0.97 GET dev.tp5_1.com//Index/routes
+[运行时间：0.151008s] [吞吐率：6.62req/s] [内存消耗：1,324.34kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:01:15+08:00 ] 10.0.0.97 GET dev.tp5_1.com/Index/routes
+[运行时间：0.031002s] [吞吐率：32.26req/s] [内存消耗：1,324.34kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:01:24+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/routes
+[运行时间：0.031002s] [吞吐率：32.26req/s] [内存消耗：1,324.34kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:01:30+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/
+[运行时间：0.024001s] [吞吐率：41.67req/s] [内存消耗：1,175.03kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:01:35+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index
+[运行时间：0.022002s] [吞吐率：45.45req/s] [内存消耗：1,175.05kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:01:43+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/redirectRoute
+[运行时间：0.028002s] [吞吐率：35.71req/s] [内存消耗：1,271.11kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:01:50+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Route
+[运行时间：0.030002s] [吞吐率：33.33req/s] [内存消耗：1,324.87kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:01:54+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,175.46kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:32+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026002s] [吞吐率：38.46req/s] [内存消耗：1,176.29kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:32+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.025002s] [吞吐率：40.00req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.031002s] [吞吐率：32.26req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.028002s] [吞吐率：35.71req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026002s] [吞吐率：38.46req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.025002s] [吞吐率：40.00req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.028001s] [吞吐率：35.71req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.024001s] [吞吐率：41.67req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.024001s] [吞吐率：41.66req/s] [内存消耗：1,175.75kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:02:43+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026002s] [吞吐率：38.46req/s] [内存消耗：981.31kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:02:51+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.027001s] [吞吐率：37.04req/s] [内存消耗：980.66kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:02:59+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.029002s] [吞吐率：34.48req/s] [内存消耗：980.66kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:02:59+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.027002s] [吞吐率：37.03req/s] [内存消耗：980.66kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:00+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.025002s] [吞吐率：40.00req/s] [内存消耗：980.66kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:00+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.024001s] [吞吐率：41.67req/s] [内存消耗：980.66kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:00+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.025001s] [吞吐率：40.00req/s] [内存消耗：980.66kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:08+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026002s] [吞吐率：38.46req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.025002s] [吞吐率：40.00req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.025001s] [吞吐率：40.00req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026002s] [吞吐率：38.46req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.027002s] [吞吐率：37.03req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026002s] [吞吐率：38.46req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026002s] [吞吐率：38.46req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.030002s] [吞吐率：33.33req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:35+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026002s] [吞吐率：38.46req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:35+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.025002s] [吞吐率：40.00req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:35+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.025001s] [吞吐率：40.00req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:39+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.025002s] [吞吐率：40.00req/s] [内存消耗：980.65kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:03:59+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.027002s] [吞吐率：37.03req/s] [内存消耗：980.92kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:04:00+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：980.92kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:04:01+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.027001s] [吞吐率：37.04req/s] [内存消耗：980.92kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:04:01+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.028001s] [吞吐率：35.71req/s] [内存消耗：980.92kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:04:01+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.027002s] [吞吐率：37.03req/s] [内存消耗：980.92kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:04:01+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.027002s] [吞吐率：37.03req/s] [内存消耗：980.92kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:04:01+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.027002s] [吞吐率：37.03req/s] [内存消耗：980.92kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:04:01+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：980.92kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:04:01+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：980.92kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:04:02+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/Routes
+[运行时间：0.025001s] [吞吐率：40.00req/s] [内存消耗：980.92kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:04:06+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/redirectRoute
+[运行时间：0.029002s] [吞吐率：34.48req/s] [内存消耗：980.64kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:04:13+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/redirectRoute
+[运行时间：0.028001s] [吞吐率：35.71req/s] [内存消耗：1,270.30kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:04:44+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/redirectRoute
+[运行时间：0.028001s] [吞吐率：35.71req/s] [内存消耗：980.94kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:05:59+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/redirectRoute
+[运行时间：0.025001s] [吞吐率：40.00req/s] [内存消耗：980.93kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:06:01+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/redirectRoute
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：980.65kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:06:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/redirectRoute
+[运行时间：0.029001s] [吞吐率：34.48req/s] [内存消耗：1,272.07kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:06:45+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.025002s] [吞吐率：40.00req/s] [内存消耗：1,154.40kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/Index/routes',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:07:06+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.028002s] [吞吐率：35.71req/s] [内存消耗：980.65kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ error ] [2]array_shift() expects parameter 1 to be array, object given[E:\phpstudy\WWW\tp5\thinkphp\library\think\Route.php:486]
+---------------------------------------------------------------
+[ 2018-08-28T10:07:29+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,154.40kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/Index/routes',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:12:42+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.027002s] [吞吐率：37.03req/s] [内存消耗：1,155.23kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/Index/routes',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:12:57+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,154.70kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/Index/routes',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:25:45+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/id/5
+[运行时间：0.085005s] [吞吐率：11.76req/s] [内存消耗：1,177.59kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5',
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:26:06+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/id/5/name/ddd
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,177.13kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5',
+  'name' => 'ddd',
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:26:35+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/id/5/name/ddd
+[运行时间：0.024001s] [吞吐率：41.67req/s] [内存消耗：1,177.41kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5',
+  'name' => 'ddd',
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:26:38+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/
+[运行时间：0.024001s] [吞吐率：41.67req/s] [内存消耗：1,176.09kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:26:49+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/
+[运行时间：0.031002s] [吞吐率：32.26req/s] [内存消耗：1,303.72kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/Index/routes',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [0]方法参数错误:id[E:\phpstudy\WWW\tp5\thinkphp\library\think\Container.php:458]
+---------------------------------------------------------------
+[ 2018-08-28T10:26:56+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/
+[运行时间：0.030001s] [吞吐率：33.33req/s] [内存消耗：1,302.44kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/Index/routes',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [0]方法参数错误:id[E:\phpstudy\WWW\tp5\thinkphp\library\think\Container.php:458]
+---------------------------------------------------------------
+[ 2018-08-28T10:27:10+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/
+[运行时间：0.024001s] [吞吐率：41.66req/s] [内存消耗：1,155.15kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/Index/routes',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:27:20+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,176.41kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:27:27+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.38kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:27:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/id/4
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,177.05kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:28:25+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/4
+[运行时间：0.025001s] [吞吐率：40.00req/s] [内存消耗：1,176.29kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:28:44+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/4
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.30kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:28:45+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/4
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.30kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:28:45+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/4
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,176.30kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:28:45+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/4
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.30kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:28:46+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/4
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.30kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:28:46+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/4
+[运行时间：0.024001s] [吞吐率：41.67req/s] [内存消耗：1,176.30kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:28:46+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/4
+[运行时间：0.024001s] [吞吐率：41.67req/s] [内存消耗：1,176.30kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:28:54+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.024001s] [吞吐率：41.67req/s] [内存消耗：1,175.80kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:30:35+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.026001s] [吞吐率：38.46req/s] [内存消耗：1,175.80kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:30:42+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/5
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.02kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:30:59+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/5
+[运行时间：0.024001s] [吞吐率：41.66req/s] [内存消耗：1,155.24kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/Index/routes',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:01+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/5
+[运行时间：0.023002s] [吞吐率：43.47req/s] [内存消耗：1,176.57kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:12+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/5
+[运行时间：0.023002s] [吞吐率：43.47req/s] [内存消耗：1,176.56kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:12+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/5
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.56kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:12+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/5
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.56kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:22+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/5
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.26kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:22+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/5
+[运行时间：0.023002s] [吞吐率：43.47req/s] [内存消耗：1,176.26kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:22+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/5
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.26kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:26+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,175.76kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:32+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.023002s] [吞吐率：43.47req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.024001s] [吞吐率：41.67req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.025001s] [吞吐率：40.00req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.024001s] [吞吐率：41.67req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:33+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.028001s] [吞吐率：35.71req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:40+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.025002s] [吞吐率：40.00req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:41+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.025002s] [吞吐率：40.00req/s] [内存消耗：1,176.58kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:41+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:41+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.023002s] [吞吐率：43.47req/s] [内存消耗：1,176.04kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:32:47+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,155.24kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/index/routes',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:33:03+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.05kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:33:08+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/id/
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,154.96kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/index/routes/id',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:33:11+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/id/3
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,154.96kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/index/routes/id',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:33:13+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/id/3
+[运行时间：0.022001s] [吞吐率：45.45req/s] [内存消耗：1,154.96kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/index/routes/id',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:33:34+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/id/3
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,156.66kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/index/routes/<id>',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => 'id',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'id',
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:33:41+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/3
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,156.25kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/index/routes/<id>',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:34:05+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/3
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,176.27kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:34:10+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/3
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,155.24kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/index/routes/3',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:34:16+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/3
+[运行时间：0.023001s] [吞吐率：43.48req/s] [内存消耗：1,156.66kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/index/routes/<id>',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:34:25+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/3
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,176.60kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-08-28T10:34:30+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/3/dd
+[运行时间：0.024002s] [吞吐率：41.66req/s] [内存消耗：1,156.55kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/index/routes/<id>/<name>',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3',
+    'name' => 'dd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'name' => 'dd',
+)
+---------------------------------------------------------------
+[ 2018-08-28T11:23:50+08:00 ] 10.0.0.97 GET dev.tp5_1.com/index/index/routes/id/3/name/ff
+[运行时间：0.025001s] [吞吐率：40.00req/s] [内存消耗：1,157.32kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\WWW\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/index/routes/id/<id>/name/<name>',
+  'route' => 'Demo/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '3',
+    'name' => 'ff',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'host' => 'dev.tp5_1.com',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'name' => 'ff',
+)
