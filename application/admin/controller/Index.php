@@ -8,6 +8,8 @@
 
 namespace app\admin\controller;
 
+use app\admin\controller\Common;
+
 class Index extends Common{
     /*
      * 构造函数
