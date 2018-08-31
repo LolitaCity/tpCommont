@@ -12,10 +12,6 @@
 Route::get('think', function () {
     return 'hello,ThinkPHP5!';
 });
-
-Route::get('hello/:name', 'index/hello');
-//Route::rule('index/Index/routes',"Demo/index");
-Route::rule('index/index/routes/id/:id/name/:name',"Demo/index");
 return [
 
 ];
