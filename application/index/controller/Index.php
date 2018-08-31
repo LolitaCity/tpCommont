@@ -4,8 +4,9 @@ namespace app\index\controller;
 use think\Db;
 use app\index\model\Admin;
 use think\Request;
+use think\Controller;
 
-class Index extends Common
+class Index extends Controller
 {
     public function __construct(\think\App $app = null) {
         parent::__construct($app);
