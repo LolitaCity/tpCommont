@@ -20,8 +20,8 @@ class Error{
      * 
      * @return #
      */
-    public function Dwz(){
+    public function _empty(){
         
-        var_dump($this->getError());
+        echo '我也不存在';exit;
     }
 }
