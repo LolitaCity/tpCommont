@@ -14,4 +14,14 @@ class Error{
     public function index(){
         echo '不存在';exit;
     }
+    
+    /*
+     * Dwz默认错误操作
+     * 
+     * @return #
+     */
+    public function Dwz(){
+        
+        var_dump($this->getError());
+    }
 }

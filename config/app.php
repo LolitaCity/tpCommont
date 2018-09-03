@@ -143,7 +143,5 @@ return [
     // 异常处理handle类 留空使用 \think\exception\Handle
     'exception_handle'       => '',
     
-    //自定义配置
-    'CAPTCHA_ON'        =>true,                    //是否开启验证码
 
 ];
