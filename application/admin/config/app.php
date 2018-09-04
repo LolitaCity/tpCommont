@@ -1,13 +1,15 @@
 <?php
-return array(
-    //'配置项'=>'配置值'
-    'SESSION_AUTO_START'=> true,                    //是否自动开启Session
-    'USER_AUTH_KEY'     =>'authId',                 //设置session的标记名称
-    'AUTH_PWD_ENCODE'   =>'md5',                    //用户认证加密方式
-    'AUTH_ON'           => true,                    //认证开关 
-    'CAPTCHA_ON'        =>0,                    //是否开启验证码
-    'VAR_PAGE'          =>'pageNum',            //设置分页参数名称,默认为p，如为p可不设置
-    'AUTO_LOGIN_KEY'    =>md5('liyujin'),       //移位或加密密钥
-    //自定义错误页面
-    
-);
+$app    = include ("/home/www_php/config/tp5/home/www_php/config/tp5/app.php");
+$cache  = include ("/home/www_php/config/tp5/home/www_php/config/tp5/cache.php");
+$console= include ("/home/www_php/config/tp5/home/www_php/config/tp5/sonsole.php");
+$cookie = include ("/home/www_php/config/tp5/home/www_php/config/tp5/cookie.php");
+$databases  = include ("/home/www_php/config/tp5/home/www_php/config/tp5/databases.php");
+$log        = include ("/home/www_php/config/tp5/home/www_php/config/tp5/log.php");
+$middleware = include ("/home/www_php/config/tp5/home/www_php/config/tp5/middleware.php");
+$session    = include ("/home/www_php/config/tp5/home/www_php/config/tp5/session.php");
+$template   = include ("/home/www_php/config/tp5/home/www_php/config/tp5/template.php");
+$trace      = include ("/home/www_php/config/tp5/home/www_php/config/tp5/trace.php");
+$config     = include ("/home/www_php/config/tp5/home/www_php/config/tp5/config.php");
+
+
+return array_merge($app,$cache,$console,$cookie,$databases,$log,$middleware,$session,$template,$trace,$config);
