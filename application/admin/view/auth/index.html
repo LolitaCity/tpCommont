@@ -36,17 +36,18 @@
                         <label>密　码：</label>
                         <input type="password" name="password" size="20" class="login_input" />
                     </p>                    
-                    {eq name="Think.config.CAPTCHA_ON" value='true'}
+                    {eq name="Think.config.CAPTCHA_ON" value='1'}
                         <p>
                             <label>验证码：</label>
                             <input class="code" id="captcha" name="captcha" type="text" size="5"/>
-                            <span><img src=""  alt="" onclick="this.src='?d='+Math.random();" width="75" height="24"/></span>
+                            <span><img src="{:url('auth/verify')}" id="verify_img"  alt="" onclick="this.src='{:url(\'auth/verify\')}?seed='+Math.random()" /></span>
+                            
                             <input type="hidden" name='captcha_exists' value="1" id='captcha_exitst'>
                         </p>
                     {/eq}
                 </form>
                 <div class="login_bar">
-                    <button class="sub" id="sub"></button>                       
+                    <a class="sub" id="sub"></a>                       
                 </div>                
             </div>
             <div class="login_banner"><img src="/static/admin/dwz/themes/default/images/login_banner_.jpg" /></div>
@@ -61,11 +62,11 @@
 <script>
     $(function(){
         $("#sub").click(function(){
-            var name    =$("input[name='user_name']").val();
+            var username=$("input[name='username']").val();
             var password=$("input[name='password']").val();
             var captcha =$("#captcha").val();
             var captcha_exists=$("#captcha_exitst").val();
-            if(name==''){
+            if(username==''){
                 alert('请填写用户名');
                 return false;
             }
@@ -73,22 +74,26 @@
                 alert('请填写密码');
                 return false;
             }
-            var flag=null;
             if(captcha_exists==1 && captcha==''){
                 alert('请填写验证码');
                 return false;
-            }else{            
-                $.post("__CONTROLLER__/ajaxCode",{captcha:captcha},function(data){
-                    if(data==1){
-                        alert("验证码错误");
-                        return false;
-                    }else{
-                        flag=1;
-                    }
-                },'json');
             }
-            $("input[name='password']").val($.md5(password));
-            $("#myForm").submit();
+            var flag=null;            
+            $.ajax({
+                async: false,
+                url:'/admin/auth/checkLogin',
+                data:{captcha:captcha,username:username,password:$.md5(password)},
+                success:function(msg){
+                    if(msg!=1000){
+                        alert(msg);
+                        return false;
+                    }
+                    flag=1;
+                }
+            });
+            if(flag==1){                
+                $(location).attr('href', '/admin/index');
+            }
         });            
     });
         

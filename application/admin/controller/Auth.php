@@ -8,6 +8,7 @@
 namespace app\admin\controller;
 
 use think\Controller;
+use think\captcha\Captcha;
 
 class Auth extends Controller{
     /*
@@ -29,47 +30,52 @@ class Auth extends Controller{
     }
     
     /*
-     * 登录验证
+     * 登录验证,账号密码,验证码
      * 
      * @return #
      */
     public function checkLogin(){        
-        $data= input('post.');
-        if(config('CAPTCHA_NO')){
-            //判断是否开启验证码，开启则进行验证码验证
-            //$captcha=new             
-        }
+        $data= input('');
+        if(config('CAPTCHA_ON')==1){
+            $captcha= new Captcha();
+            if(!$captcha->check($data['captcha'])){
+                echo '验证码错误';exit; 
+            }
+        }  
         if(!isset($data['username'])||empty($data['username'])){
-            
+            echo '用户名不能为空';exit; 
         }
-        if(!isset($data['passwd'])||empty($data['passwd'])){
-            
+        if(!isset($data['password'])||empty($data['password'])){
+            echo '密码不能为空';exit; 
         }
-        $map['name|tel|email']=$data['name'];
+        $map['name|tel|email']=$data['username'];
         $userInfo= db('Admin')->where($map)->find();
         if(empty($userInfo)){
-            
+            echo '用户不存在';exit; 
         }
         if($userInfo['status']!=1){
-                
+            echo '用户状态异常';exit; 
         }
-        if(md5($data['passwd'])!=$userInfo['password']){
-            
+        if(md5($data['password'])!=$userInfo['password']){
+            echo '用户名或密码错误';exit; 
         }
         unset($userInfo['password']);
-        config('USER_AUTH_KEY',$userInfo['id']);
+        session(config('USER_AUTH_KEY'),$userInfo['id']);
         session('user',$userInfo);
         $updata=array(
             'inc'           =>$userInfo['inc']+1,
             'last_logintime'=>time(),
             'last_ip'       => $this->request->ip(),
         );
-        if(db("Admin")->where($userInfo['id'])->update($updata)){
-            //登陆成功信息写入日志
-            self::addLog(0);
-            redirect('index/index');
+        if(!db("Admin")->where(array("id"=>$userInfo['id']))->update($updata)){            
+            session(null);
+            cookie(null);
+            echo '系统繁忙';exit; 
+            
         }
-        //系统繁忙
+        //登陆成功信息写入日志
+        self::addLog(0);
+        echo 1000;exit;
     }  
     
     /*
@@ -87,9 +93,10 @@ class Auth extends Controller{
             'type'      =>$type,
         );
         if($type==0){
+            $ipInfo =ip2Area($this->request->ip());
             $map['content'] =session('user.name').' 登录成功';
             $map['ip']      =$this->request->ip();
-            $map['addr']    =ip2Area($this->request->ip());
+            $map['addr']    =$ipInfo['province'].'-'.$ipInfo['city'];  
         }else{
             $map['db']      =$db;
             $map['content'] =$content;
@@ -107,7 +114,7 @@ class Auth extends Controller{
      */
     public function checkRole($u_id='',$role_id=''){
         if($role_id==''){
-            $role_id    =db("AdminRole")->where(array("u_id"=>$u_id))->value("role_id");
+            $role_id    =db("AdminRole")->where(array("a_id"=>$u_id))->value("role_id");
         }
         $roleInfo       =db("Role")->find($role_id);
         if(!$roleInfo['status'] || $roleInfo['status']==2){
@@ -125,17 +132,21 @@ class Auth extends Controller{
      * 
      * @return #
      */
-    public function ckeckAuth($level='',$role_id=''){ 
+    public function ckeckAuth($level='',$role_id=''){         
         if($level && session('nodeList_s')){
             return session('nodeList_s');
         }else if(($level=='' || $level==0) && session('nodeList_t')){
             return session("nodeList_t");
         }
-        $nodes  =$this->checkRole(session("authId"),$role_id);        
-        foreach($nodes as $vo){
-            $node[]     =$vo['node_id'];
+        //默认admin拥有所有节点权限
+        if(session(config('USER_AUTH_KEY'))!=1){
+            $nodes  =$this->checkRole(session("authId"),$role_id); 
+            foreach($nodes as $vo){
+                $node[]     =$vo['node_id'];
+            }
+            $map['id']      =array("in",implode(",",$node));
         }
-        $map['id']      =array("in",implode(",",$node));
+        
         $map['status']  =1;
         if($level==1){
             $map['level']   =$level;            //次级节点
@@ -144,7 +155,7 @@ class Auth extends Controller{
         }else{
             $map['level']   =0;                 //顶级节点
         }
-        $nodeList   =db("Node")->where($map)->order("sort_ asc")->select(); 
+        $nodeList   =db("Node")->where($map)->order("ord asc")->select(); 
         if($level){
             session('nodeList_s',$nodeList);
         }else{
@@ -163,7 +174,7 @@ class Auth extends Controller{
             '操作系统'=>PHP_OS,
             '运行环境'=>$_SERVER["SERVER_SOFTWARE"],
             'PHP运行方式'=>php_sapi_name(),
-            'ThinkPHP版本'=>THINK_VERSION.' [ <a href="http://thinkphp.cn" target="_blank">查看最新版本</a> ]',
+            'ThinkPHP版本'=>\think\facade\App::version() .' [ <a href="http://thinkphp.cn" target="_blank">查看最新版本</a> ]',
             '上传附件限制'=>ini_get('upload_max_filesize'),
             '执行时间限制'=>ini_get('max_execution_time').'秒',
             '服务器时间'=>date("Y年n月j日 H:i:s"),
@@ -193,4 +204,25 @@ class Auth extends Controller{
             $this->error('已经登出！');
         }
     }
+    
+    /*
+     * 生成验证码
+     * 
+     * @return verify
+     */
+    public function verify()
+    {
+        $config =    [            
+            'fontSize'  =>13,   // 验证码字体大小             
+            'length'    => 4,   // 验证码位数
+            'reset'     =>TRUE, //验证成功重置
+            'fontttf'   =>'5.ttf',//验证码字体
+            'imageH'    =>'25',
+            'imageW'    =>'90',
+            'useCurve'  =>FALSE,
+        ];
+        $captcha = new Captcha($config);
+        return $captcha->entry();    
+    }
+    
 }

@@ -1,0 +1,19 @@
+<div class="accordion" fillSpace="sidebar">                      
+    <div class="accordionContent">
+        <ul class="tree treeFolder">
+            {foreach $oneNodeList as $one}
+                <li><a {notempty name="one.action"} href="{:url($one['controller'].'/'.$one['action'])}" rel="{$one.controller}"  target="navTab" {/notempty} >{$one.name}</a>
+                    <ul>                        
+                        {foreach $twoNodeList as $two}
+                                {if ($two.p_id == $one.id)}
+                                <li>
+                                    <a href="{:url($two['controller'].'/'.$two['action'])}" rel="{$two.controller}"  target="navTab">{$two.name}</a>
+                                </li>
+                                {/if}
+                        {/foreach}
+                    </ul>
+                </li>
+            {/foreach}
+        </ul>
+    </div>                    
+</div>
