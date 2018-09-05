@@ -11,7 +11,7 @@
                         <select class="combox" name="p_id">
                             <option value="">父节点</option>
                             {foreach $topNoList as $vo}
-                                <option value="{$vo.id}" {if (input('p_id')==$vo['id'])} selected {/if} >{$vo.name}</option>
+                                <option value="{$vo.id}" {if (input('p_id')==$vo['id'])} selected = "selected" {/if} >{$vo.name}</option>
                             {/foreach}                            
                         </select>
                     </td>
@@ -31,9 +31,9 @@
 <div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">            
-            <li><a class="add" href="__CONTROLLER__/show" target="dialog" mask="true"><span>添加</span></a></li>                      
-            <li><a title="确实要删除这些记录吗?" target="selectedTodo" rel="id[]" href="__CONTROLLER__/del" class="delete"><span>批量删除</span></a></li>                  
-            <li><a class="edit" href="__CONTROLLER__/show/id/{l_id}" target="dialog" mask="true" warn="请选择一条信息"><span>修改</span></a></li>
+            <li><a class="add" href="{:url('/admin/node/show')}" target="dialog" mask="true"><span>添加</span></a></li>                      
+            <li><a title="确实要删除这些记录吗?" target="selectedTodo" rel="id[]" href="{:url('/admin/node/del')}" class="delete"><span>批量删除</span></a></li>                  
+            <li><a class="edit" href="/admin/node/show/id/{l_id}" target="dialog" mask="true" warn="请选择一条信息"><span>修改</span></a></li>
             <li class="line">line</li>
         </ul>
     </div>
@@ -45,10 +45,10 @@
                 <th width="120" >节点名称</th>
                 <th width="100" >控制器</th>
                 <th width="80" >方法</th>
-                <th width="100" orderField="level" align="center" {if (input('_order')=='level')} class="{$Think.input._sort}" {/if}>层级</th>
-                <th width="80" orderField="ord" align="center" {if (input('_order')=='ord')} class="{$Think.input._sort}" {/if}>排序</th>
-                <th width="80" orderField="p_id"   align="center" {if (input('_order')=='p_id')}  class="{$Think.input._sort}" {/if}>父节点</th>
-                <th width="130" orderField="add_time"   align="center" {if (input('_order')=='add_time')}  class="{$Think.input._sort}" {/if}>添加时间</th>
+                <th width="100" orderField="level" align="center" {if (input('_order')=='level')} class="{$Think.post._sort}" {/if}>层级</th>
+                <th width="80"  orderField="ord"  align="center" {if (input('_order')=='ord')} class="{$Think.post._sort}" {/if}>排序</th>
+                <th width="80"  orderField="p_id"   align="center" {if (input('_order')=='p_id')}  class="{$Think.post._sort}" {/if}>父节点</th>
+                <th width="130" orderField="add_time"   align="center" {if (input('_order')=='add_time')}  class="{$Think.post._sort}" {/if}>添加时间</th>
                 <th width="100" align="center">操作</th>
             </tr>
         </thead>
@@ -87,10 +87,10 @@
         <div class="pages">
             <span>显示</span>
             <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
-                <option value="20">20</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-                <option value="200">200</option>
+                <option value="20" {if (input('numPerPage')==20)} selected = "selected"  {/if}>20</option>
+                <option value="50" {if (input('numPerPage')==50)} selected = "selected"  {/if}>50</option>
+                <option value="100" {if (input('numPerPage')==100)} selected = "selected"  {/if}>100</option>
+                <option value="200" {if (input('numPerPage')==200)} selected = "selected"  {/if}>200</option>
             </select>
             <span>条，共{$totalCount}条</span>          
         </div>

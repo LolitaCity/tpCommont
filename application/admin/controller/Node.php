@@ -12,7 +12,7 @@ class Node extends Common{
     protected $listRows;
     protected $url_query='';
     protected $beforeActionList = [
-        'beforeIndex'=>['only'=>'index']
+        'beforeIndex'=>['only'=>'index,show']
     ];
     /*
      * 构造函数

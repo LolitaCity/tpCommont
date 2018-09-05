@@ -11,7 +11,7 @@ use think\Controller;
 use think\Request;
 
 class Common extends Controller{
-    public $auth;
+    protected $auth;
     /*
      * 构造函数，继承父类构造函，数权限验证
      * 
@@ -26,8 +26,8 @@ class Common extends Controller{
             $this->error('无访问权限');
         }
         //权限验证
-        if(strtolower(request()->controller())!='index'){
-            $this->auth=new Auth();
+        $this->auth=new Auth();
+        if(strtolower(request()->controller())!='index'){            
             $nodeList= $this->auth->ckeckAuth();
             $nodes=array();
             foreach ($nodeList as $vo){
@@ -48,10 +48,7 @@ class Common extends Controller{
      */
     public function _search($name=''){
         //生成查询条件
-        if (empty ($name)) {
-            $name = request()->controller();
-        }
-        $model      =db($name);        
+        $model      =$name?db($name):db(request()->controller());        
         $map        =array ();
         $fieldArray =array();
         if ($model->gettablefields()){
@@ -82,11 +79,10 @@ class Common extends Controller{
                     'product_url'
                 );
                 if (in_array($val, $likeArray)){
-                    //模糊查询
-                    $map [$val] = array('like', '%'.trim(input()[$val]).'%');
+                    $map[]  =[$val,"LIKE",'%'.trim(input($val)).'%'];
                 } else {
                     //精确查询
-                    $map[$val] = input()[$val];
+                    $map[] =[$val,'=',input($val)];
                 }
             }
         }
@@ -105,51 +101,41 @@ class Common extends Controller{
      *
      * @return array    #
      */
-    public function _list($model, $map, $sortBy='',$asc =TRUE, $countPk="id", $field="*") {
+    public function _list($model, $map, $sortBy='',$asc =TRUE, $countPk="id", $field="*") {        
         //验证传参的有效性
-        if (empty($asc)){
-            $asc = false;
-        }
-        if ($model->getPk()!=NULL) {
-            $countPk = $model->getPk();
-        }
-        if (empty($countPk)){
-            $countPk = "id";
-        }
+        $asc = $asc?true:false;
+        $countPk = $model->getPk()?$model->getPk():"id";
         //排序字段 默认为主键名
         $orderSign  =TRUE;
-        if (!empty (input('_order'))) {
-            $order  =input('_order');
-        } else {
+        $order  =input('_order');
+        if(empty($order)){
+            $order  =$sortBy?$sortBy:$countPk;     
             if(!empty($sortBy)){
-                $order  =$sortBy;
-                if(is_array($sortBy)){
-                    $orderSign  =FALSE;
-                }
-            }else{
-                $order  =$countPk;
+                $orderSign=(is_array($sortBy))?FALSE:TRUE;                
             }
         }
         //排序方式默认按照倒序排列
-        //接受 sort参数 0 表示倒序 非0都 表示正序
+        //接受 sort参数 0 表示倒序 非0都 表示正序        
         if($orderSign){
-            if (!empty (input('_sort') )) {
+            $sort = $asc? 'asc' : 'desc';
+            if (input('_sort')) {
                 $sort = input('_sort') == 'asc' ? 'asc' : 'desc'; //zhanghuihua@msn.com
-            }else{
-                $sort = $asc? 'asc' : 'desc';
             }
-        }
+        }        
         //取得满足条件的记录数
-        $url_query='';
-        foreach ( $map as $key => $val ) {
-            if (!is_array ( $val )) {
-                $url_query .= "$key=" . urlencode ( $val ) . "&";
-            }
+        $param=array_filter(array_merge(input(),$map));
+        $param['page']=1;
+        if(isset($param['pageNum'])&&!empty($param['pageNum'])){
+            $param['page']=$param['pageNum'];
+            unset($param['pageNum']);
         }
-        $listRows= input('listRows',20);
-        $voList = $model->where($map)->group($countPk)->field($field)->order($order)->paginate($listRows,false,['query'=>$url_query]);         
-        $sortImg = $sort; //排序图标
-        $sortAlt = $sort == 'desc' ? '升序排列' : '倒序排列'; //排序提示
+        $listRows=input('numPerPage',20);
+        if($listRows==0||empty($listRows)||$listRows==null){
+            $listRows=20;
+        }  
+        $voList = $model->where($map)->group($countPk)->field($field)->order($order.' '.$sort)->paginate($listRows,false,$param);         
+        $sortImg =$sort; //排序图标
+        $sortAlt =$sort == 'desc' ? '升序排列' : '倒序排列'; //排序提示
         $sort = $sort == 'desc' ? 1 : 0; //排序方式
         //模板赋值显示
         $this->assign ( 'list', $voList );
@@ -159,8 +145,7 @@ class Common extends Controller{
         $this->assign ( 'sortType', $sortAlt );
         $this->assign ( 'totalCount', $voList->total());
         $this->assign ( 'numPerPage', $listRows );
-        $this->assign ( 'numPerPage', 5 );
-        $this->assign ( 'currentPage', !empty(input(config('VAR_PAGE')))?input()[config('VAR_PAGE')]:1);        
+        $this->assign ( 'currentPage', !empty(input(config('VAR_PAGE')))?input(config('VAR_PAGE')):1);        
     }  
     
     /*
@@ -168,21 +153,11 @@ class Common extends Controller{
      * 
      * @return #
      */
-    public function index($db='',$sort='id',$sortBy=FALSE){
-        $map = $this->_search($db);
-        if (method_exists($this, '_filter')) {
-            $this->_filter($map);
-        }
-        $map['status']  =1;
-        if($db==""){
-            $model      = db(request()->controller());
-        }else{
-            $model      =db($db);  
-        }
-        if (!empty ($model)) {
-            $this->_list($model, $map,$sort,$sortBy);
-        }
-        
+    public function index($db='',$sort='id',$sortBy=TRUE){
+        $map = $this->_search($db);        
+        $map[]  =['status','=',1];
+        $model=$db?db($db):db(request()->controller());        
+        $this->_list($model, $map,$sort,$sortBy);       
         return $this->fetch(request()->action());
     }
     
@@ -191,24 +166,20 @@ class Common extends Controller{
      * 
      * @return #
      */
-    public function show(){
-        if(I("request.sign")){
-            $this->assign("_sign",I("request.sign",'','code'));
+    public function show(){        
+        if(input("sign")){
+            $this->assign("_sign",input("sign",'','code'));
         }
-        if(I("request.id")){
-            if(!I("request.db")){
-                $model  =D(CONTROLLER_NAME);
-            }else{
-                $model  =D(I("request.db",'','code'));  
-            }
-            $id = $_REQUEST [$model->getPk()];
+        if(input("id")){
+            $model  =input('db')?db(input('db','','code')):db(request()->controller());            
+            $id = input($model->getPk());
             if(!is_numeric($id)){
                 $id=code($id);
             }
-            $vo = $model->getById($id);
+            $vo = $model->find($id);
             $this->assign('vo', $vo);
         }
-        $this->display();
+        return $this->fetch();
     }    
     
     /*
@@ -217,27 +188,22 @@ class Common extends Controller{
      * @return # 
      */
     public function edit(){
-        if(I("request.id")){
-            if($this->update()){
+        if(input('id')){
+            if(self::update()){
                 $this->success("修改成功");
-            }else{
-                if(!empty($this->update()['name'])){
-                    $this->error($this->update()['name']);
-                }else{
-                    $this->error("修改失败");
-                }
             }
-        }else{
-            if($this->insert()=="true"){
-                $this->success("新增成功");
-            }else{
-                if(!empty($this->insert()['name'])){
-                    $this->error($this->insert()['name']);
-                }else{
-                    $this->error("新增失败");
-                }
+            if(!empty(self::update()['name'])){
+                $this->error(self::update()['name']);
             }
+            $this->error("修改失败");
         }
+        if(self::insert()=="true"){
+            $this->success("新增成功");
+        }
+        if(!empty(self::insert()['name'])){
+            $this->error(self::insert()['name']);
+        }
+        $this->error("新增失败");
     }    
     
     /*
@@ -245,32 +211,26 @@ class Common extends Controller{
      * 
      * @return #
      */
-    function insert(){ 
-        if(!I("request.db")){
-            $model  =D(CONTROLLER_NAME);
-        }else{ 
-            $model  =D(I("request.db"));
-        }  
-        $field  =$model->getDbFields();
-        if(in_array("sort_",$field) &&($_POST['sort_']==''|| $_POST['sort_']==0)){
-            $top            =$model->where(array("status"=>1))->max("sort_");
-            $_POST['sort_'] =$top+1;
+    public function insert(){
+        $dbName =input("db")? input("db"): request()->controller();
+        $model  =db($dbName);        
+        $field=$model->getTableFields();        
+        //$field  =$model->getDbFields();
+        //节点表如果没有指定排序，默认在当前二级排序下+1
+        if(in_array('ord',$field) && (empty(input('ord'))||input('ord')==0)){
+            $top=$model->where(array('status'=>1))->max('ord');
+            input('ord',$top+1);
         }
-        if (false === $model->create()) {
-            return $model->getError();
-        }        
+        $list=$model->allowField(true)->insert(input());
         //保存当前数据对象
-        $list = $model->add();
-        if ($list !== false) {
-            $dbName =I("request.db")?I("request.db"):CONTROLLER_NAME;
-            if($this->addLog("新增",I("request.name"),$dbName)){
-                return TRUE;
-            }else{
-                return FALSE;
-            }
-        } else {
+        if ($list == false) {            
             return FALSE;
+        } 
+        $content= session('user.name').'在数据库 '.$dbName.' 新增了一条数据';
+        if($this->auth->addLog(1,$dbName,$content)){
+            return TRUE;
         }
+        return FALSE;
     }
     
     /*
@@ -278,66 +238,39 @@ class Common extends Controller{
      * 
      * $return #
      */
-    function update(){
-        if(!I("request.db")){
-            $model  =D(CONTROLLER_NAME);
-        }else{
-            $model  =D(I("request.db"));  
-        }
-        $dbName =I("request.db")?I("request.db"):CONTROLLER_NAME;        
+    public function update(){
+        $dbName =input("db")?input("db"):request()->controller();  
+        $model  =db($dbName);
         $model->startTrans();
         //判断是否有图片存在，标签图片是否更改
-        $imageIcon  =$model->getById(I("request.id"));
-        $condition  =array("id"=>I("request.id"));
-        
-        if(!$this->invaImages($model, $condition, $dbName)){
+        //$imageIcon  =$model->find(input('id'));
+        $condition  =array($model->getPk()=>input("id"));        
+        if(!self::invaImages($model, $condition, $dbName)){
             $model->rollback();
             return FALSE;
-        }
-        if (false === $model->create()) {
-            return $model->getError();
-        }        
+        }       
         // 更新数据
         //var_dump($model->create());exit;
-        $list = $model->save();
-        if (false !== $list) {            
-            if($this->addLog("修改",I("request.name"),$dbName)){
-                unlink('Application/Public/Upload/'.session("oldImg"));
-                if(session("oldSmallImg")){
-                    unlink('Application/Public/Upload/'.session("oldSmallImg"));
-                }
-                $model->commit();
-                return TRUE;
-            }else{
-                $model->rollback();
-                return FALSE;
-            }
-        } else {
+        $list   =$model->where($condition)->allowField(TRUE)->update(input());        
+        if (false == $list) {       
             $model->rollback();
             return FALSE;
+        } 
+        $contents=session('user.name').'编辑的数据表'.$dbName.'中主键为'.$model->getPk().' 的数据';            
+        if(!$this->auth->addLog(1,$dbName,$contents)){
+            $model->rollback();
+            return FALSE;  
         }
+        $imgPath     ='/static/public/upload/';
+        if(session("oldImg")!=null && file_exists($imgPath.session("oldImg"))){
+            unlink($imgPath.session("oldImg"));
+        }            
+        if(session('oldSmallImg')!=null && file_exists($imgPath.session('oldSmallImg'))){
+            unlink($imgPath.session("oldSmallImg"));
+        }
+        $model->commit();
+        return TRUE;
     }
-    
-    /*
-     * 新增日志信息
-     * 
-     * @return #
-     */
-    public function addLog($g='',$name='',$db=''){        
-        if(is_array($name)){
-            $name   =implode(",",$name);
-        }
-        $data       =array(
-            'user_id'   =>session("authId"),
-            'db'        =>$db,
-            'content'   =>$g." 了 ".$name
-        );
-        if(M("Log")->add($data)){
-            return TRUE;
-        }else{
-            return FALSE;
-        }
-    }  
     
     /*
      * 删除数据
@@ -346,45 +279,39 @@ class Common extends Controller{
      */
     public function del(){
         //删除指定记录
-        if(!I("request.db")){
-            $model  =D(CONTROLLER_NAME);
-        }else{
-            $model  =D(I("request.db","","code"));  
-        }
+        $dbName =input("db")?input("db",'','code'):request()->controller();
+        $model  =db($dbName);        
         $model->startTrans();
-        if (!empty ($model)) {
-            $pk = $model->getPk();
-            $id =$_REQUEST [$pk];
-            if(!is_array($id)){                
-                $id = explode(",",code($id));
-            }           
-            if (isset ($id)) {
-                $condition  =array($pk => array('in', implode(',', $id)));
-                $list       =$model->where($condition)->setField('status',0);
-                if($list==FALSE){
-                    $model->rollback();
-                }
-                $logName    =$this->getLogName($id,$model);
-                if($logName==FALSE){
-                    $model->rollback();
-                }
-                $dbName     =I("request.db","","code")?I("request.db","","code"):CONTROLLER_NAME;
-                if($this->invaImages($model,$condition,$dbName)==FALSE){
-                    $model->rollback();
-                    $this->error("参数错误，删除失败");
-                }              
-                if ($list !== false && $this->addLog("删除",$logName,$dbName)) {
-                    $model->commit();
-                    $this->success('删除成功！');
-                } else {
-                    $model->rollback();
-                    $this->error('删除失败！');
-                }
-            }else{
-                $model->rollback();
-                $this->error('非法操作');
-            }
+        if(!$model){
+            $model->rollback();
+            $this->error('非法操作');
         }
+        $pk = $model->getPk();
+        $id = input($pk);
+        if(!is_array($id)){                
+            $id = explode(",",code($id));
+        }           
+        if (!isset ($id)) {
+            $model->rollback();
+            $this->error('非法操作');
+        }
+        $condition  =array($pk => array('in', implode(',', $id)));
+        $list       =$model->where($condition)->setField('status',0);
+        if($list==FALSE){
+            $model->rollback();
+        }
+        if($this->invaImages($model,$condition,$dbName)==FALSE){
+            $model->rollback();
+            $this->error("参数错误，删除失败");
+        }              
+        $contents=session('user.name')."删除了数据表 ".$dbName. "中主键为".implode(',', $id)."d的数据";
+        if ($list !== false && $this->auth->addLog(1,$dbName,$contents)) {
+            $model->commit();
+            $this->success('删除成功！');
+        } else {
+            $model->rollback();
+            $this->error('删除失败！');
+        }        
     }
     
     /*
@@ -392,44 +319,37 @@ class Common extends Controller{
      * 
      * @return bool
      */
-    public function delete(){
+    public function delete($imagePath=''){
         //删除指定记录
-        if(!I("request.db")){
-            $model  =D(CONTROLLER_NAME);
-        }else{
-            $model  =D(I("request.db","","code"));  
+        $dbName =input("db","","code")?input("db","","code"): request()->controller();
+        $model  =db($dbName);
+        $pk     =$model->getPk();
+        $id     = input($pk);
+        if(!is_array($id)){                
+            $id = explode(",",code($id));
         }
-        if (!empty ($model)) {
-            $pk     =$model->getPk();
-            $id     =$_REQUEST [$pk];
-            if(!is_array($id)){                
-                $id = explode(",",code($id));
+        if(!isset($id)){
+            $this->error('非法操作');
+        }
+        $condition  =array($pk => array('in', implode(',', $id)));
+        if (false == $model->where($condition)->delete()) {
+            $this->error('删除失败！');
+        }
+        if($dbName=="Invaimg"){
+            //如果操作的是清理图片表，那么就要执行清理
+            $imgList=$model->where($condition)->column('imagepath');
+            $imgPath=array();
+            $imagePath=$imagePath?$imagePath:'/static/admin/img/';
+            foreach($imgList as $vo){
+                $imgPath[]  =$vo;
             }
-            if (isset ($id)) {
-                $condition  =array($pk => array('in', implode(',', $id)));
-                if (false !== $model->where($condition)->delete()) {
-                    $dbName =I("request.db","","code")?I("request.db","","code"):CONTROLLER_NAME;
-                    if($dbName=="Invaimg"){
-                        //如果操作的是清理图片表，那么就要执行清理
-                        $imgList=$model->where($condition)->select();
-                        $imgPath=array();
-                        foreach($imgList as $vo){
-                            $imgPath[]  =$vo['imagepath'];
-                        }
-                        if($imgPath!=''){
-                            for($i=0;$i<=count($imgPath);$i++){
-                                unlink('Application/Public/Upload/'.$imgPath[$i]);
-                            }
-                        }
-                    }
-                    $this->success('删除成功！');
-                } else {
-                    $this->error('删除失败！');
+            if($imgPath!=''){
+                for($i=0;$i<=count($imgPath);$i++){
+                    unlink($imagePath.$imgPath[$i]);
                 }
-            }else{
-                $this->error('非法操作');
             }
         }
+        $this->success('删除成功！'); 
     }
     
     /*
@@ -437,57 +357,44 @@ class Common extends Controller{
      * 
      * @return #
      */
-    public function upImg(){
-        if(!empty($_FILES['images']['name'])){
-            if(I("request.ajax")==1){
-                $rootPath   ='title/';
-            }else if(I("request.ajax")==2){
-                $rootPath   ='top/';
-            }else if(I("request.ajax")==3){
-                $rootPath   ='section/';
-            }else if(I("request.ajax")==4){
-                $rootPath   ='user/';
-            }else if(I("request.ajax")==5){
-                $rootPath   ='club/';
-            }else if(I("request.ajax")==6){
-                $rootPath   ='data/';
-            }else if(I("request.ajax")==7){
-                $rootPath   ='mod/';
-            }else if(I("request.ajax")==8){
-                $rootPath   ="club_img/";
-            }else if(I("request.ajax")==9){
-                $rootPath   ="answer/";
-            }else{
-                $rootPath   ='common/';
-            }
-            $config =array(
-                'rootPath'  =>'./Application/Public/Upload/',       //根目录
-                'savePath'  =>$rootPath,                            //保存路径
-                'maxSize'   =>'0',                                  //上传的文件大小限制 (0-不做限制)
-                'exts'      =>array('ico','jpg','png','gif','jpeg','doc','docx','xls','xlsx','pdf','txt','ppt','pptx') //允许上传的文件后缀
-            );
-            //附件被上传到路径：根目录/保存目录路径/创建日期目录
-            $new_upload =new \Think\Upload($config);
-            //uploadOne会返回已经上传的附件信息
-            $upload     =$new_upload->uploadOne($_FILES['images']);
-            if(!$upload){
-                echo $new_upload->getError();
-            }else{                 
-                $exts   =array("jpg","jpeg","png","gif","JPG","JPEG",'PNG','GIF');
-                if(in_array(pathinfo($upload['savename'], PATHINFO_EXTENSION),$exts)){
-                    //把已经上传好的图片制作缩略图Image.class.php
-                    $image  =new \Think\Image();
-                    //open();打开图像资源，通过路径名找到图像
-                    $srcimg =$new_upload->rootPath.$upload['savepath'].$upload['savename'];
-                    $image->open($srcimg);
-                    //制作80*80 的缩略图                             
-                    $s          =$image->thumb(100,100);  //按照比例缩小
-                    $smallimg   =$upload['savepath']."small_".$upload['savename'];
-                    $image->save($new_upload->rootPath.$smallimg); 
-                    echo ($upload['savepath'].$upload['savename']);
-                }
-            }           
+    public function upImg($rootPath=''){
+        $ext=array('ico','jpg','png','gif','jpeg','doc','docx','xls','xlsx','pdf','txt','ppt','pptx'); //允许上传的文件后缀
+        $file = request()->validate(['ext'=> implode(',',$ext)])->file('image');
+        if(!$file){
+            $file->getError();
         }
+        if(input("ajax")==1){
+            $savePath   ='title/';
+        }else if(input("ajax")==2){
+            $savePath   ='top/';
+        }else if(input("ajax")==3){
+            $savePath   ='section/';
+        }else if(input("ajax")==4){
+            $savePath   ='user/';
+        }else if(input("ajax")==5){
+            $savePath   ='club/';
+        }else if(input("ajax")==6){
+            $savePath   ='data/';
+        }else if(input("ajax")==7){
+            $savePath   ='mod/';
+        }else if(input("ajax")==8){
+            $savePath   ="club_img/";
+        }else if(input("ajax")==9){
+            $savePath   ="answer/";
+        }else{
+            $savePath   ='common/';
+        }
+        $rootPath=$rootPath?$rootPath:'/static/admin/file/';
+        $info=$file->move($rootPath.$savePath);
+        if($info){
+            $imgName=$info->getSaveName();
+        }
+        if(in_array($info->getExtension(),array("jpg,jpeg,png,gif"))){
+            $image = \think\Image::open($rootPath.$savePath.$info->getSaveName());
+            // 按照原图的比例生成一个最大为150*150的缩略图并保存为thumb.png
+            $image->thumb(150,150,\think\Image::THUMB_CENTER)->save($rootPath.'small/'.$savePath);
+        }
+        return $imgName;
     }
     
     /*
@@ -496,32 +403,26 @@ class Common extends Controller{
      * @return #
      */
     public function changeStatus(){ 
-        if(!I("request.db")){
-            $model  =D(CONTROLLER_NAME);
-        }else{
-            $model  =D(I("request.db","","code"));  
+        $dbName =input("db","","code")?input("db","","code"):request()->controller();
+        $model  =db($dbName);
+        if(empty($model)||$model->isEmpty()){
+            $this->error('非法操作');
         }
-        if (!empty ($model)) {
-            $pk = $model->getPk();
-            $id =$_REQUEST [$pk];
-            if(!is_array($id)){                
-                $id = explode(",",code($id));
-            } 
-            if (isset ($id)) {
-                $condition  =array($pk => array('in', implode(',', $id)));
-                $list       =$model->where($condition)->setField('status',(int)I("request.status","","code"));
-               
-               
-                $dbName =I("request.db","","code")?I("request.db","","code"):CONTROLLER_NAME;
-                $logName=$this->getLogName($id,$model);
-                if ($list !== false && $this->addLog("修改",$logName,$dbName)) {
-                    $this->success('状态修改成功！');
-                } else {
-                    $this->error('状态修改失败！');
-                }
-            } else {
-                $this->error('非法操作');
-            }
+        $pk = $model->getPk();
+        $id = input($pk);
+        if(!is_array($id)){                
+            $id = explode(",",code($id));
+        }
+        if(!$id){
+            $this->error('非法操作');
+        }
+        $condition  =array($pk => array('in', implode(',', $id)));
+        $list       =$model->where($condition)->setField('status',(int)input("status","","code"));
+        $contents=session("user.name")."修改了数据表".$dbName.'中主键为'.$pk.'的数据状态';
+        if ($list !== false && $this->auth->addLog(1,$dbName,$contents)) {
+            $this->success('状态修改成功！');
+        } else {
+            $this->error('状态修改失败！');
         }
     }
     
@@ -533,33 +434,15 @@ class Common extends Controller{
     public function getIds($field='',$name='name',$db='',$val='id'){        
         $map[$name]     =array('like',"%".trim($field)."%");
         $map['status']  =array('neq',0);
-        $db             =D($db);
-        $arr            =$db->where($map)->select();
+        $model          =db($db);
+        $arr            =$model->where($map)->column($val);
         $arrIds         =array();
         foreach($arr as $vo){
-            $arrIds[]   =$vo[$val];             
+            $arrIds[]   =$vo;             
         }            
         $ids=array("in",implode(',', $arrIds));
         return $ids;
     } 
-    
-    /*
-     * 获取被删除数据的名称
-     * 
-     * @param   $id  array()    被删除的数据id
-     * @param   $db             被删除的数据所在的数据库
-     * 
-     * @return $logName 
-     */
-    public function getLogName($id,$db){
-        $delNames   =$db->where(array("id"=>array("IN",implode(',',$id))))->select(array("field"=>'name'));
-        $arrNames   =array();
-        foreach($delNames as $vo){
-            $arrNames[] =$vo['name'];
-        }
-        $logName    =implode(',', $arrNames);
-        return $logName;
-    }
     
     /*
      * 修改和删除数据时，如果有图片，则把图片存在过期图片表中
@@ -592,14 +475,13 @@ class Common extends Controller{
             }
         }                
         $imaPath    =array_merge($imaPath,$smallImg);
-        if($imaPath[0]!=NULL || $imaPath[0]!=''){
-            $invaImg    =D("Invaimg");
+        if($imaPath[0]){
+            $invaImg    =db("Invaimg");
             for($i=0;$i<count($imaPath);$i++){
                 $map["db_name"]     =$dbName;
                 $map['imagepath']   =$imaPath[$i];
-                if(!$invaImg->add($map)){
+                if(!$invaImg->insert($map)){
                     return FALSE;
-                    break;
                 }
             }
             return TRUE;

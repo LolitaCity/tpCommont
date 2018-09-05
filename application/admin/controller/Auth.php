@@ -140,6 +140,7 @@ class Auth extends Controller{
         }
         //默认admin拥有所有节点权限
         if(session(config('USER_AUTH_KEY'))!=1){
+            $node=array();
             $nodes  =$this->checkRole(session("authId"),$role_id); 
             foreach($nodes as $vo){
                 $node[]     =$vo['node_id'];
