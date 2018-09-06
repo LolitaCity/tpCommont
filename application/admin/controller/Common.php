@@ -54,36 +54,20 @@ class Common extends Controller{
         if ($model->gettablefields()){
             $fieldArray =$model->getTableFields();
         }
+        //进行精确查询的字段
+        $notLikeArray = array(
+            'p_id',
+        );
         foreach ( $fieldArray as $key => $val ) {				
-            if (input($val)&& input($val) != ''){
-                //特别指定一些字段进行模糊查询
-                $likeArray = array(
-                    'name',
-                    'title',
-                    'username',
-                    'nickname',
-                    'remark',
-                    'content',
-                    'desc_',
-                    'controller',
-                    'action',
-                    'result',
-                    'add_time',
-                    'email',
-                    'reseller_company_name',
-                    'reseller_amazon_name',
-                    'reseller_contact_name',
-                    'reseller_contact_email',
-                    'reseller_name',
-                    'product_name',
-                    'product_url'
-                );
-                if (in_array($val, $likeArray)){
-                    $map[]  =[$val,"LIKE",'%'.trim(input($val)).'%'];
-                } else {
-                    //精确查询
-                    $map[] =[$val,'=',input($val)];
-                }
+            if (!input($val)|| input($val) == ''){
+                continue ;
+            }
+            //特别指定一些字段进行模糊查询
+            if (in_array($val, array_diff($fieldArray,$notLikeArray))){
+                $map[]  =[$val,"LIKE",'%'.trim(input($val)).'%'];
+            } else {
+                //精确查询
+                $map[] =[$val,'=',input($val)];
             }
         }
         return $map;
@@ -123,7 +107,7 @@ class Common extends Controller{
             }
         }        
         //取得满足条件的记录数
-        $param=array_filter(array_merge(input(),$map));
+        $param=array_filter(array_merge(input(),$map));//过滤空字段
         $param['page']=1;
         if(isset($param['pageNum'])&&!empty($param['pageNum'])){
             $param['page']=$param['pageNum'];
