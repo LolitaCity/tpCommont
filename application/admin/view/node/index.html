@@ -94,6 +94,12 @@
             </select>
             <span>条，共{$totalCount}条</span>          
         </div>
-        <div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="6"  currentPage="{$currentPage}"></div>
+        <!--
+        totalCount      控制整个页码列表
+        numPerPage      控制页码数量，避免页码无休止
+        pageNumShown    页码列表数量，显示几个页码1 2 3
+        currentPage     指定当前页的style状态（当前页红色）
+        -->
+        <div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="5"  currentPage="{$currentPage}"></div>
     </div>
 </div>

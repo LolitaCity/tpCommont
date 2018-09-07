@@ -34,21 +34,20 @@ class Auth extends Controller{
      * 
      * @return #
      */
-    public function checkLogin(){        
-        $data= input('');
+    public function checkLogin(){ 
         if(config('CAPTCHA_ON')==1){
             $captcha= new Captcha();
-            if(!$captcha->check($data['captcha'])){
+            if(!$captcha->check(input('captcha'))){
                 echo '验证码错误';exit; 
             }
         }  
-        if(!isset($data['username'])||empty($data['username'])){
+        if(!input('username')){
             echo '用户名不能为空';exit; 
         }
-        if(!isset($data['password'])||empty($data['password'])){
+        if(!input('password')){
             echo '密码不能为空';exit; 
         }
-        $map['name|tel|email']=$data['username'];
+        $map['name|tel|email']=input('username');
         $userInfo= db('Admin')->where($map)->find();
         if(empty($userInfo)){
             echo '用户不存在';exit; 
@@ -56,7 +55,7 @@ class Auth extends Controller{
         if($userInfo['status']!=1){
             echo '用户状态异常';exit; 
         }
-        if(md5($data['password'])!=$userInfo['password']){
+        if(md5(input('password'))!=$userInfo['password']){
             echo '用户名或密码错误';exit; 
         }
         unset($userInfo['password']);
@@ -66,8 +65,8 @@ class Auth extends Controller{
             'inc'           =>$userInfo['inc']+1,
             'last_logintime'=>time(),
             'last_ip'       => $this->request->ip(),
-        );
-        if(!db("Admin")->where(array("id"=>$userInfo['id']))->update($updata)){            
+        );        
+        if(!db("Admin")->where("id",'=',$userInfo['id'])->update($updata)){            
             session(null);
             cookie(null);
             echo '系统繁忙';exit; 
@@ -88,8 +87,8 @@ class Auth extends Controller{
      */
     public function addLog($type=0,$db='',$content=''){
         $map=array(
-            'user_id'   => session('user.id'),
-            'add_time'  =>date("Y-m-d H:i:s", time()),
+            'user_id'   =>session('user.id'),
+            'add_time'  =>time(),
             'type'      =>$type,
         );
         if($type==0){
@@ -101,7 +100,10 @@ class Auth extends Controller{
             $map['db']      =$db;
             $map['content'] =$content;
         }
-        db("Log")->insert($map);
+        if(db("Log")->insert($map)){
+            return TRUE;
+        }
+        return FALSE;
     }
     
     /*
@@ -132,7 +134,7 @@ class Auth extends Controller{
      * 
      * @return #
      */
-    public function ckeckAuth($level='',$role_id=''){         
+    public function ckeckAuth($level=0,$role_id=''){         
         if($level && session('nodeList_s')){
             return session('nodeList_s');
         }else if(($level=='' || $level==0) && session('nodeList_t')){
@@ -144,24 +146,13 @@ class Auth extends Controller{
             $nodes  =$this->checkRole(session("authId"),$role_id); 
             foreach($nodes as $vo){
                 $node[]     =$vo['node_id'];
-            }
-            $map['id']      =array("in",implode(",",$node));
-        }
-        
-        $map['status']  =1;
-        if($level==1){
-            $map['level']   =$level;            //次级节点
-        }else if($level==2){
-            $map['level']   =array("lt",10);    //所有权限下的节点
-        }else{
-            $map['level']   =0;                 //顶级节点
-        }
+            }            
+            $map[]      =['id'=>$node];
+        }        
+        $map[]  =['status','=',1];
+        $map[]  =$level==2?['level','<',10]:['level','=',$level];
         $nodeList   =db("Node")->where($map)->order("ord asc")->select(); 
-        if($level){
-            session('nodeList_s',$nodeList);
-        }else{
-            session("nodeList_t",$nodeList);
-        }
+        $level?session('nodeList_s',$nodeList):session("nodeList_t",$nodeList);
         return $nodeList;
     }
     
@@ -175,7 +166,7 @@ class Auth extends Controller{
             '操作系统'=>PHP_OS,
             '运行环境'=>$_SERVER["SERVER_SOFTWARE"],
             'PHP运行方式'=>php_sapi_name(),
-            'ThinkPHP版本'=>\think\facade\App::version() .' [ <a href="http://thinkphp.cn" target="_blank">查看最新版本</a> ]',
+            'ThinkPHP版本'=>\think\facade\App::version() ,
             '上传附件限制'=>ini_get('upload_max_filesize'),
             '执行时间限制'=>ini_get('max_execution_time').'秒',
             '服务器时间'=>date("Y年n月j日 H:i:s"),
@@ -201,9 +192,8 @@ class Auth extends Controller{
             session(null);
             session_destroy();            
             $this->redirect('index');
-        } else {
-            $this->error('已经登出！');
-        }
+        } 
+        return json(jsonData('已经登出！',300));
     }
     
     /*

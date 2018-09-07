@@ -134,6 +134,31 @@ if(!function_exists('code')){
         }
         //解密
         $value	=base64_decode(substr(substr($value,6),0,strlen(substr($value,6))-1));
-        return  $value^$key;
+        return  $value;
+    }
+}
+
+/*
+ * Json弹窗返回数据参数
+ * 
+ * @param str $content 弹窗内容
+ * @param int $status  状态，默认200 ，提示成功，不带关闭
+ * @param int $status  状态，201，提示成功，带关闭
+ * @param int $status  状态，300，提示失败，不带关闭
+ * @param int $status  状态，301，提示失败，带关闭
+ * 
+ * @return array $data;
+ */
+if(!function_exists('jsonData')){
+    function jsonData($content='操作成功',$status=200){
+        $data['statusCode']     =200;
+        $data['message']        =$content;  
+        $data['callbackType']   =($status==201)?"closeCurrent":'';
+        $data['statusCode']     =($status==300)?300:200;
+        if($status==301){
+            $data['callbackType']   ="closeCurrent";
+            $data['statusCode']     =300;
+        }
+        return $data;
     }
 }
