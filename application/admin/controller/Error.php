@@ -5,22 +5,16 @@
  * @author Lee<a605333742@gmail.com>
  * @date 2018-08-27
  */
-namespace app\home\controller;
+namespace app\admin\controller;
 
-class Error extends Controller{
-    /*
-     * 默认空操作
-     */
-    public function index(){
-        echo "<img src='/static/admin/img/404.jpg' width='60%' style='text-align:center;'>";exit;
-    }
-    
+class Error{
     /*
      * Dwz默认错误操作
      * 
      * @return #
      */
-    public function _empty(){        
+    public function _empty(){
+        
         echo "<img src='/static/admin/img/404.jpg' width='60%' style='text-align:center;'>";exit;
     }
 }

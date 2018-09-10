@@ -61,6 +61,11 @@
 </html>
 <script>
     $(function(){
+        $(document).keyup(function(event){
+            if(event.keyCode ==13){
+               $("#sub").click();
+            }
+        });
         $("#sub").click(function(){
             var username=$("input[name='username']").val();
             var password=$("input[name='password']").val();

@@ -130,10 +130,10 @@ class Common extends Controller{
      * @return #
      */
     public function index($db='',$sort='id',$sortBy=TRUE){
-        $map = $this->_search($db);        
+        $map = self::_search($db);        
         $map[]  =['status','=',1];
         $model=$db?Db::name($db):Db::name(request()->controller());        
-        $this->_list($model, $map,$sort,$sortBy);       
+        self::_list($model, $map,$sort,$sortBy);       
         return $this->fetch(request()->action());
     }
     

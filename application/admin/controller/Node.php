@@ -93,17 +93,18 @@ class Node extends Common{
         return db('Node')->where('id','=',$id)->update($map);
     }
     
+    /*
+     * 节点删除成功后续操作，删除缓存
+     * 
+     * @return #
+     */
     public function del() {
-        $result=parent::del();        
-        //$data="'".$result."'";
-        var_dump($result->contentType);exit;
-        //var_dump($result->data());exit; 
-        //var_dump($result->data);exit; 
-        var_dump(json_decode($data));exit;         
-        //var_dump($result->toArray());exit;         
-        
-        session('nodeList_s',null);
-        session('nodeList_t',null);
-        
+        $result=parent::del()->getdata();
+        if(isset($result['statusCode'])&&$result['statusCode']==200){
+            session('nodeList_s',null);
+            session('nodeList_t',null);
+            return json(jsonData($result['message']));
+        }
+        return json(jsonData($result['message'],300));
     }
 }
