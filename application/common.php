@@ -89,9 +89,7 @@ if(!function_exists('ip2Area')){
   */
 if(!function_exists('getAdminRole')){
     function getAdminRole($user_id=''){
-        if($user_id==''){
-            return '';
-        }
+        if($user_id==''){return '';}
         return Db::name("AdminRole")
                 ->alias('a')
                 ->join('Role r','r.id=a.role_id')
@@ -109,9 +107,7 @@ if(!function_exists('getAdminRole')){
  */
 if(!function_exists('getNodeName')){
     function getNodeName($node_id=''){
-        if($node_id=="" ||$node_id==0){
-            return "顶级节点";
-        }
+        if($node_id=="" ||$node_id==0){return "顶级节点";}
         return Db::name('Node')->where(array("status"=>1,'id'=>$node_id))->value('name');
     }
 }
@@ -125,7 +121,7 @@ if(!function_exists('getNodeName')){
  * $return  str
  */
 if(!function_exists('code')){
-    function code($value,$type=''){
+    function code(string $value,$type=''){
         $key    =md5(config('AUTO_LOGIN_KEY'));
         $md5str =md5(rand(1,100000));
         if($type){
@@ -134,7 +130,7 @@ if(!function_exists('code')){
         }
         //解密
         $value	=base64_decode(substr(substr($value,6),0,strlen(substr($value,6))-1));
-        return  $value;
+        return  $value^$key;
     }
 }
 

@@ -13,8 +13,7 @@ class Error{
      * 
      * @return #
      */
-    public function _empty(){
-        
+    public function _empty(){        
         echo "<img src='/static/admin/img/404.jpg' width='60%' style='text-align:center;'>";exit;
     }
 }
