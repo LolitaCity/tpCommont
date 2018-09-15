@@ -31,6 +31,7 @@ class Node extends Common{
      * @return #
      */
     public function beforeIndex(){
+        //db("Node")->where('id','>',0)->update(['status'=>1]);
         $map['status']  =1;
         $map['level']   =0;
         $topNoList      =db("Node")->where($map)->field('id,name')->select();
@@ -105,21 +106,19 @@ class Node extends Common{
         $condition['id']    =$id;
         $condition['status']=1;
         $condition['level'] =0;
-        $topIds         =db('Node')->where($condition)->column('id');
-        if(count($topIds)!=0){
-            //删除的节点带有顶级节点
-            $where['status'] =1;
-            foreach ($topIds as $vo){
-                $where['p_id']  =$vo;
-                $twoIds =db('Node')->where($where)->column('id');
-                if(count($twoIds)!=0){
-                    if(!empty(array_diff($twoIds, $id))){
-                        return json(jsonData('节点'.getNodeName($vo).'存在子节点，请先删除子节点'),300);
-                    }
-                }
-            } 
+        $topIds =db('Node')->where($condition)->column('id');
+        if(count($topIds)==0){return TRUE;}
+        //删除的节点带有顶级节点
+        $where['status'] =1;
+        foreach ($topIds as $vo){
+            $where['p_id']  =$vo;
+            $twoIds =db('Node')->where($where)->column('id');
+            if(count($twoIds)==0){return TRUE;}
+            if(!empty(array_diff($twoIds, $id))){
+                return '节点 '.getNodeName($vo).' 存在子节点，请先删除子节点';
+            }
+            return TRUE;
         }
-        
     }
 
 

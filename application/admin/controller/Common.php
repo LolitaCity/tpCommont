@@ -130,8 +130,9 @@ class Common extends Controller{
      * @return #
      */
     public function index($db='',$sort='id',$sortBy=TRUE){
-        $map = self::_search($db);        
+        $map    =self::_search($db);        
         $map[]  =['status','=',1];
+        $sort   =strtolower(request()->controller())=='node'?'path':$sort;
         $model=$db?Db::name($db):Db::name(request()->controller());        
         self::_list($model, $map,$sort,$sortBy);       
         return $this->fetch(request()->action());
@@ -242,6 +243,11 @@ class Common extends Controller{
      * @return #
      */
     public function del(){
+        if(method_exists($this,'beforeDell')){
+            if($this->beforeDell()!==TRUE){
+                return json(jsonData($this->beforeDell(),300));
+            }
+        }
         //删除指定记录
         $dbName =input("db")?input("db",'','code'):request()->controller();
         $model  =Db::name($dbName);        
