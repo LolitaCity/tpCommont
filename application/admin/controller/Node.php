@@ -12,7 +12,8 @@ class Node extends Common{
     protected $listRows;
     protected $url_query='';
     protected $beforeActionList = [
-        'beforeIndex'=>['only'=>'index,show']
+        'beforeIndex'   =>['only'=>'index,show'],
+        'beforeDell'    =>['only'=>'del']
     ];
     /*
      * 构造函数
@@ -93,6 +94,35 @@ class Node extends Common{
         return db('Node')->where('id','=',$id)->update($map);
     }
     
+    /*
+     * 节点删除前判断是否为顶级节点，是否存在子节点
+     * 
+     * @return #
+     */
+    public function beforeDell(){
+        $id= is_array(input('id'))?input('id'):array(input('id','','code'));
+        //提取顶级节点ID
+        $condition['id']    =$id;
+        $condition['status']=1;
+        $condition['level'] =0;
+        $topIds         =db('Node')->where($condition)->column('id');
+        if(count($topIds)!=0){
+            //删除的节点带有顶级节点
+            $where['status'] =1;
+            foreach ($topIds as $vo){
+                $where['p_id']  =$vo;
+                $twoIds =db('Node')->where($where)->column('id');
+                if(count($twoIds)!=0){
+                    if(!empty(array_diff($twoIds, $id))){
+                        return json(jsonData('节点'.getNodeName($vo).'存在子节点，请先删除子节点'),300);
+                    }
+                }
+            } 
+        }
+        
+    }
+
+
     /*
      * 节点删除成功后续操作，删除缓存
      * 
