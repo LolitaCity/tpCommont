@@ -158,3 +158,49 @@ if(!function_exists('jsonData')){
         return $data;
     }
 }
+
+/*
+ * 根据后台用户ID获取用户名
+ * 
+ * @param int admin_id 用户ID
+ * @return str adminName 返回用户名
+ */
+if(!function_exists('getAdminName')){
+    function getAdminName($admin_id){
+        return Db::name('Admin')->where('id','=',$admin_id)->value('name');
+    }
+}
+
+/*
+ * 将时间转为时间戳范围
+ * 
+ * @param str $time 查询的时间
+ * @param str $file 需要查询转换的字段
+ * @return array timestamp
+ */
+if(!function_exists('timeTotimestamp')){
+    function timeTotimestamp($time){
+        $start  =strtotime($time);
+        $end    =$start+3600*24;
+        return [$start,$end];
+    }
+}
+
+/*
+ * 将模糊字段转换为ID
+ * 
+ * @param str $field 被转换的字段
+ * @param str $name 对应的数据库字段
+ * @param str $db 操作的数据库
+ * 
+ * @return str $val 转换后的返回值
+ */
+if(!function_exists('getIds')){
+    function getIds($field='',$name='name',$db='',$val='id'){
+        $map[]  =[$name,"LIKE","%".trim($field)."%"];
+        $map[]  =['status','=',1];
+        $arrIds =Db::name($db)->where($map)->column($val);
+        return $arrIds;
+    }
+}
+  

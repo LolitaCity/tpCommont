@@ -5,12 +5,12 @@
         <div class="pageFormContent" layoutH="58">
             {foreach $oneList as $nList}
                 <div class="unit">
-                    <input type="checkbox" onclick="clickData(this)" id="sel{$nList.id}" name="nodeId[]" value="{$nList.id}"  <?= in_array($nList['id'], $rList) ? "checked" : "" ?>/>{$nList.name|default=''}                   
+                    <input type="checkbox" onclick="clickData(this)" id="sel{$nList.id}" name="nodeId[]" value="{$nList.id}" {if in_array($nList.id,$rList)} checked {/if}/>{$nList.name|default=''}                   
                 </div>
                 <div class="unit">
                     {foreach $twoList as $tList}
                         {eq name="tList.p_id" value="$nList.id"}
-                            &nbsp;　　&nbsp;<input type="checkbox" id="sel{$nList.id}" name="nodeId[]" value="{$tList.id}"  <?= in_array($tList['id'], $rList) ? "checked" : "" ?>/>{$tList.name|default=''}<br/>
+                            &nbsp;　　&nbsp;<input type="checkbox" id="sel{$nList.id}" name="nodeId[]" value="{$tList.id}"  {if in_array($tList.id,$rList)} checked {/if} />{$tList.name|default=''}<br/>
                         {/eq}
                     {/foreach}
                 </div>
@@ -49,10 +49,10 @@
 <script>   
     function clickData(obj){
         var id=$(obj).attr("id");
-       if($(obj).prop("checked") == true) {
-           $("input[id='"+id+"']").prop("checked", true);
-       }else{
-           $("input[id='"+id+"']").prop("checked", false);
-       }
+        if($(obj).prop("checked") == true) {
+            $("input[id='"+id+"']").prop("checked", true);
+        }else{
+            $("input[id='"+id+"']").prop("checked", false);
+        }
     } 
 </script>

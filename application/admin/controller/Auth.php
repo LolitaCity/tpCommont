@@ -64,13 +64,12 @@ class Auth extends Controller{
         $updata=array(
             'inc'           =>$userInfo['inc']+1,
             'last_logintime'=>time(),
-            'last_ip'       => $this->request->ip(),
+            'last_ip'       => $this->request->ip()=="::1"?"127.0.0.1":$this->request->ip(),
         );        
         if(!db("Admin")->where("id",'=',$userInfo['id'])->update($updata)){            
             session(null);
             cookie(null);
             echo '系统繁忙';exit; 
-            
         }
         //登陆成功信息写入日志
         self::addLog(0);

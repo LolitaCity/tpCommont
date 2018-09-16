@@ -58,8 +58,10 @@ class Common extends Controller{
             if (!input($val)|| input($val) == ''){
                 continue ;
             }
-            //特别指定一些字段进行模糊查询
-            if (in_array($val, array_diff($fieldArray,$notLikeArray))){
+            if(strtotime(input($val))!==FALSE){
+                $map[]  =[$val,'between',timeTotimestamp(input($val))];
+            }elseif(in_array($val, array_diff($fieldArray,$notLikeArray))){
+                //特别指定一些字段进行模糊查询
                 $map[]  =[$val,"LIKE",'%'.trim(input($val)).'%'];
             } else {
                 //精确查询
@@ -108,6 +110,7 @@ class Common extends Controller{
         }
         $listRows=input('numPerPage')?input('numPerPage'):20;
         $voList = $model->where($map)->group($countPk)->field($field)->order($order.' '.$sort)->paginate($listRows,false,$param);         
+        //var_dump($model->getLastSql());exit;
         $sortImg =$sort; //排序图标
         $sortAlt =$sort == 'desc' ? '升序排列' : '倒序排列'; //排序提示
         $sort = $sort == 'desc' ? 1 : 0; //排序方式
@@ -379,23 +382,6 @@ class Common extends Controller{
         }
         return json(jsonData('状态修改失败!',300));
     }
-    
-    /*
-     * 将模糊的字段名转换为id字符串列
-     * 
-     * @return str  $ids
-     */
-    public function getIds($field='',$name='name',$db='',$val='id'){        
-        $map[$name]     =array('like',"%".trim($field)."%");
-        $map['status']  =array('neq',0);
-        $model          =Db::name($db);
-        $arr            =$model->where($map)->column($val);
-        $arrIds         =array();
-        foreach($arr as $vo){
-            $arrIds[]   =$vo;             
-        }
-        return [$model=>$arr];
-    } 
     
     /*
      * 修改和删除数据时，如果有图片，则把图片存在过期图片表中

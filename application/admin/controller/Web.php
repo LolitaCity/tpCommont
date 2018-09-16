@@ -55,16 +55,13 @@ class Web extends Common{
         $map['level']   =0;
         $map1['status'] =1;
         $map1['level']  =1;
-        $noeNodeList=db('Node')->where($map)->select();          //顶级节点
-        $twoNodeList=db('Node')->where($map1)->select();         //次级节点
-        $roleList   =$this->auth->checkRole('',input("role_id",'','code')); 
-        $roles      =array();
-        foreach($roleList as $vo){
-            $roles[]=$vo['node_id'];
-        }
+        $field      ="id,name,level,p_id,status";
+        $noeNodeList=db('Node')->where($map)->field($field)->select();          //顶级节点
+        $twoNodeList=db('Node')->where($map1)->field($field)->select();         //次级节点
+        $roleList   =$this->auth->checkRole('',input("role_id",'','code'));
         $this->assign("oneList",$noeNodeList);
         $this->assign("twoList",$twoNodeList);
-        $this->assign("rList",$roles);
+        $this->assign("rList",$roleList);
         $this->assign("role_id",input("role_id",'','code'));
         return $this->fetch();
     }
