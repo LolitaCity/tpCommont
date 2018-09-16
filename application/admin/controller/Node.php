@@ -31,7 +31,6 @@ class Node extends Common{
      * @return #
      */
     public function beforeIndex(){
-        //db("Node")->where('id','>',0)->update(['status'=>1]);
         $map['status']  =1;
         $map['level']   =0;
         $topNoList      =db("Node")->where($map)->field('id,name')->select();

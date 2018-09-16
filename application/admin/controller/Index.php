@@ -22,6 +22,7 @@ class Index extends Common{
         $this->db   = db('Node');
         $this->authModel=new Auth();
     }
+    
     /*
      * 构造函数
      * 

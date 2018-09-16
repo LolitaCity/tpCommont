@@ -47,9 +47,7 @@ class Common extends Controller{
      *
      * @return array
      */
-    public function _search($name=''){
-        //生成查询条件
-        $model      =$name?Db::name($name):Db::name(request()->controller());        
+    public function _search($model=''){
         $map        =array ();
         $fieldArray =$model->gettablefields()?$model->gettablefields():array();
         //进行精确查询的字段
@@ -83,10 +81,10 @@ class Common extends Controller{
      *
      * @return array    #
      */
-    public function _list($model, $map, $sortBy='',$asc =TRUE, $countPk="id", $field="*") {        
+    public function _list($model, $map, $sortBy='id',$asc =TRUE, $countPk="id", $field="*") {        
         //验证传参的有效性
         $asc = $asc?true:false;
-        $countPk = $model->getPk()?$model->getPk():"id";
+        $countPk = $model->getPk()?$model->getPk():$countPk;
         //排序字段 默认为主键名
         $orderSign  =TRUE;
         $order  =input('_order');
@@ -130,11 +128,11 @@ class Common extends Controller{
      * @return #
      */
     public function index($db='',$sort='id',$sortBy=TRUE){
-        $map    =self::_search($db);        
+        $model  =$db?Db::name($db):Db::name(request()->controller());        
+        $map    =self::_search($model);        
         $map[]  =['status','=',1];
         $sort   =strtolower(request()->controller())=='node'?'path':$sort;
-        $model=$db?Db::name($db):Db::name(request()->controller());        
-        self::_list($model, $map,$sort,$sortBy);       
+        self::_list($model,$map,$sort,$sortBy);       
         return $this->fetch(request()->action());
     }
     
