@@ -1,0 +1,55 @@
+<style>    
+    #testFileInput2{
+        height: 30px; width: 102px; margin-left: 128px;
+    }
+    #preview1, #topPhpto
+        {  
+            width:150px;  
+            padding-left: 65px;padding-top: 15px; border-top-width: 5px;
+        }
+</style>
+<div class="pageContent">	
+    <form method="post" action="/admin/user/edit?callbackType=closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+        <input type="hidden"  id='hidden'  name='id' value="{$vo.id|default=''|default=''}"/>
+            <div class="pageFormContent" layoutH="58">
+                <div class="unit">
+                    <label>用户名：</label>
+                    <input type="text" name="name" size="25"  value="{$vo.name|default=''}" class='required alphanumeric' />
+                </div>
+                <div class="unit">
+                    <label>昵称：</label>
+                    <input type="text" name="nickname" size="25"  value="{$vo.nickname|default=''}" class='required' />
+                </div>
+                <div class="unit">
+                    <label>密码：</label>
+                    <input type="password" id="cp_newPassword" name="password" size="25" minlength="6" maxlength="20" {if isset($vo['id'])&& $vo['id']!=''} class="alphanumeric" {else/} class="required alphanumeric" {/if}/>
+                </div>
+                <div class="unit">
+                    <label>重复输入密码：</label>
+                    <input type="password" name="rnewPassword" size="25" equalTo="#cp_newPassword" {if isset($vo['id'])&& $vo['id']!=''} class="alphanumeric" {else/} class="required alphanumeric" {/if}/>
+                </div>
+                <div class="unit">
+                    <label>电话：</label>
+                    <input type="text" name="tel" size="25"  value="{$vo.tel|default=''}" class='phone' />
+                </div>
+                <div class="unit">
+                    <label>邮箱：</label>
+                    <input type="text" name="email" size="25"  value="{$vo.email|default=''}" class='email' />
+                </div>
+                <div class="unit">
+                    <label>角色：</label>
+                    <select class="" name="role_id" id='section' style="width: 101px;">
+                        {foreach $rlist as $role}
+                            <option value="{$role['id']|default=''}" {if $role['id']==$Think.session.authId} selected {/if} >{$role.name}</option>                           
+                        {/foreach}
+                    </select>
+                </div>
+            </div> 
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>	
+</div>

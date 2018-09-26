@@ -110,7 +110,6 @@ class Common extends Controller{
         }
         $listRows=input('numPerPage')?input('numPerPage'):20;
         $voList = $model->where($map)->group($countPk)->field($field)->order($order.' '.$sort)->paginate($listRows,false,$param);         
-        //var_dump($model->getLastSql());exit;
         $sortImg =$sort; //排序图标
         $sortAlt =$sort == 'desc' ? '升序排列' : '倒序排列'; //排序提示
         $sort = $sort == 'desc' ? 1 : 0; //排序方式
@@ -135,7 +134,7 @@ class Common extends Controller{
         $map    =self::_search($model);        
         $map[]  =['status','=',1];
         $sort   =strtolower(request()->controller())=='node'?'path':$sort;
-        self::_list($model,$map,$sort,$sortBy);       
+        self::_list($model,$map,$sort,$sortBy);
         return $this->fetch(request()->action());
     }
     
