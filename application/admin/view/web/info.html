@@ -104,7 +104,7 @@
 </table>
 <div class="formBar">
     <ul id="editWeb">
-        <li><div class="buttonActive"><div class="buttonContent"><a href="{:url('Web/show',array('id'=>code($webInfo['id']|default='1',1),'sign'=>code('1',1)))}" target="dialog" mask="true" width='800' height='600'><button>编辑</button></a ></div></div></li>       
+        <li><div class="buttonActive"><div class="buttonContent"><a href="{:url('Web/show',array('id'=>code($webInfo['id']?$webInfo['id']:'1',1),'sign'=>code('1',1)))}" target="dialog" mask="true" width='800' height='600'><button>编辑</button></a ></div></div></li>       
     </ul>
 </div>
 <style type="text/css" media="screen">
