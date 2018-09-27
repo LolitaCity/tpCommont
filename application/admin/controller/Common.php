@@ -243,9 +243,9 @@ class Common extends Controller{
      * @return #
      */
     public function del(){
-        if(method_exists($this,'beforeDell')){
-            if($this->beforeDell()!==TRUE){
-                return json(jsonData($this->beforeDell(),300));
+        if(method_exists($this,'beforeDel')){
+            if($this->beforeDel()!==TRUE){
+                return json(jsonData($this->beforeDel(),300));
             }
         }
         //删除指定记录

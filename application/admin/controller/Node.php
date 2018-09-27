@@ -13,7 +13,7 @@ class Node extends Common{
     protected $url_query='';
     protected $beforeActionList = [
         'beforeIndex'   =>['only'=>'index,show'],
-        'beforeDell'    =>['only'=>'del']
+        'beforeDel'     =>['only'=>'del']
     ];
     /*
      * 构造函数
@@ -99,7 +99,7 @@ class Node extends Common{
      * 
      * @return #
      */
-    public function beforeDell(){
+    public function beforeDel(){
         $id= is_array(input('id'))?input('id'):array(input('id','','code'));
         //提取顶级节点ID
         $condition['id']    =$id;

@@ -134,23 +134,24 @@ class Auth extends Controller{
      * @return #
      */
     public function ckeckAuth($level=0,$role_id=''){         
-        if($level && session('nodeList_s')){
-            return session('nodeList_s');
-        }else if(($level=='' || $level==0) && session('nodeList_t')){
-            return session("nodeList_t");
-        }
+//        if($level && session('nodeList_s')){
+//            return session('nodeList_s');
+//        }else if(($level=='' || $level==0) && session('nodeList_t')){
+//            return session("nodeList_t");
+//        }
+        
         //默认admin拥有所有节点权限
         if(session(config('USER_AUTH_KEY'))!=1){
             $node=array();
             $nodes  =$this->checkRole(session("authId"),$role_id); 
             foreach($nodes as $vo){
-                $node[]     =$vo['node_id'];
+                $node[] =$vo;
             }            
-            $map[]      =['id'=>$node];
+            $map[]  =['id',"IN", implode(',',$node)];
         }        
         $map[]  =['status','=',1];
         $map[]  =$level==2?['level','<',10]:['level','=',$level];
-        $nodeList   =db("Node")->where($map)->order("ord asc")->select(); 
+        $nodeList   =db("Node")->where($map)->order("ord asc")->select();
         $level?session('nodeList_s',$nodeList):session("nodeList_t",$nodeList);
         return $nodeList;
     }

@@ -8,7 +8,7 @@
                         用户名：<input type="text" name="name"  value="{$Think.post.name}"/>
                     </td>
                     <td>
-                        昵称：<input type="text" name="nickname" value="{$Think.post.nickname}"/>
+                        昵称：<input type="text" name="nick_name" value="{$Think.post.nick_name}"/>
                     </td>
                     <td>
                         电话：<input type="text" name="tel" value="{$Think.post.tel}"/>
@@ -29,9 +29,9 @@
 <div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">            
-            <li><a class="add" href="{:url('User/show',array('sign'=>code('2',1),'db'=>code('Admin',1)))}" target="dialog" mask="true" width='600' height='600'><span>添加用户</span></a></li>                      
+            <li><a class="add" href="{:url('User/show',array('sign'=>code('2',1),'db'=>code('Admin',1)))}" target="dialog" mask="true" width='600' height='400'><span>添加用户</span></a></li>                      
             <li><a title="确实要删除这些记录吗?" target="selectedTodo" rel="id[]" href="{:url('User/del',array('db'=>code('Admin',1)))}" class="delete"><span>批量删除</span></a></li>                  
-            <li><a class="edit" href="/admin/user/show/id/{l_id}/sign/<?php echo code('2',1);?>/db/<?php echo code('Admin',1)?>" target="dialog" mask="true" warn="请选择一条信息" width='600' height='600'><span>修改用户</span></a></li>
+            <li><a class="edit" href="/admin/user/show/id/{l_id}/sign/<?php echo code('2',1);?>/db/<?php echo code('Admin',1)?>" target="dialog" mask="true" warn="请选择一条信息" width='600' height='400'><span>修改用户</span></a></li>
             <li class="line">line</li>
         </ul>
     </div>
@@ -59,7 +59,7 @@
                     <td><input name="id[]" value="{$vo.id}" type="checkbox"></td>
                     <td>{$k+1}</td>
                     <td>{$vo.name}</td>
-                    <td>{$vo.nickname|default=''}</td>
+                    <td>{$vo.nick_name|default=''}</td>
                     <td>{$vo.tel}</td>
                     <td>{$vo.email}</td>
                     {eq name="Think.session.authId" value="1"}
@@ -67,7 +67,7 @@
                         <td>{$vo.last_logintime|date="Y-m-d H:i:s"}</td>
                    {/eq}
                     <td>{$vo.id|getAdminRole}</td>
-                    <td>{$vo.add_time|substr=0,10}</td>
+                    <td>{$vo.add_time|date='Y-m-d H:i:s'}</td>
                     <td>
                         <a title="确定删除该用户" target="ajaxTodo" href="{:url('User/del',array('id'=>code($vo['id'],1),'db'=>code('Admin',1)))}" style='color:red'>删除</a>                       
                     </td>
