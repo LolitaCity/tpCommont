@@ -9,5 +9,6 @@ return array(
     'VAR_PAGE'          =>'pageNum',            //设置分页参数名称,默认为p，如为p不设置
     'AUTO_LOGIN_KEY'    =>md5('liyujin'),       //移位或加密密钥
     //自定义错误页面
-
+    //url不区分大小写
+    'url_convert'   =>false,
 );

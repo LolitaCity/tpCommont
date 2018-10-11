@@ -10,7 +10,7 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
-/**
+/***
  * 公共函数库
  * 
  * @author Lee<a605333742@gmail.com>
@@ -18,7 +18,7 @@
  */
 use think\Db;
 
-/*
+/**
  * 根据ip获取ip归属地区信息
  *
  * @param string $ip  输入的ip
@@ -80,7 +80,7 @@ if(!function_exists('ip2Area')){
     }
 }
     
- /*
+ /**
   * 根据id查询用户角色
   * 
   * @param user_id   用户id
@@ -98,7 +98,7 @@ if(!function_exists('getAdminRole')){
     }
 }
 
-/*
+/**
  * 根据节点id获取节点名
  * 
  * @param   $node_id    节点id
@@ -112,7 +112,7 @@ if(!function_exists('getNodeName')){
     }
 }
 
-/*
+/**
  * 异位或加密解密
  * 
  * @param   $value  加密的字符
@@ -134,7 +134,7 @@ if(!function_exists('code')){
     }
 }
 
-/*
+/**
  * Json弹窗返回数据参数
  * 
  * @param str $content 弹窗内容
@@ -159,7 +159,7 @@ if(!function_exists('jsonData')){
     }
 }
 
-/*
+/**
  * 根据后台用户ID获取用户名
  * 
  * @param int admin_id 用户ID
@@ -171,7 +171,7 @@ if(!function_exists('getAdminName')){
     }
 }
 
-/*
+/**
  * 将时间转为时间戳范围
  * 
  * @param str $time 查询的时间
@@ -186,7 +186,7 @@ if(!function_exists('timeTotimestamp')){
     }
 }
 
-/*
+/**
  * 将模糊字段转换为ID
  * 
  * @param str $field 被转换的字段
@@ -202,5 +202,47 @@ if(!function_exists('getIds')){
         $arrIds =Db::name($db)->where($map)->column($val);
         return $arrIds;
     }
+}
+
+/**
+ * 递归删除目录
+ * 
+ * @param $dir 指定要删除的目录
+ * 
+ * @return #
+ */
+if(!function_exists('delDir')){
+    function delDir($dir) {
+        $dh = opendir($dir);
+        while ($file = readdir($dh)) {
+            if ($file != "." && $file != "..") {
+                $fullpath = $dir . "/" . $file;
+                if (!is_dir($fullpath)) {
+                    unlink($fullpath);
+                } else {
+                    delDir($fullpath);
+                }
+            }
+        }
+    }
+}
+
+/**
+ * 判断目录是否为空
+ * 
+ * @param	string	$ddir	指定目录
+ * @param	bool	$path	删除指定目录还是删除指定目录下的所有子目录
+ * 
+ * @return  void
+*/
+function is_empty_dir($ddir){
+    $d=opendir($ddir);
+    $i=0;
+    while($a=readdir($d)){
+            $i++;
+    }
+    closedir($d);
+    if($i>2){return false;}
+    return true;
 }
   

@@ -1,3 +1,4 @@
+<?php /*a:2:{s:75:"/Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html";i:1539270658;s:74:"/Applications/MAMP/htdocs/tpCommont/application/admin/view/index/main.html";i:1537097887;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -66,12 +67,12 @@ $(function(){
                 <a class="logo" href="__CONTROLLER__">标志</a>
                 <ul class="nav">
                     <eq name="Think.session.authId" value="1">
-                        <li><a href="{:url('auth/systemInfo')}" target="dialog" height="420" width="490">系统消息</a></li>                       
+                        <li><a href="<?php echo url('auth/systemInfo'); ?>" target="dialog" height="420" width="490">系统消息</a></li>                       
                         <li><a href="__MODULE__/Bak/backup">数据库备份</a></li>
                     </eq>
-                    <li><a href="{:url('system/delCache')}" target="ajaxTodo">清除缓存</a></li>
-                    <li><a href="{:url('system/changePwd')}" target="dialog" width="600">修改密码</a></li>
-                    <li><a href="{:url('auth/loginOut')}" onclick="if (confirm('确定退出系统?')) return true; else return false;">退出</a></li>
+                    <li><a href="<?php echo url('system/delCache'); ?>" target="ajaxTodo">清除缓存</a></li>
+                    <li><a href="<?php echo url('system/changePwd'); ?>" target="dialog" width="600">修改密码</a></li>
+                    <li><a href="<?php echo url('auth/loginOut'); ?>" onclick="if (confirm('确定退出系统?')) return true; else return false;">退出</a></li>
                 </ul>
                 <ul class="themeList" id="themeList">
                     <li theme="default"><div class="selected">蓝色</div></li>
@@ -91,7 +92,23 @@ $(function(){
             </div>
             <div id="sidebar">
                 <div class="toggleCollapse"><h2>主菜单</h2><div>Shrink</div></div>
-                    {include file="index:main"/}
+                    <div class="accordion" fillSpace="sidebar">                      
+    <div class="accordionContent">
+        <ul class="tree treeFolder">
+            <?php foreach($oneNodeList as $one): ?>
+                <li><a <?php if(!(empty($one['action']) || (($one['action'] instanceof \think\Collection || $one['action'] instanceof \think\Paginator ) && $one['action']->isEmpty()))): ?> href="<?php echo url($one['controller'].'/'.$one['action']); ?>" rel="<?php echo htmlentities($one['controller']); ?>"  target="navTab" <?php endif; ?> ><?php echo htmlentities($one['name']); ?></a>
+                    <ul>                        
+                        <?php foreach($twoNodeList as $two): if(($two['p_id'] == $one['id'])): ?>
+                                <li>
+                                    <a href="<?php echo url($two['controller'].'/'.$two['action']); ?>" rel="<?php echo htmlentities($two['controller']); ?>"  target="navTab"><?php echo htmlentities($two['name']); ?></a>
+                                </li>
+                                <?php endif; endforeach; ?>
+                    </ul>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>                    
+</div>
             </div>
         </div>
         <div id="container">
@@ -122,7 +139,7 @@ $(function(){
                                                 <td>时间:<?php echo date('Y-m-d h:i:s',time()); ?></td>
                                             </tr>
                                             <tr>
-                                                <td style="font-weight: bold; font-size: 16px">{$Think.session.user.name}</td>
+                                                <td style="font-weight: bold; font-size: 16px"><?php echo htmlentities(app('session')->get('user.name')); ?></td>
                                             </tr>
                                             <tr>
                                                 <td>欢迎进入管理中心!</td>
@@ -141,24 +158,24 @@ $(function(){
                             <table cellspacing=0 cellpadding=2 width="95%" align=center border=0 id="info" style="font-size:20px">
                                 <tr>
                                     <td align=right width=100>用户:</td>
-                                    <td style="color: #880000">{$Think.session.user.name}</td>
+                                    <td style="color: #880000"><?php echo htmlentities(app('session')->get('user.name')); ?></td>
                                 </tr>
                                 <tr>
                                     <td align=right width=100>角色:</td>
-                                    <td style="color: #880000">{$Think.session.authId|getAdminRole}</td>
+                                    <td style="color: #880000"><?php echo htmlentities(getAdminRole(app('session')->get('authId'))); ?></td>
                                 </tr>
                                 <tr>
                                     <td align=right>注册时间:</td>
                                     
-                                    <td style="color: #880000">{$Think.session.user.add_time|date="Y-m-d H:i"}</td>
+                                    <td style="color: #880000"><?php echo htmlentities(date("Y-m-d H:i",!is_numeric(app('session')->get('user.add_time'))? strtotime(app('session')->get('user.add_time')) : app('session')->get('user.add_time'))); ?></td>
                                 </tr>
                                 <tr>
                                     <td align=right>登陆次数:</td>
-                                    <td style="color: #880000">{$Think.session.user.inc}</td>
+                                    <td style="color: #880000"><?php echo htmlentities(app('session')->get('user.inc')); ?></td>
                                 </tr>
                                 <tr>
                                     <td align=right>上次登录时间:</td>
-                                    <td style="color: #880000">{$Think.session.user.last_logintime|date="Y-m-d H:i"}</td>
+                                    <td style="color: #880000"><?php echo htmlentities(date("Y-m-d H:i",!is_numeric(app('session')->get('user.last_logintime'))? strtotime(app('session')->get('user.last_logintime')) : app('session')->get('user.last_logintime'))); ?></td>
                                 </tr>
                             </table>                            
                         </div>

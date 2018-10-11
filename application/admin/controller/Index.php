@@ -8,6 +8,8 @@
 
 namespace app\admin\controller;
 
+use think\config;
+
 class Index extends Common{
     protected $db;
     protected $listRows='listRows';
@@ -24,7 +26,7 @@ class Index extends Common{
     }
     
     /*
-     * 构造函数
+     * 系统首页
      * 
      * @return #
      */

@@ -54,4 +54,44 @@ class System extends Common{
         $this->assign('type',$type);
         $this->_list($model,$map);
     }
+    
+    /**
+     * 清除缓存
+     * 
+     * @return #
+     */
+    public function delCache(){
+        delDir(app()->getRuntimePath());
+        if(is_empty_dir(app()->getRuntimePath().'cache/')==FALSE){
+            return json(jsonData('缓存清理失败',300));
+        }
+        session('nodeList_s',null);
+        session('nodeList_t',null);
+        $content= session('user.name').'清除了缓存文件';
+        $this->auth->addLog(1,'',$content);
+        return json(jsonData('缓存清理成功',200));
+    }
+    
+    /**
+     * 修改自己的密码
+     * 
+     * @return #
+     */
+    public function changepwd(){
+        if(input('newPassword')==''){
+            return $this->fetch();
+        }
+        $userInfo= db("Admin")->find(session("authId"));
+        if($userInfo['password']!=md5(input('oldPassword','','md5'))){
+            return json(jsonData('原密码错误',300));
+        }
+        if(!db("Admin")->update(['id'=> session('authId'),'password'=>md5(input('newPassword','','md5'))])){
+            return json(jsonData('密码修改失败',300));
+        }
+        cookie(null);
+        session(null);
+        session_destroy();
+        $this->redirect('index');
+        //return json(jsonData('密码修改成功',201));
+    } 
 }

@@ -1,0 +1,1466 @@
+---------------------------------------------------------------
+[ 2018-10-11T23:17:27+08:00 ] ::1 POST dev.tp5m.com/admin/system/delCache.html
+[运行时间：0.106080s] [吞吐率：9.43req/s] [内存消耗：2,850.23kb] [文件加载：74]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://dev.tp5m.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000411s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003903s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000772s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000392s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_log` [ RunTime:0.005448s ]
+[ sql ] [ SQL ] INSERT INTO `mh_log` (`user_id` , `add_time` , `type` , `db` , `content`) VALUES (1 , 1539271047 , 1 , '' , 'admin清除了缓存文件') [ RunTime:0.000810s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:17:30+08:00 ] ::1 GET dev.tp5m.com/admin/system/changePwd.html?_=1539271030556
+[运行时间：0.077824s] [吞吐率：12.85req/s] [内存消耗：2,928.16kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539271030556',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000433s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003562s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000529s ]
+[ error ] [0]模板文件不存在:/Applications/MAMP/htdocs/tpCommont/application/admin/view/system/changepwd.html[/Applications/MAMP/htdocs/tpCommont/thinkphp/library/think/view/driver/Think.php:86]
+---------------------------------------------------------------
+[ 2018-10-11T23:17:36+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.096515s] [吞吐率：10.36req/s] [内存消耗：3,204.38kb] [文件加载：79]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html [ array (
+  0 => 'oneNodeList',
+  1 => 'twoNodeList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000389s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003756s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000571s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000358s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 1 ORDER BY `ord` ASC [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.002587s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.000470s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:17:45+08:00 ] ::1 GET dev.tp5m.com/admin/system/changepwd.html?_=1539270406596
+[运行时间：0.237806s] [吞吐率：4.21req/s] [内存消耗：2,948.64kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'x-requested-with' => 'XMLHttpRequest',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=09e9f8cb5107f56aace377ff2b5bc9e0; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539270406596',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000916s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.019248s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.001576s ]
+[ error ] [0]模板文件不存在:/Applications/MAMP/htdocs/tpCommont/application/admin/view/system/changepwd.html[/Applications/MAMP/htdocs/tpCommont/thinkphp/library/think/view/driver/Think.php:86]
+---------------------------------------------------------------
+[ 2018-10-11T23:17:46+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.178637s] [吞吐率：5.60req/s] [内存消耗：2,987.46kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=09e9f8cb5107f56aace377ff2b5bc9e0; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html [ array (
+  0 => 'oneNodeList',
+  1 => 'twoNodeList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001083s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.015790s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.006929s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000992s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 1 ORDER BY `ord` ASC [ RunTime:0.001377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.010438s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.005002s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:17:57+08:00 ] ::1 GET dev.tp5m.com/admin/system/changePwd.html?_=1539271066818
+[运行时间：0.249046s] [吞吐率：4.02req/s] [内存消耗：2,948.64kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'x-requested-with' => 'XMLHttpRequest',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=09e9f8cb5107f56aace377ff2b5bc9e0; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539271066818',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002186s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.013832s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.002009s ]
+[ error ] [0]模板文件不存在:/Applications/MAMP/htdocs/tpCommont/application/admin/view/system/changepwd.html[/Applications/MAMP/htdocs/tpCommont/thinkphp/library/think/view/driver/Think.php:86]
+---------------------------------------------------------------
+[ 2018-10-11T23:18:22+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.153958s] [吞吐率：6.50req/s] [内存消耗：2,987.46kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=09e9f8cb5107f56aace377ff2b5bc9e0; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html [ array (
+  0 => 'oneNodeList',
+  1 => 'twoNodeList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001050s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.014781s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.001316s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001686s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 1 ORDER BY `ord` ASC [ RunTime:0.001082s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.006988s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.005830s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:18:25+08:00 ] ::1 GET dev.tp5m.com/admin/system/changePwd.html?_=1539271103142
+[运行时间：0.157943s] [吞吐率：6.33req/s] [内存消耗：3,038.20kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'x-requested-with' => 'XMLHttpRequest',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=09e9f8cb5107f56aace377ff2b5bc9e0; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539271103142',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/system/changepwd.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000703s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.007030s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000930s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:18:31+08:00 ] ::1 GET dev.tp5m.com/admin/system/changePwd.html?_=1539271056975
+[运行时间：0.086492s] [吞吐率：11.56req/s] [内存消耗：2,841.12kb] [文件加载：75]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539271056975',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/system/changepwd.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000367s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003646s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000561s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:19:03+08:00 ] ::1 POST dev.tp5m.com/admin/System/change_Pwd?callbackType=closeCurrent
+[运行时间：0.073433s] [吞吐率：13.62req/s] [内存消耗：2,948.02kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'content-length' => '61',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://dev.tp5m.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'callbackType' => 'closeCurrent',
+  'oldPassword' => '123456',
+  'newPassword' => 'admin888',
+  'rnewPassword' => 'admin888',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000702s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.004241s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.001205s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:19:14+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.096955s] [吞吐率：10.31req/s] [内存消耗：2,987.48kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html [ array (
+  0 => 'oneNodeList',
+  1 => 'twoNodeList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000614s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.002696s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000507s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000352s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 1 ORDER BY `ord` ASC [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.004547s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.000397s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:19:18+08:00 ] ::1 GET dev.tp5m.com/admin/system/changePwd.html?_=1539271154605
+[运行时间：0.111029s] [吞吐率：9.01req/s] [内存消耗：3,038.18kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539271154605',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/system/changepwd.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000480s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.005879s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000825s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:19:37+08:00 ] ::1 POST dev.tp5m.com/admin/System/change_Pwd?callbackType=closeCurrent
+[运行时间：0.079328s] [吞吐率：12.61req/s] [内存消耗：2,948.02kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'content-length' => '61',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://dev.tp5m.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'callbackType' => 'closeCurrent',
+  'oldPassword' => '123456',
+  'newPassword' => 'admin888',
+  'rnewPassword' => 'admin888',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000364s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003709s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000648s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:19:51+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.096452s] [吞吐率：10.37req/s] [内存消耗：2,987.48kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html [ array (
+  0 => 'oneNodeList',
+  1 => 'twoNodeList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000461s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003778s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000536s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000354s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 1 ORDER BY `ord` ASC [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.006350s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.000450s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:19:53+08:00 ] ::1 GET dev.tp5m.com/admin/system/changePwd.html?_=1539271191868
+[运行时间：0.111650s] [吞吐率：8.96req/s] [内存消耗：3,038.18kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539271191868',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/system/changepwd.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000402s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.004473s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000720s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:20:13+08:00 ] ::1 POST dev.tp5m.com/admin/System/changePwd?callbackType=closeCurrent
+[运行时间：0.100904s] [吞吐率：9.91req/s] [内存消耗：3,026.91kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'content-length' => '61',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://dev.tp5m.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'callbackType' => 'closeCurrent',
+  'oldPassword' => '123456',
+  'newPassword' => 'admin888',
+  'rnewPassword' => 'admin888',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000364s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003693s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.001289s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000406s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.003053s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000788s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000400s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `password` = '0b77520f93de693bdab0060746e38165'  WHERE  `id` = 1 [ RunTime:0.002466s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:20:13+08:00 ] ::1 GET dev.tp5m.com/admin/admin/index.html
+[运行时间：0.040010s] [吞吐率：24.99req/s] [内存消耗：1,692.00kb] [文件加载：60]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-10-11T23:21:22+08:00 ] ::1 POST dev.tp5m.com/admin/System/changePwd?callbackType=closeCurrent
+[运行时间：0.047189s] [吞吐率：21.19req/s] [内存消耗：1,950.19kb] [文件加载：70]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'content-length' => '61',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://dev.tp5m.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'callbackType' => 'closeCurrent',
+  'oldPassword' => '123456',
+  'newPassword' => 'admin888',
+  'rnewPassword' => 'admin888',
+)
+---------------------------------------------------------------
+[ 2018-10-11T23:21:22+08:00 ] ::1 GET dev.tp5m.com/admin/Auth/index.html
+[运行时间：0.046820s] [吞吐率：21.36req/s] [内存消耗：2,011.70kb] [文件加载：70]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/auth/index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-10-11T23:21:23+08:00 ] ::1 POST dev.tp5m.com/admin/System/changePwd?callbackType=closeCurrent
+[运行时间：0.050294s] [吞吐率：19.88req/s] [内存消耗：1,950.19kb] [文件加载：70]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'content-length' => '61',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://dev.tp5m.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'callbackType' => 'closeCurrent',
+  'oldPassword' => '123456',
+  'newPassword' => 'admin888',
+  'rnewPassword' => 'admin888',
+)
+---------------------------------------------------------------
+[ 2018-10-11T23:21:23+08:00 ] ::1 GET dev.tp5m.com/admin/Auth/index.html
+[运行时间：0.049215s] [吞吐率：20.32req/s] [内存消耗：1,873.05kb] [文件加载：68]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/auth/index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-10-11T23:21:26+08:00 ] ::1 GET dev.tp5m.com/admin/system/changePwd.html?_=1539271191869
+[运行时间：0.065708s] [吞吐率：15.22req/s] [内存消耗：1,950.54kb] [文件加载：70]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539271191869',
+)
+---------------------------------------------------------------
+[ 2018-10-11T23:21:26+08:00 ] ::1 GET dev.tp5m.com/admin/Auth/index.html
+[运行时间：0.055783s] [吞吐率：17.93req/s] [内存消耗：1,873.00kb] [文件加载：68]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/auth/index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-10-11T23:21:31+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.034262s] [吞吐率：29.19req/s] [内存消耗：1,940.98kb] [文件加载：70]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-10-11T23:21:31+08:00 ] ::1 GET dev.tp5m.com/admin/Auth/index.html
+[运行时间：0.033039s] [吞吐率：30.27req/s] [内存消耗：1,897.86kb] [文件加载：68]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/auth/index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-10-11T23:21:39+08:00 ] ::1 GET dev.tp5m.com/admin/auth/checkLogin?username=admin&password=7fef6171469e80d32c0559f88b377245
+[运行时间：0.135740s] [吞吐率：7.37req/s] [内存消耗：2,720.94kb] [文件加载：69]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '7fef6171469e80d32c0559f88b377245',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000365s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.003718s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  ( `name` = 'admin' OR `tel` = 'admin' OR `email` = 'admin' ) LIMIT 1 [ RunTime:0.000679s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000381s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `inc` = 142 , `last_logintime` = '1539271299' , `last_ip` = '127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.000945s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000392s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_log` [ RunTime:0.003941s ]
+[ sql ] [ SQL ] INSERT INTO `mh_log` (`user_id` , `add_time` , `type` , `content` , `ip` , `addr`) VALUES (1 , 1539271299 , 0 , 'admin 登录成功' , '::1' , '广东-深圳') [ RunTime:0.000659s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:21:39+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.063454s] [吞吐率：15.76req/s] [内存消耗：2,979.20kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html [ array (
+  0 => 'oneNodeList',
+  1 => 'twoNodeList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000389s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003576s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000523s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000397s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 1 ORDER BY `ord` ASC [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.003128s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.000338s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:21:41+08:00 ] ::1 GET dev.tp5m.com/admin/system/changePwd.html?_=1539271299344
+[运行时间：0.078606s] [吞吐率：12.72req/s] [内存消耗：2,841.08kb] [文件加载：75]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539271299344',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/system/changepwd.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000365s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.004016s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000494s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:21:51+08:00 ] ::1 POST dev.tp5m.com/admin/System/changePwd?callbackType=closeCurrent
+[运行时间：0.072899s] [吞吐率：13.72req/s] [内存消耗：3,026.88kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'content-length' => '59',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://dev.tp5m.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'callbackType' => 'closeCurrent',
+  'oldPassword' => 'admin888',
+  'newPassword' => '123456',
+  'rnewPassword' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000428s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.005643s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000507s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000337s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.003461s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000868s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000361s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `password` = '14e1b600b1fd579f47433b88e8d85291'  WHERE  `id` = 1 [ RunTime:0.000741s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:21:51+08:00 ] ::1 GET dev.tp5m.com/admin/System/index.html
+[运行时间：0.036522s] [吞吐率：27.38req/s] [内存消耗：1,950.19kb] [文件加载：70]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-10-11T23:21:52+08:00 ] ::1 GET dev.tp5m.com/admin/Auth/index.html
+[运行时间：0.032353s] [吞吐率：30.91req/s] [内存消耗：1,873.06kb] [文件加载：68]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/auth/index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-10-11T23:22:10+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.041000s] [吞吐率：24.39req/s] [内存消耗：1,940.98kb] [文件加载：70]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-10-11T23:22:10+08:00 ] ::1 GET dev.tp5m.com/admin/Auth/index.html
+[运行时间：0.035892s] [吞吐率：27.86req/s] [内存消耗：1,897.88kb] [文件加载：68]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/auth/index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-10-11T23:22:16+08:00 ] ::1 GET dev.tp5m.com/admin/auth/checkLogin?username=admin&password=e10adc3949ba59abbe56e057f20f883e
+[运行时间：0.138462s] [吞吐率：7.22req/s] [内存消耗：2,720.94kb] [文件加载：69]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'e10adc3949ba59abbe56e057f20f883e',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000439s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.003980s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  ( `name` = 'admin' OR `tel` = 'admin' OR `email` = 'admin' ) LIMIT 1 [ RunTime:0.000635s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000384s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `inc` = 143 , `last_logintime` = '1539271335' , `last_ip` = '127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.000762s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000891s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] INSERT INTO `mh_log` (`user_id` , `add_time` , `type` , `content` , `ip` , `addr`) VALUES (1 , 1539271335 , 0 , 'admin 登录成功' , '::1' , '广东-深圳') [ RunTime:0.000493s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:22:16+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.065419s] [吞吐率：15.29req/s] [内存消耗：2,979.20kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html [ array (
+  0 => 'oneNodeList',
+  1 => 'twoNodeList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000474s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.004080s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000890s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000401s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 1 ORDER BY `ord` ASC [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.003160s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.000410s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:22:17+08:00 ] ::1 GET dev.tp5m.com/admin/system/changePwd.html?_=1539271336262
+[运行时间：0.072651s] [吞吐率：13.76req/s] [内存消耗：2,841.88kb] [文件加载：75]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539271336262',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/system/changepwd.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000441s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.004031s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000528s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:22:28+08:00 ] ::1 POST dev.tp5m.com/admin/System/changePwd?callbackType=closeCurrent
+[运行时间：0.070851s] [吞吐率：14.11req/s] [内存消耗：2,883.51kb] [文件加载：71]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'content-length' => '61',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://dev.tp5m.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'callbackType' => 'closeCurrent',
+  'oldPassword' => '123456',
+  'newPassword' => 'admin888',
+  'rnewPassword' => 'admin888',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000446s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003605s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000538s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000360s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.003546s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000608s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000404s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `password` = '0b77520f93de693bdab0060746e38165'  WHERE  `id` = 1 [ RunTime:0.001009s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:22:50+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.061723s] [吞吐率：16.20req/s] [内存消耗：2,987.48kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html [ array (
+  0 => 'oneNodeList',
+  1 => 'twoNodeList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000497s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003631s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000488s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000495s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 1 ORDER BY `ord` ASC [ RunTime:0.000669s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.003579s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.000419s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:22:55+08:00 ] ::1 GET dev.tp5m.com/admin/auth/loginOut.html
+[运行时间：0.041938s] [吞吐率：23.84req/s] [内存消耗：1,879.95kb] [文件加载：70]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-10-11T23:22:55+08:00 ] ::1 GET dev.tp5m.com/admin/Auth/index.html
+[运行时间：0.033973s] [吞吐率：29.44req/s] [内存消耗：1,897.52kb] [文件加载：68]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/auth/index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-10-11T23:23:07+08:00 ] ::1 GET dev.tp5m.com/admin/auth/checkLogin?username=admin&password=e10adc3949ba59abbe56e057f20f883e
+[运行时间：0.042067s] [吞吐率：23.77req/s] [内存消耗：2,662.50kb] [文件加载：68]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'e10adc3949ba59abbe56e057f20f883e',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000366s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.003560s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  ( `name` = 'admin' OR `tel` = 'admin' OR `email` = 'admin' ) LIMIT 1 [ RunTime:0.000631s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:23:14+08:00 ] ::1 GET dev.tp5m.com/admin/auth/checkLogin?username=admin&password=7fef6171469e80d32c0559f88b377245
+[运行时间：0.147699s] [吞吐率：6.77req/s] [内存消耗：2,851.20kb] [文件加载：76]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '7fef6171469e80d32c0559f88b377245',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000382s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.003751s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  ( `name` = 'admin' OR `tel` = 'admin' OR `email` = 'admin' ) LIMIT 1 [ RunTime:0.000509s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000353s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `inc` = 144 , `last_logintime` = '1539271394' , `last_ip` = '127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.000720s ]
+[ error ] [2]file_get_contents(http://ip.taobao.com/service/getIpInfo.php?ip=113.102.163.199): failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+[/Applications/MAMP/htdocs/tpCommont/application/common.php:34]
+---------------------------------------------------------------
+[ 2018-10-11T23:23:17+08:00 ] ::1 GET dev.tp5m.com/admin/auth/checkLogin?username=admin&password=7fef6171469e80d32c0559f88b377245
+[运行时间：0.148641s] [吞吐率：6.73req/s] [内存消耗：2,851.67kb] [文件加载：76]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '7fef6171469e80d32c0559f88b377245',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000359s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.002659s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  ( `name` = 'admin' OR `tel` = 'admin' OR `email` = 'admin' ) LIMIT 1 [ RunTime:0.000683s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000371s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `inc` = 145 , `last_logintime` = '1539271397' , `last_ip` = '127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.000782s ]
+[ error ] [2]file_get_contents(http://ip.taobao.com/service/getIpInfo.php?ip=113.102.163.199): failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+[/Applications/MAMP/htdocs/tpCommont/application/common.php:34]
+---------------------------------------------------------------
+[ 2018-10-11T23:23:22+08:00 ] ::1 GET dev.tp5m.com/admin/auth/checkLogin?username=admin&password=7fef6171469e80d32c0559f88b377245
+[运行时间：0.218453s] [吞吐率：4.58req/s] [内存消耗：2,721.41kb] [文件加载：69]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '7fef6171469e80d32c0559f88b377245',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000375s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.004888s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  ( `name` = 'admin' OR `tel` = 'admin' OR `email` = 'admin' ) LIMIT 1 [ RunTime:0.000636s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000359s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `inc` = 146 , `last_logintime` = '1539271401' , `last_ip` = '127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.000768s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000452s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_log` [ RunTime:0.003866s ]
+[ sql ] [ SQL ] INSERT INTO `mh_log` (`user_id` , `add_time` , `type` , `content` , `ip` , `addr`) VALUES (1 , 1539271401 , 0 , 'admin 登录成功' , '::1' , '广东-深圳') [ RunTime:0.000490s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:23:22+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.066180s] [吞吐率：15.11req/s] [内存消耗：2,979.20kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html [ array (
+  0 => 'oneNodeList',
+  1 => 'twoNodeList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000437s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.004371s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000822s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000467s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 1 ORDER BY `ord` ASC [ RunTime:0.000545s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.003175s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.000402s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:23:24+08:00 ] ::1 GET dev.tp5m.com/admin/system/changePwd.html?_=1539271402249
+[运行时间：0.093054s] [吞吐率：10.75req/s] [内存消耗：2,841.13kb] [文件加载：75]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539271402249',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/system/changepwd.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000401s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.004984s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000548s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:23:33+08:00 ] ::1 POST dev.tp5m.com/admin/System/changePwd?callbackType=closeCurrent
+[运行时间：0.085926s] [吞吐率：11.64req/s] [内存消耗：2,892.95kb] [文件加载：75]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'content-length' => '59',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://dev.tp5m.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'callbackType' => 'closeCurrent',
+  'oldPassword' => 'admin888',
+  'newPassword' => '123456',
+  'rnewPassword' => '123456',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000608s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.002977s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000530s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000360s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.003271s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000674s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000418s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `password` = '14e1b600b1fd579f47433b88e8d85291'  WHERE  `id` = 1 [ RunTime:0.000838s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:23:45+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.036993s] [吞吐率：27.03req/s] [内存消耗：1,940.98kb] [文件加载：70]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-10-11T23:23:45+08:00 ] ::1 GET dev.tp5m.com/admin/Auth/index.html
+[运行时间：0.035709s] [吞吐率：28.00req/s] [内存消耗：1,897.88kb] [文件加载：68]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/auth/index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-10-11T23:23:53+08:00 ] ::1 GET dev.tp5m.com/admin/auth/checkLogin?username=admin&password=e10adc3949ba59abbe56e057f20f883e
+[运行时间：0.143134s] [吞吐率：6.99req/s] [内存消耗：2,720.94kb] [文件加载：69]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'e10adc3949ba59abbe56e057f20f883e',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000377s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.003827s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  ( `name` = 'admin' OR `tel` = 'admin' OR `email` = 'admin' ) LIMIT 1 [ RunTime:0.000654s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000362s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `inc` = 147 , `last_logintime` = '1539271433' , `last_ip` = '127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.000760s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000448s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_log` [ RunTime:0.004015s ]
+[ sql ] [ SQL ] INSERT INTO `mh_log` (`user_id` , `add_time` , `type` , `content` , `ip` , `addr`) VALUES (1 , 1539271433 , 0 , 'admin 登录成功' , '::1' , '广东-深圳') [ RunTime:0.000478s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:23:53+08:00 ] ::1 GET dev.tp5m.com/admin/index
+[运行时间：0.060915s] [吞吐率：16.42req/s] [内存消耗：2,979.20kb] [文件加载：77]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://dev.tp5m.com/admin/Auth/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html [ array (
+  0 => 'oneNodeList',
+  1 => 'twoNodeList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000393s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003884s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000506s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000405s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 1 ORDER BY `ord` ASC [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.002987s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.000412s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:23:55+08:00 ] ::1 GET dev.tp5m.com/admin/system/changePwd.html?_=1539271434096
+[运行时间：0.089103s] [吞吐率：11.22req/s] [内存消耗：2,841.13kb] [文件加载：75]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1539271434096',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/system/changepwd.html [ array (
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000452s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.006754s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000674s ]
+---------------------------------------------------------------
+[ 2018-10-11T23:24:05+08:00 ] ::1 POST dev.tp5m.com/admin/System/changePwd?callbackType=closeCurrent
+[运行时间：0.079082s] [吞吐率：12.65req/s] [内存消耗：2,892.95kb] [文件加载：75]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'connection' => 'keep-alive',
+  'content-length' => '61',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://dev.tp5m.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dev.tp5m.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=dee7baae33ec8077fd7c46402244b5d3',
+)
+[ info ] [ PARAM ] array (
+  'callbackType' => 'closeCurrent',
+  'oldPassword' => '123456',
+  'newPassword' => 'admin888',
+  'rnewPassword' => 'admin888',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000786s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.006031s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000544s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000368s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.003751s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000849s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000542s ] mysql:host=localhost;port=8889;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `password` = '0b77520f93de693bdab0060746e38165'  WHERE  `id` = 1 [ RunTime:0.002752s ]
