@@ -1,0 +1,74 @@
+---------------------------------------------------------------
+[ 2018-10-14T14:55:51+08:00 ] ::1 GET dev.tp5m.com/admin
+[运行时间：0.265048s] [吞吐率：3.77req/s] [内存消耗：1,939.63kb] [文件加载：70]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-10-14T14:55:51+08:00 ] ::1 GET dev.tp5m.com/admin/Auth/index.html
+[运行时间：0.095092s] [吞吐率：10.52req/s] [内存消耗：1,896.95kb] [文件加载：68]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=495471f21eb1824ca18b090115427f05',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/auth/index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-10-14T15:01:38+08:00 ] ::1 GET dev.tp5m.com/admin
+[运行时间：0.109654s] [吞吐率：9.12req/s] [内存消耗：1,939.64kb] [文件加载：70]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-10-14T15:01:38+08:00 ] ::1 GET dev.tp5m.com/admin/Auth/index.html
+[运行时间：0.127725s] [吞吐率：7.83req/s] [内存消耗：1,896.95kb] [文件加载：68]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5m.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=f881a4a5de2a7a96ad59cb0205126252',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/auth/index.html [ array (
+) ]
