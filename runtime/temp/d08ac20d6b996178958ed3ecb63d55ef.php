@@ -1,4 +1,4 @@
-<?php /*a:2:{s:75:"/Applications/MAMP/htdocs/tpCommont/application/admin/view/index/index.html";i:1539270658;s:74:"/Applications/MAMP/htdocs/tpCommont/application/admin/view/index/main.html";i:1537097887;}*/ ?>
+<?php /*a:2:{s:76:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\index\index.html";i:1540202330;s:75:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\index\main.html";i:1540201586;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -42,7 +42,7 @@
 $(function(){
 
 	DWZ.init("/static/admin/dwz/dwz.frag.xml", {
-		loginUrl:"/login_dialog", loginTitle:"Login",	// 弹出登录对话框
+		loginUrl:"/admin/Auth/loginDialog", loginTitle:"Login",	// 弹出登录对话框
 //		loginUrl:"login.html",	// 跳到登录页面
 		statusCode:{ok:200, error:300, timeout:301}, //【可选】
 		pageInfo:{pageNum:"pageNum", numPerPage:"numPerPage", orderField:"_order", orderDirection:"_sort"}, //【可选】
@@ -100,7 +100,7 @@ $(function(){
                     <ul>                        
                         <?php foreach($twoNodeList as $two): if(($two['p_id'] == $one['id'])): ?>
                                 <li>
-                                    <a href="<?php echo url($two['controller'].'/'.$two['action']); ?>" rel="<?php echo htmlentities($two['controller']); ?>"  target="navTab"><?php echo htmlentities($two['name']); ?></a>
+                                    <a <?php if((app('session')->get('isOut')==1)): ?> href="<?php echo url('auth/timeOut'); ?>" <?php else: ?> href="<?php echo url($two['controller'].'/'.$two['action']); ?>" rel="<?php echo htmlentities($two['controller']); ?>" <?php endif; ?>  target="navTab"><?php echo htmlentities($two['name']); ?></a>
                                 </li>
                                 <?php endif; endforeach; ?>
                     </ul>

@@ -11,4 +11,13 @@ return array(
     //自定义错误页面
     //url不区分大小写
     'url_convert'   =>false,
+    'cache' => [
+        'redis'=>[
+            'type'   => '\app\driver\cache\Redis',
+            'host'   => '106.12.115.122',
+            'port'   => '6379',
+            'password' => 'yujinLee888',
+            'timeout'=> 3600
+        ]
+    ],
 );

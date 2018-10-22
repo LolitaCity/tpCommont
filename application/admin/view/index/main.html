@@ -7,7 +7,7 @@
                         {foreach $twoNodeList as $two}
                                 {if ($two.p_id == $one.id)}
                                 <li>
-                                    <a href="{:url($two['controller'].'/'.$two['action'])}" rel="{$two.controller}"  target="navTab">{$two.name}</a>
+                                    <a href="{:url($two['controller'].'/'.$two['action'])}" rel="{$two.controller}" target="navTab">{$two.name}</a>
                                 </li>
                                 {/if}
                         {/foreach}

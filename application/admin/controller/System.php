@@ -88,10 +88,7 @@ class System extends Common{
         if(!db("Admin")->update(['id'=> session('authId'),'password'=>md5(input('newPassword','','md5'))])){
             return json(jsonData('密码修改失败',300));
         }
-        cookie(NULL);
-        session(NULL);
-        session_destroy();
-        $this->redirect('index');
-        //return json(jsonData('密码修改成功',201));
+        session('isOut',1);
+        return json(jsonData('密码修改成功',201));
     } 
 }

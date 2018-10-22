@@ -138,10 +138,10 @@ if(!function_exists('code')){
  * Json弹窗返回数据参数
  * 
  * @param str $content 弹窗内容
- * @param int $status  状态，默认200 ，提示成功，不带关闭
- * @param int $status  状态，201，提示成功，带关闭
- * @param int $status  状态，300，提示失败，不带关闭
- * @param int $status  状态，301，提示失败，带关闭
+ * @param int $status  状态，默认200 ，提示成功，不带关闭弹窗
+ * @param int $status  状态，201，提示成功，带关闭弹窗
+ * @param int $status  状态，300，提示失败，不带关闭弹窗
+ * @param int $status  状态，301，提示失败，带关闭弹窗
  * 
  * @return array $data;
  */
