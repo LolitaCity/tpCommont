@@ -78,9 +78,7 @@ class System extends Common{
      * @return #
      */
     public function changepwd(){
-        if(input('newPassword')==''){
-            return $this->fetch();
-        }
+        if(input('newPassword')==''){return $this->fetch();}
         $userInfo= db("Admin")->find(session("authId"));
         if($userInfo['password']!=md5(input('oldPassword','','md5'))){
             return json(jsonData('原密码错误',300));
