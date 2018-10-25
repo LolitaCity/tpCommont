@@ -1,4 +1,4 @@
-<?php /*a:2:{s:76:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\index\index.html";i:1540202330;s:75:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\index\main.html";i:1540201586;}*/ ?>
+<?php /*a:2:{s:76:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\index\index.html";i:1540347623;s:75:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\index\main.html";i:1540209707;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -68,7 +68,7 @@ $(function(){
                 <ul class="nav">
                     <eq name="Think.session.authId" value="1">
                         <li><a href="<?php echo url('auth/systemInfo'); ?>" target="dialog" height="420" width="490">系统消息</a></li>                       
-                        <li><a href="__MODULE__/Bak/backup">数据库备份</a></li>
+                        <li><a href="<?php echo url('bak/backup'); ?>">数据库备份</a></li>
                     </eq>
                     <li><a href="<?php echo url('system/delCache'); ?>" target="ajaxTodo">清除缓存</a></li>
                     <li><a href="<?php echo url('system/changePwd'); ?>" target="dialog" width="600">修改密码</a></li>
@@ -100,7 +100,7 @@ $(function(){
                     <ul>                        
                         <?php foreach($twoNodeList as $two): if(($two['p_id'] == $one['id'])): ?>
                                 <li>
-                                    <a <?php if((app('session')->get('isOut')==1)): ?> href="<?php echo url('auth/timeOut'); ?>" <?php else: ?> href="<?php echo url($two['controller'].'/'.$two['action']); ?>" rel="<?php echo htmlentities($two['controller']); ?>" <?php endif; ?>  target="navTab"><?php echo htmlentities($two['name']); ?></a>
+                                    <a href="<?php echo url($two['controller'].'/'.$two['action']); ?>" rel="<?php echo htmlentities($two['controller']); ?>" target="navTab"><?php echo htmlentities($two['name']); ?></a>
                                 </li>
                                 <?php endif; endforeach; ?>
                     </ul>

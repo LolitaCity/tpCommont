@@ -40,14 +40,14 @@
             <tr>
                 <th width="22"><input type="checkbox" group="id[]" class="checkboxCtrl"></th>
                 <th width="40"  align="center">序号</th>
-                <th width="100" align="center">用户名</th>
-                <th width="100" align="center">昵称</th>
-                <th width="100" align="center">电话</th>
-                <th width="120" align="center">邮箱</th>
                 {eq name="Think.session.authId" value="1"}
                     <th width="40" align="center" orderField='id' {if (input('_order')=='id')} class="{$Think.post._order}" {/if} >id</th>
                     <th width="150" align="center" orderField='last_logintime' {if (input('_order')=='last_logintime')} class="{$Think.post._order}" {/if} >上次登录时间</th>
                 {/eq}
+                <th width="100" align="center">用户名</th>
+                <th width="100" align="center">昵称</th>
+                <th width="100" align="center">电话</th>
+                <th width="120" align="center">邮箱</th>
                 <th width="100" align="center">角色</th>
                 <th width="140" align="center" orderField='add_time' {if (input('_order')=='add_time')} class="{$Think.post._order}" {/if} >注册日期</th>
                 <th width="150" align="center">操作</th>
@@ -58,15 +58,15 @@
                 <tr target="l_id" rel="{$vo.id}">
                     <td><input name="id[]" value="{$vo.id}" type="checkbox"></td>
                     <td>{$k+1}</td>
-                    <td>{$vo.name}</td>
-                    <td>{$vo.nick_name|default=''}</td>
-                    <td>{$vo.tel}</td>
-                    <td>{$vo.email}</td>
                     {eq name="Think.session.authId" value="1"}
                         <td>{$vo.id|default=''}</td>
                         <td>{$vo.last_logintime|date="Y-m-d H:i:s"}</td>
-                   {/eq}
-                    <td>{$vo.id|getAdminRole}</td>
+                    {/eq}
+                    <td style='color:blue'>{$vo.name}</td>
+                    <td style='color:royalblue'>{$vo.nick_name|default=''}</td>
+                    <td>{$vo.tel}</td>
+                    <td>{$vo.email}</td>
+                    <td style='color:green'>{$vo.id|getAdminRole}</td>
                     <td>{$vo.add_time|date='Y-m-d H:i:s'}</td>
                     <td>
                         <a title="确定删除该用户" target="ajaxTodo" href="{:url('User/del',array('id'=>code($vo['id'],1),'db'=>code('Admin',1)))}" style='color:red'>删除</a>                       
