@@ -1,0 +1,478 @@
+---------------------------------------------------------------
+[ 2018-10-26T08:51:42+08:00 ] 127.0.0.1 GET dev.tpcommont.com/
+[运行时间：0.018199s] [吞吐率：54.95req/s] [内存消耗：1,514.91kb] [文件加载：65]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'XDEBUG_SESSION=netbeans-xdebug',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\TpCommon\application\index\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-10-26T08:51:46+08:00 ] 127.0.0.1 GET dev.tpcommont.com/admin
+[运行时间：0.017872s] [吞吐率：55.95req/s] [内存消耗：1,580.27kb] [文件加载：69]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'XDEBUG_SESSION=netbeans-xdebug; thinkphp_show_page_trace=0|0',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-10-26T08:51:46+08:00 ] 127.0.0.1 GET dev.tpcommont.com/admin/Auth/index
+[运行时间：0.017387s] [吞吐率：57.51req/s] [内存消耗：1,603.13kb] [文件加载：68]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'XDEBUG_SESSION=netbeans-xdebug; thinkphp_show_page_trace=0|0; PHPSESSID=gt37ps8ocp6p6v6jdkope5ili3',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\auth\index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-10-26T08:51:58+08:00 ] 127.0.0.1 GET dev.tpcommont.com/admin/auth/checkLogin?username=admin&password=e10adc3949ba59abbe56e057f20f883e
+[运行时间：0.047293s] [吞吐率：21.14req/s] [内存消耗：2,306.55kb] [文件加载：76]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'XDEBUG_SESSION=netbeans-xdebug; thinkphp_show_page_trace=0|0; PHPSESSID=gt37ps8ocp6p6v6jdkope5ili3',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://dev.tpcommont.com/admin/Auth/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'e10adc3949ba59abbe56e057f20f883e',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001054s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'works.mh_admin' doesn't exist[E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\library\think\db\Connection.php:685]
+---------------------------------------------------------------
+[ 2018-10-26T08:52:00+08:00 ] 127.0.0.1 GET dev.tpcommont.com/admin/auth/checkLogin?username=admin&password=e10adc3949ba59abbe56e057f20f883e
+[运行时间：0.093039s] [吞吐率：10.75req/s] [内存消耗：2,306.55kb] [文件加载：76]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'XDEBUG_SESSION=netbeans-xdebug; thinkphp_show_page_trace=0|0; PHPSESSID=gt37ps8ocp6p6v6jdkope5ili3',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://dev.tpcommont.com/admin/Auth/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'e10adc3949ba59abbe56e057f20f883e',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010188s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'works.mh_admin' doesn't exist[E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\library\think\db\Connection.php:685]
+---------------------------------------------------------------
+[ 2018-10-26T08:52:08+08:00 ] 127.0.0.1 GET dev.tpcommont.com/admin/auth/checkLogin?username=admin&password=e10adc3949ba59abbe56e057f20f883e
+[运行时间：0.050359s] [吞吐率：19.86req/s] [内存消耗：2,306.55kb] [文件加载：76]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'XDEBUG_SESSION=netbeans-xdebug; thinkphp_show_page_trace=0|0; PHPSESSID=gt37ps8ocp6p6v6jdkope5ili3',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://dev.tpcommont.com/admin/Auth/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'e10adc3949ba59abbe56e057f20f883e',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010865s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'works.mh_admin' doesn't exist[E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\library\think\db\Connection.php:685]
+---------------------------------------------------------------
+[ 2018-10-26T08:53:23+08:00 ] 127.0.0.1 GET dev.tpcommont.com/admin/auth/checkLogin?username=admin&password=e10adc3949ba59abbe56e057f20f883e
+[运行时间：0.049687s] [吞吐率：20.13req/s] [内存消耗：2,205.57kb] [文件加载：68]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'XDEBUG_SESSION=netbeans-xdebug; thinkphp_show_page_trace=0|0; PHPSESSID=gt37ps8ocp6p6v6jdkope5ili3',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://dev.tpcommont.com/admin/Auth/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'e10adc3949ba59abbe56e057f20f883e',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010229s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.017772s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  ( `name` = 'admin' OR `tel` = 'admin' OR `email` = 'admin' ) LIMIT 1 [ RunTime:0.000409s ]
+---------------------------------------------------------------
+[ 2018-10-26T08:53:28+08:00 ] 127.0.0.1 GET dev.tpcommont.com/admin/auth/checkLogin?username=admin&password=7fef6171469e80d32c0559f88b377245
+[运行时间：0.262666s] [吞吐率：3.81req/s] [内存消耗：2,334.37kb] [文件加载：69]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'XDEBUG_SESSION=netbeans-xdebug; thinkphp_show_page_trace=0|0; PHPSESSID=gt37ps8ocp6p6v6jdkope5ili3',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://dev.tpcommont.com/admin/Auth/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => '7fef6171469e80d32c0559f88b377245',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010290s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.010823s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  ( `name` = 'admin' OR `tel` = 'admin' OR `email` = 'admin' ) LIMIT 1 [ RunTime:0.000350s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010998s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] UPDATE `mh_admin`  SET `inc` = 167 , `last_logintime` = '1540515208' , `last_ip` = '127.0.0.1'  WHERE  `id` = 1 [ RunTime:0.024659s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011062s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_log` [ RunTime:0.039095s ]
+[ sql ] [ SQL ] INSERT INTO `mh_log` (`user_id` , `add_time` , `type` , `content` , `ip` , `addr`) VALUES (1 , 1540515208 , 0 , 'admin 登录成功' , '127.0.0.1' , '广东-深圳') [ RunTime:0.000838s ]
+---------------------------------------------------------------
+[ 2018-10-26T08:53:28+08:00 ] 127.0.0.1 GET dev.tpcommont.com/admin/index
+[运行时间：0.063425s] [吞吐率：15.77req/s] [内存消耗：2,557.93kb] [文件加载：77]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'cookie' => 'XDEBUG_SESSION=netbeans-xdebug; thinkphp_show_page_trace=0|0; PHPSESSID=gt37ps8ocp6p6v6jdkope5ili3',
+  'referer' => 'http://dev.tpcommont.com/admin/Auth/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\index\index.html [ array (
+  0 => 'oneNodeList',
+  1 => 'twoNodeList',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010009s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.010833s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000417s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009461s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 1 ORDER BY `ord` ASC [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.009455s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.000340s ]
+---------------------------------------------------------------
+[ 2018-10-26T08:53:36+08:00 ] 127.0.0.1 GET dev.tpcommont.com/admin/System/loginLog.html?_=1540515209008
+[运行时间：0.107636s] [吞吐率：9.29req/s] [内存消耗：2,666.58kb] [文件加载：81]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; XDEBUG_SESSION=netbeans-xdebug; thinkphp_show_page_trace=0|0; PHPSESSID=gt37ps8ocp6p6v6jdkope5ili3',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://dev.tpcommont.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1540515209008',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\system\log.html [ array (
+  0 => 'type',
+  1 => 'list',
+  2 => 'sort',
+  3 => 'order',
+  4 => 'sortImg',
+  5 => 'sortType',
+  6 => 'totalCount',
+  7 => 'numPerPage',
+  8 => 'currentPage',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011126s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.012421s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000459s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010044s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_log` [ RunTime:0.023899s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) AS think_count FROM `mh_log` WHERE  `type` = 0 GROUP BY `id` ) `_group_count_` LIMIT 1 [ RunTime:0.000649s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_log` WHERE  `type` = 0 GROUP BY `id` ORDER BY `id` ASC LIMIT 0,20 [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.010256s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000280s ]
+---------------------------------------------------------------
+[ 2018-10-26T08:53:42+08:00 ] 127.0.0.1 POST dev.tpcommont.com/admin/System/loginlog.html
+[运行时间：0.091747s] [吞吐率：10.90req/s] [内存消耗：2,710.56kb] [文件加载：81]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; XDEBUG_SESSION=netbeans-xdebug; thinkphp_show_page_trace=0|0; PHPSESSID=gt37ps8ocp6p6v6jdkope5ili3',
+  'content-length' => '58',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dev.tpcommont.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+  'pageNum' => '',
+  'numPerPage' => '50',
+  '_order' => 'id',
+  '_sort' => '0',
+  'userId' => '',
+  'add_time' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\system\log.html [ array (
+  0 => 'type',
+  1 => 'list',
+  2 => 'sort',
+  3 => 'order',
+  4 => 'sortImg',
+  5 => 'sortType',
+  6 => 'totalCount',
+  7 => 'numPerPage',
+  8 => 'currentPage',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011077s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.011244s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000467s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009881s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_log` [ RunTime:0.007803s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) AS think_count FROM `mh_log` WHERE  `type` = 0 GROUP BY `id` ) `_group_count_` LIMIT 1 [ RunTime:0.000445s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_log` WHERE  `type` = 0 GROUP BY `id` ORDER BY `id` ASC LIMIT 0,50 [ RunTime:0.000568s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.008644s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000180s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000187s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000180s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000161s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000167s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000177s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000180s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000144s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000179s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000172s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000157s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000155s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000157s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000171s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000165s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000156s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000099s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000098s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000097s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000099s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000098s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000098s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000098s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000097s ]
+---------------------------------------------------------------
+[ 2018-10-26T08:53:46+08:00 ] 127.0.0.1 POST dev.tpcommont.com/admin/System/loginlog.html
+[运行时间：0.158102s] [吞吐率：6.33req/s] [内存消耗：2,710.56kb] [文件加载：81]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\TpCommon\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'cookie' => 'thinkphp_show_page_trace=0|0; XDEBUG_SESSION=netbeans-xdebug; thinkphp_show_page_trace=0|0; PHPSESSID=gt37ps8ocp6p6v6jdkope5ili3',
+  'content-length' => '59',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://dev.tpcommont.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0',
+  'host' => 'dev.tpcommont.com',
+)
+[ info ] [ PARAM ] array (
+  'pageNum' => '',
+  'numPerPage' => '200',
+  '_order' => 'id',
+  '_sort' => '0',
+  'userId' => '',
+  'add_time' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\system\log.html [ array (
+  0 => 'type',
+  1 => 'list',
+  2 => 'sort',
+  3 => 'order',
+  4 => 'sortImg',
+  5 => 'sortType',
+  6 => 'totalCount',
+  7 => 'numPerPage',
+  8 => 'currentPage',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010505s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.022942s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000408s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010543s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_log` [ RunTime:0.007077s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) AS think_count FROM `mh_log` WHERE  `type` = 0 GROUP BY `id` ) `_group_count_` LIMIT 1 [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_log` WHERE  `type` = 0 GROUP BY `id` ORDER BY `id` ASC LIMIT 0,200 [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.007516s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000225s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000101s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000156s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000152s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000155s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000131s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000144s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000152s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000160s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000156s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000129s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000151s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000153s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000154s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000099s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000157s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000155s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000099s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000097s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000102s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000099s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000096s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000098s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000098s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000096s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000099s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000096s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000098s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000097s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000097s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000115s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000098s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000106s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000113s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000098s ]
+[ sql ] [ SQL ] SELECT `name` FROM `mh_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000096s ]
