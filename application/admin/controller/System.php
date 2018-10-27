@@ -43,7 +43,7 @@ class System extends Common{
      * 
      * @return #
      */
-    public function log($type=0){
+    public function log($type=0,$sortBy='id',$asc=FALSE){
         $model  =db("Log");
         $map    =$this->_search($model);
         $map[]  =['type','=',$type];
@@ -52,7 +52,7 @@ class System extends Common{
             $map[]=['user_id',"IN", implode(',',getIds(input('userId'),'name','Admin','id'))];
         }
         $this->assign('type',$type);
-        $this->_list($model,$map);
+        $this->_list($model,$map,$sortBy,$asc);
     }
     
     /**

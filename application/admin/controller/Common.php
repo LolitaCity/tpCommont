@@ -61,7 +61,8 @@ class Common extends Controller{
             if (!input($val)|| input($val) == ''){
                 continue ;
             }
-            if(strtotime(input($val))!==FALSE){
+            if(date('Y-m-d',strtotime(input($val)))==input($val,'','trim')){
+                //时间处理
                 $map[]  =[$val,'between',timeTotimestamp(input($val))];
             }elseif(in_array($val, array_diff($fieldArray,$notLikeArray))){
                 //特别指定一些字段进行模糊查询
