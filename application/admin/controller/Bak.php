@@ -1,14 +1,14 @@
 <?php
 /**
  * 数据库备份
- * 
+ *
  * @author Lee<a605333742@gmail.com>
  * @date 2018-10-23
  */
 namespace app\admin\controller;
 header('Content-type:text/html; charset=utf-8');
 Header("Content-type:application/octet-stream");
-header("Content-Disposition:attachment; filename=\"".date( 'YmdHis ').'.sql'."\""); 
+header("Content-Disposition:attachment; filename=\"".date( 'Ymd_His').'.sql'."\"");
 class Bak extends Common{
     /**
     *返回数据库中的数据表
@@ -33,21 +33,21 @@ class Bak extends Common{
         echo $struct;
         echo $record;
     }
-	
+
     /**
     *备份数据表结构
     */
     protected function bakStruct($array){
         $sql='';
-        foreach ($array as $v){		
-            $tbName=$v;			
+        foreach ($array as $v){
+            $tbName=$v;
             $result=  \think\Db::query('show columns from '.$tbName);
             $sql.="--\r\n";
             $sql.="-- 数据表结构: `$tbName`\r\n";
-            $sql.="--\r\n\r\n";			
+            $sql.="--\r\n\r\n";
             $sql.="create table `$tbName` (\r\n";
-            $rsCount=count($result);			
-            foreach ($result as $k=>$v){			
+            $rsCount=count($result);
+            foreach ($result as $k=>$v){
                 $field  =$v['Field'];
                 $type   =$v['Type'];
                 $default=$v['Default'];
@@ -67,7 +67,7 @@ class Bak extends Common{
         }
         return str_replace(',)',')',$sql);
     }
-    
+
     /**
     *备份数据表数据
     */
