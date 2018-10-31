@@ -1,4 +1,4 @@
-<?php /*a:1:{s:84:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\public\login_dialog.html";i:1540203970;}*/ ?>
+<?php /*a:1:{s:84:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\public\login_dialog.html";i:1540209707;}*/ ?>
 <div class="pageContent">
     <form method="post" action="<?php echo url('Auth/checkLogin'); ?>" class="pageForm" onsubmit="return validateCallback(this, dialogAjaxDone)">
         <input type="hidden" name='notCaptcha' value="1"/>

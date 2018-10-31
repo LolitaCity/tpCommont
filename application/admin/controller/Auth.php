@@ -81,7 +81,7 @@ class Auth extends Controller{
         //登陆成功信息写入日志
         self::addLog(0);
         if(input('notCaptcha')!=NULL){
-            session('isOut',NULL);
+            //session('isOut',NULL); /*间断性报错，等待进一步测试 --@Lee<a605333742@gmail.com> @date 2018-10-31*/
             return json(jsonData('登录成功',201));
         }
         echo 1000;exit;

@@ -1,5 +1,4 @@
-<?php /*a:1:{s:81:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\system\changepwd.html";i:1539306852;}*/ ?>
-   
+<?php /*a:1:{s:81:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\system\changepwd.html";i:1540510859;}*/ ?>
 <div class="pageContent">	
     <form method="post" action="/admin/System/changePwd?callbackType=closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
         <div class="pageFormContent" layoutH="58">
