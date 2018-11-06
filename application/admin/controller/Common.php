@@ -146,10 +146,11 @@ class Common extends Controller{
      *
      * @return #
      */
-    public function index($db='',$sort='id',$sortBy=TRUE){
+    public function index($db='',$sort='id',$sortBy=TRUE,$condition=NULL){
         $model  =$db?Db::name($db):Db::name(request()->controller());
         $map    =self::_search($model);
-        $map[]  =['status','=',1];
+        if(in_array("status",$model->gettablefields())){$map[]  =['status','=',1];}
+        if($condition!=NULL){$map[]=$condition;}
         $sort   =strtolower(request()->controller())=='node'?'path':$sort;
         self::_list($model,$map,$sort,$sortBy);
         return $this->fetch(request()->action());

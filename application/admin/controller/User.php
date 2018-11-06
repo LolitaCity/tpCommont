@@ -146,7 +146,9 @@ class User extends Common{
                 'tel'       =>trim($this->data['tel']??''),
                 'email'     =>trim($this->data['email']??''),
                 'add_time'  =>time(),
-                'add_a_id'  =>session("user.id")
+                'add_a_id'  =>session("user.id"),
+                'edit_a_id' =>session("user.id"),
+                'edit_time' =>time()
             );
             try{
                 $newId  =db("Admin")->insertGetId($condition);

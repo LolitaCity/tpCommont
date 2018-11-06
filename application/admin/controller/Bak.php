@@ -22,7 +22,7 @@ class Bak extends Common{
         return $tbArray;
     }
 
-    public function index($db='',$sort='id',$sortBy=TRUE){
+    public function index($db='',$sort='id',$sortBy=TRUE,$condition=NULL){
         $this->display();
     }
 
