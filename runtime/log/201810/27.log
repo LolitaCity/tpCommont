@@ -3945,3 +3945,163 @@
 [ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  `name` LIKE '%k%'  AND `status` = 1 GROUP BY `id` ORDER BY `id` ASC LIMIT 0,20 [ RunTime:0.000640s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.000724s ]
 [ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.000572s ]
+---------------------------------------------------------------
+[ 2018-10-27T18:32:50+08:00 ] ::1 GET dev.tp5.com/admin/bak/backup.html
+[运行时间：0.264262s] [吞吐率：3.78req/s] [内存消耗：3,043.88kb] [文件加载：75]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://dev.tp5.com/admin/index',
+  'connection' => 'keep-alive',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=6eqn660kt6i0iu8pn9l4h2j1s1',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001054s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.004848s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000972s ]
+[ sql ] [ SQL ] show tables from works [ RunTime:0.001806s ]
+[ sql ] [ SQL ] show columns from mh_admin [ RunTime:0.002964s ]
+[ sql ] [ SQL ] show columns from mh_admin_role [ RunTime:0.004306s ]
+[ sql ] [ SQL ] show columns from mh_log [ RunTime:0.005151s ]
+[ sql ] [ SQL ] show columns from mh_node [ RunTime:0.001411s ]
+[ sql ] [ SQL ] show columns from mh_role [ RunTime:0.002904s ]
+[ sql ] [ SQL ] show columns from mh_role_node [ RunTime:0.001834s ]
+[ sql ] [ SQL ] show columns from mh_user [ RunTime:0.005319s ]
+[ sql ] [ SQL ] show columns from mh_web [ RunTime:0.004500s ]
+[ sql ] [ SQL ] select * from mh_admin [ RunTime:0.001600s ]
+[ sql ] [ SQL ] select * from mh_admin_role [ RunTime:0.001065s ]
+[ sql ] [ SQL ] select * from mh_log [ RunTime:0.001095s ]
+[ sql ] [ SQL ] select * from mh_node [ RunTime:0.001169s ]
+[ sql ] [ SQL ] select * from mh_role [ RunTime:0.002356s ]
+[ sql ] [ SQL ] select * from mh_role_node [ RunTime:0.002712s ]
+[ sql ] [ SQL ] select * from mh_user [ RunTime:0.001407s ]
+[ sql ] [ SQL ] select * from mh_web [ RunTime:0.000845s ]
+---------------------------------------------------------------
+[ 2018-10-27T18:32:54+08:00 ] ::1 GET dev.tp5.com/admin/bak/backup.html
+[运行时间：0.255390s] [吞吐率：3.92req/s] [内存消耗：3,043.27kb] [文件加载：75]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=6eqn660kt6i0iu8pn9l4h2j1s1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003546s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.003949s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.000732s ]
+[ sql ] [ SQL ] show tables from works [ RunTime:0.002166s ]
+[ sql ] [ SQL ] show columns from mh_admin [ RunTime:0.002311s ]
+[ sql ] [ SQL ] show columns from mh_admin_role [ RunTime:0.004493s ]
+[ sql ] [ SQL ] show columns from mh_log [ RunTime:0.009819s ]
+[ sql ] [ SQL ] show columns from mh_node [ RunTime:0.013973s ]
+[ sql ] [ SQL ] show columns from mh_role [ RunTime:0.002934s ]
+[ sql ] [ SQL ] show columns from mh_role_node [ RunTime:0.003924s ]
+[ sql ] [ SQL ] show columns from mh_user [ RunTime:0.002719s ]
+[ sql ] [ SQL ] show columns from mh_web [ RunTime:0.002485s ]
+[ sql ] [ SQL ] select * from mh_admin [ RunTime:0.003857s ]
+[ sql ] [ SQL ] select * from mh_admin_role [ RunTime:0.004593s ]
+[ sql ] [ SQL ] select * from mh_log [ RunTime:0.002812s ]
+[ sql ] [ SQL ] select * from mh_node [ RunTime:0.001075s ]
+[ sql ] [ SQL ] select * from mh_role [ RunTime:0.002596s ]
+[ sql ] [ SQL ] select * from mh_role_node [ RunTime:0.003335s ]
+[ sql ] [ SQL ] select * from mh_user [ RunTime:0.003306s ]
+[ sql ] [ SQL ] select * from mh_web [ RunTime:0.002361s ]
+---------------------------------------------------------------
+[ 2018-10-27T18:33:56+08:00 ] ::1 GET dev.tp5.com/admin/bak/backup.html
+[运行时间：0.222321s] [吞吐率：4.50req/s] [内存消耗：3,043.89kb] [文件加载：75]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://dev.tp5.com/admin/index',
+  'connection' => 'keep-alive',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=6eqn660kt6i0iu8pn9l4h2j1s1',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000861s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.001180s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.001084s ]
+[ sql ] [ SQL ] show tables from works [ RunTime:0.002283s ]
+[ sql ] [ SQL ] show columns from mh_admin [ RunTime:0.002528s ]
+[ sql ] [ SQL ] show columns from mh_admin_role [ RunTime:0.002095s ]
+[ sql ] [ SQL ] show columns from mh_log [ RunTime:0.002921s ]
+[ sql ] [ SQL ] show columns from mh_node [ RunTime:0.001058s ]
+[ sql ] [ SQL ] show columns from mh_role [ RunTime:0.002415s ]
+[ sql ] [ SQL ] show columns from mh_role_node [ RunTime:0.002813s ]
+[ sql ] [ SQL ] show columns from mh_user [ RunTime:0.002713s ]
+[ sql ] [ SQL ] show columns from mh_web [ RunTime:0.001283s ]
+[ sql ] [ SQL ] select * from mh_admin [ RunTime:0.001527s ]
+[ sql ] [ SQL ] select * from mh_admin_role [ RunTime:0.001339s ]
+[ sql ] [ SQL ] select * from mh_log [ RunTime:0.001118s ]
+[ sql ] [ SQL ] select * from mh_node [ RunTime:0.001062s ]
+[ sql ] [ SQL ] select * from mh_role [ RunTime:0.002141s ]
+[ sql ] [ SQL ] select * from mh_role_node [ RunTime:0.001825s ]
+[ sql ] [ SQL ] select * from mh_user [ RunTime:0.002026s ]
+[ sql ] [ SQL ] select * from mh_web [ RunTime:0.000826s ]
+---------------------------------------------------------------
+[ 2018-10-27T18:34:16+08:00 ] ::1 GET dev.tp5.com/admin/User/adminIndex.html?_=1540634121254
+[运行时间：0.112928s] [吞吐率：8.86req/s] [内存消耗：3,306.31kb] [文件加载：81]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/tpCommont/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'dev.tp5.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:63.0) Gecko/20100101 Firefox/63.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://dev.tp5.com/admin/index',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=6eqn660kt6i0iu8pn9l4h2j1s1',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1540634121254',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/tpCommont/application/admin/view/user/admin_index.html [ array (
+  0 => 'list',
+  1 => 'sort',
+  2 => 'order',
+  3 => 'sortImg',
+  4 => 'sortType',
+  5 => 'totalCount',
+  6 => 'numPerPage',
+  7 => 'currentPage',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001460s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_node` [ RunTime:0.002999s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_node` WHERE  `status` = 1  AND `level` = 0 ORDER BY `ord` ASC [ RunTime:0.001124s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000629s ] mysql:host=127.0.0.1;port=3306;dbname=works;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin` [ RunTime:0.001210s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) AS think_count FROM `mh_admin` WHERE  `status` = 1 GROUP BY `id` ) `_group_count_` LIMIT 1 [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT * FROM `mh_admin` WHERE  `status` = 1 GROUP BY `id` ORDER BY `id` ASC LIMIT 0,20 [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `mh_admin_role` [ RunTime:0.000924s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.000871s ]
+[ sql ] [ SQL ] SELECT `r`.`name` FROM `mh_admin_role` `a` INNER JOIN `mh_role` `r` ON `r`.`id`=`a`.`role_id` WHERE  `a`.`a_id` = '1' LIMIT 1 [ RunTime:0.002650s ]

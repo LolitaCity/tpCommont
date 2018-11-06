@@ -8,7 +8,7 @@
 namespace app\admin\controller;
 header('Content-type:text/html; charset=utf-8');
 Header("Content-type:application/octet-stream");
-header("Content-Disposition:attachment; filename=\"".date( 'YmdHis ').'.sql'."\""); 
+header("Content-Disposition:attachment; filename=\"".date( 'Ymd_His ').'.sql'."\""); 
 class Bak extends Common{
     /**
     *返回数据库中的数据表
