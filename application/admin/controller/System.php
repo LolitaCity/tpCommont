@@ -1,7 +1,7 @@
 <?php
 /**
  * 系统管理
- * 
+ *
  * @author  Lee<a605333742@gmail.com>
  * @date    2018-09-16
  */
@@ -10,26 +10,26 @@ namespace app\admin\controller;
 class System extends Common{
     /*
      * 构造函数
-     * 
+     *
      * @return #
      */
     public function __construct(\think\App $app = null) {
         parent::__construct($app);
     }
-    
+
     /*
      * 登录日志
-     * 
+     *
      * @return #
      */
     public function loginLog(){
         self::log(0);
         return $this->fetch('log');
     }
-    
+
     /*
      *  操作日志
-     * 
+     *
      * @return #
      */
     public function optionLog(){
@@ -40,7 +40,7 @@ class System extends Common{
 
     /*
      * 公共日志方法
-     * 
+     *
      * @return #
      */
     public function log($type=0,$sortBy='id',$asc=FALSE){
@@ -54,10 +54,10 @@ class System extends Common{
         $this->assign('type',$type);
         $this->_list($model,$map,$sortBy,$asc);
     }
-    
+
     /**
      * 清除缓存
-     * 
+     *
      * @return #
      */
     public function delCache(){
@@ -71,10 +71,10 @@ class System extends Common{
         $this->auth->addLog(1,'',$content);
         return json(jsonData('缓存清理成功',200));
     }
-    
+
     /**
      * 修改自己的密码
-     * 
+     *
      * @return #
      */
     public function changepwd(){
@@ -86,7 +86,8 @@ class System extends Common{
         if(!db("Admin")->update(['id'=> session('authId'),'password'=>md5(input('newPassword','','md5'))])){
             return json(jsonData('密码修改失败',300));
         }
-        session('isOut',1);
+        //session('isOut',1); /*间断性报错，等待进一步测试 --@Lee<a605333742@gmail.com> @date 2018-10-31*/
+        session(NULL);
         return json(jsonData('密码修改成功',201));
-    } 
+    }
 }

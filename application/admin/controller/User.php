@@ -1,7 +1,7 @@
 <?php
 /**
  * 用户管理
- * 
+ *
  * @author Lee<a605333742@gmail.com>
  * @date 2018-09-17
  */
@@ -16,26 +16,26 @@ class User extends Common{
     ];
     /*
      * 构造函数
-     * 
+     *
      * @return #
      */
     public function __construct(\think\App $app = null) {
         parent::__construct($app);
         $this->data= input();
     }
-    
+
     /*
      * 前台用户管理
-     * 
+     *
      * @return #
      */
 //    public function index($db = 'Admin', $sort = 'id', $sortBy = TRUE) {
 //        parent::index($db, $sort, $sortBy, $where, $view);
 //    }
-    
+
     /*
      * 后台用户管理
-     * 
+     *
      * @return #
      */
     public function adminIndex(){
@@ -45,10 +45,10 @@ class User extends Common{
         $this->_list($model, $map);
         return $this->fetch();
     }
-    
+
     /*
      * 显示前置操作
-     * 
+     *
      * @return #
      */
     public function beforeShow() {
@@ -61,10 +61,10 @@ class User extends Common{
         }
         $this->assign("rlist",$roleList);
     }
-    
+
     /**
      * 编辑用户，包括前台用户和后台用户，新增和修改
-     * 
+     *
      * @return #
      */
     public function edit() {
@@ -104,6 +104,8 @@ class User extends Common{
                 $condition['name']      =trim($this->data['name'])??'';
                 $condition['tel']       =trim($this->data['tel'])??'';
                 $condition['email']     =trim($this->data['email'])??'';
+                $condition['edit_a_id'] =session("user.id");
+                $condition['edit_time'] =time();
                 try{
                     db("Admin")->update($condition);
                 } catch (\Exception $e){
@@ -143,7 +145,10 @@ class User extends Common{
                 'password'  =>trim(md5(md5($this->data['password']))),
                 'tel'       =>trim($this->data['tel']??''),
                 'email'     =>trim($this->data['email']??''),
-                'add_time'  =>time()
+                'add_time'  =>time(),
+                'add_a_id'  =>session("user.id"),
+                'edit_a_id' =>session("user.id"),
+                'edit_time' =>time()
             );
             try{
                 $newId  =db("Admin")->insertGetId($condition);
@@ -168,10 +173,10 @@ class User extends Common{
         }
         //前台用户新增
     }
-    
+
     /**
      * 删除用户
-     * 
+     *
      * @return bool
      */
     public function beforeDel(){

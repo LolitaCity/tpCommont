@@ -1,4 +1,4 @@
-<?php /*a:2:{s:76:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\index\index.html";i:1540347623;s:75:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\index\main.html";i:1540209707;}*/ ?>
+<?php /*a:2:{s:76:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\index\index.html";i:1541060254;s:75:"E:\phpStudy\PHPTutorial\WWW\TpCommon\application\admin\view\index\main.html";i:1540209707;}*/ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -64,10 +64,10 @@ $(function(){
     <div id="layout">
         <div id="header">
             <div class="headerNav">
-                <a class="logo" href="__CONTROLLER__">标志</a>
+                <a class="logo" href="<?php echo url("","",true,false);?>">标志</a>
                 <ul class="nav">
                     <eq name="Think.session.authId" value="1">
-                        <li><a href="<?php echo url('auth/systemInfo'); ?>" target="dialog" height="420" width="490">系统消息</a></li>                       
+                        <li><a href="<?php echo url('auth/systemInfo'); ?>" target="dialog" height="420" width="490">系统消息</a></li>
                         <li><a href="<?php echo url('bak/backup'); ?>">数据库备份</a></li>
                     </eq>
                     <li><a href="<?php echo url('system/delCache'); ?>" target="ajaxTodo">清除缓存</a></li>
@@ -82,7 +82,7 @@ $(function(){
                     <li theme="azure"><div>天蓝</div></li>
                 </ul>
             </div>
-            <!-- navMenu -->			
+            <!-- navMenu -->
         </div>
         <div id="leftside">
             <div id="sidebar_s">
@@ -127,7 +127,7 @@ $(function(){
                         <li><a href="javascript:;">主页</a></li>
                     </ul>
                 <div class="navTab-panel tabsPageContent layoutBox">
-                    <div class="page unitBox">                        
+                    <div class="page unitBox">
                         <div class="pageFormContent" layoutH="80" style="margin-right:230px">
                             <table cellspacing=0 cellpadding=0 width="90%" align=center border=0>
                                 <tr height=100>
@@ -144,17 +144,17 @@ $(function(){
                                             <tr>
                                                 <td>欢迎进入管理中心!</td>
                                             </tr>
-                                        </table>                                            
+                                        </table>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan=3 height=10></td>
                                 </tr>
-                            </table>                         
-                            
+                            </table>
+
                             <div class="buttonActive" target="_blank"><span>基本信息（oschina）</span></div>
                             <div class="divider"></div>
-                            
+
                             <table cellspacing=0 cellpadding=2 width="95%" align=center border=0 id="info" style="font-size:20px">
                                 <tr>
                                     <td align=right width=100>用户:</td>
@@ -166,7 +166,7 @@ $(function(){
                                 </tr>
                                 <tr>
                                     <td align=right>注册时间:</td>
-                                    
+
                                     <td style="color: #880000"><?php echo htmlentities(date("Y-m-d H:i",!is_numeric(app('session')->get('user.add_time'))? strtotime(app('session')->get('user.add_time')) : app('session')->get('user.add_time'))); ?></td>
                                 </tr>
                                 <tr>
@@ -177,7 +177,7 @@ $(function(){
                                     <td align=right>上次登录时间:</td>
                                     <td style="color: #880000"><?php echo htmlentities(date("Y-m-d H:i",!is_numeric(app('session')->get('user.last_logintime'))? strtotime(app('session')->get('user.last_logintime')) : app('session')->get('user.last_logintime'))); ?></td>
                                 </tr>
-                            </table>                            
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -185,5 +185,5 @@ $(function(){
         </div>
     </div>
     <div id="footer">Copyright &copy; 2010 <a href="demo_page2.html" target="dialog">DWZ团队</a> 京ICP备15053290号-2</div>
-</body>    
+</body>
 </html>
