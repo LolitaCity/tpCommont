@@ -9,6 +9,7 @@ namespace app\admin\controller;
 header('Content-type:text/html; charset=utf-8');
 Header("Content-type:application/octet-stream");
 header("Content-Disposition:attachment; filename=\"".date( 'Ymd_His ').'.sql'."\"");
+header("Content-Disposition:attachment; filename=\"".date( 'Ymd_His ').'.sql'."\"");
 header("Content-Disposition:attachment; filename=\"".date( 'Ymd_His').'.sql'."\"");
 class Bak extends Common{
     /**
