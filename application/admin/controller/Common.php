@@ -20,10 +20,15 @@ class Common extends Controller{
      */
     public function __construct(\think\App $app = null) {
         parent::__construct($app);
+        /*间断性报错，等待进一步测试 --@Lee<a605333742@gmail.com> @date 2018-10-31 start
         if(session('isOut')!=NULL && session('isOut')==1){
             $this->redirect('auth/timeOut');
         }
+        间断性报错，等待进一步测试 --@Lee<a605333742@gmail.com> @date 2018-10-31 end*/
         if(session(config('USER_AUTH_KEY'))==NULL || empty(session(config('USER_AUTH_KEY')))){
+            if(strtolower(request()->controller())!='index'){
+                $this->redirect('auth/timeOut');
+            }
             $this->redirect('/admin/Auth/index');
         }
         if(in_array(request()->module(),config('deny_module_list'))){
@@ -141,10 +146,11 @@ class Common extends Controller{
      *
      * @return #
      */
-    public function index($db='',$sort='id',$sortBy=TRUE){
+    public function index($db='',$sort='id',$sortBy=TRUE,$condition=NULL){
         $model  =$db?Db::name($db):Db::name(request()->controller());
         $map    =self::_search($model);
-        $map[]  =['status','=',1];
+        if(in_array("status",$model->gettablefields())){$map[]  =['status','=',1];}
+        if($condition!=NULL){$map[]=$condition;}
         $sort   =strtolower(request()->controller())=='node'?'path':$sort;
         self::_list($model,$map,$sort,$sortBy);
         return $this->fetch(request()->action());

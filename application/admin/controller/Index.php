@@ -1,7 +1,7 @@
 <?php
 /**
  * 后台首页
- * 
+ *
  * @author  Lee<a605333742@gmail.com>
  * @date 2018-08-31
  */
@@ -13,7 +13,7 @@ use think\config;
 class Index extends Common{
     protected $db;
     protected $listRows='listRows';
-    protected $authModel;    
+    protected $authModel;
     /*
      * 构造函数
      * @return #
@@ -24,13 +24,13 @@ class Index extends Common{
         $this->db   = db('Node');
         $this->authModel=new Auth();
     }
-    
+
     /*
      * 系统首页
-     * 
+     *
      * @return #
      */
-    public function index($db="Node",$sort='id',$sortBy=false){
+    public function index($db="Node",$sort='id',$sortBy=false,$condition=NULL){
         $oneNodeList=$this->authModel->ckeckAuth();
         $twoNodeList=$this->authModel->ckeckAuth(1);
         $this->assign("oneNodeList",$oneNodeList);

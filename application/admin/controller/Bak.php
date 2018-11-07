@@ -8,6 +8,7 @@
 namespace app\admin\controller;
 header('Content-type:text/html; charset=utf-8');
 Header("Content-type:application/octet-stream");
+header("Content-Disposition:attachment; filename=\"".date( 'Ymd_His ').'.sql'."\"");
 header("Content-Disposition:attachment; filename=\"".date( 'Ymd_His').'.sql'."\"");
 class Bak extends Common{
     /**
@@ -22,7 +23,7 @@ class Bak extends Common{
         return $tbArray;
     }
 
-    public function index($db='',$sort='id',$sortBy=TRUE){
+    public function index($db='',$sort='id',$sortBy=TRUE,$condition=NULL){
         $this->display();
     }
 

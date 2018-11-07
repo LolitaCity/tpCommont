@@ -81,7 +81,7 @@ class Auth extends Controller{
         //登陆成功信息写入日志
         self::addLog(0);
         if(input('notCaptcha')!=NULL){
-            session('isOut',NULL);
+            //session('isOut',NULL); /*间断性报错，等待进一步测试 --@Lee<a605333742@gmail.com> @date 2018-10-31*/
             return json(jsonData('登录成功',201));
         }
         echo 1000;exit;
@@ -102,11 +102,11 @@ class Auth extends Controller{
             'type'      =>$type,
         );
         if($type==0){
-            $ipInfo =ip2Area($this->request->ip());
+            //$ipInfo =ip2Area($this->request->ip());
             $map['content'] =session('user.name').' 登录成功';
             $map['ip']      =$this->request->ip();
-            $map['addr']    =$ipInfo['province'].'-'.$ipInfo['city'];
-            //$map['addr']    =json_decode(trim(substr(file_get_contents('http://pv.sohu.com/cityjson?ie=utf-8'),strpos(file_get_contents('http://pv.sohu.com/cityjson?ie=utf-8'),'=')+1),';'))->cname;
+            //$map['addr']    =$ipInfo['province'].'-'.$ipInfo['city'];
+            $map['addr']    =json_decode(trim(substr(file_get_contents('http://pv.sohu.com/cityjson?ie=utf-8'),strpos(file_get_contents('http://pv.sohu.com/cityjson?ie=utf-8'),'=')+1),';'))->cname;
         }else{
             $map['db']      =$db;
             $map['content'] =$content;
