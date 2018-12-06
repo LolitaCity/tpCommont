@@ -12,17 +12,7 @@
 		<input type="text" name="text" style="width:300px" />
 		<input type="submit" />
 	</form>
-<?php
-if( isset($_REQUEST['text']) ) {
-	// 注意至少要带上一个链接。
-	$ret = $c->share( $_REQUEST['text'] );	//发送微博
-	if ( isset($ret['error_code']) && $ret['error_code'] > 0 ) {
-		echo "<p>发送失败，错误：{$ret['error_code']}:{$ret['error']}</p>";
-	} else {
-		echo "<p>发送成功</p>";
-	}
-}
-?>
+
 
 <?php if( is_array( $ms['statuses'] ) ): ?>
 <?php foreach( $ms['statuses'] as $item ): ?>
