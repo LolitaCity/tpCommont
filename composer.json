@@ -23,7 +23,8 @@
     },
     "autoload": {
         "psr-4": {
-            "app\\": "application"
+            "app\\": "application",
+            "ext\\": "extend"
         }
     },
     "extra": {

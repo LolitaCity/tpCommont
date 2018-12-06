@@ -17,6 +17,10 @@ class ComposerStaticInit043456b4a33884a68c211ef30b7ddc1c
             'think\\captcha\\' => 14,
             'think\\' => 6,
         ),
+        'e' => 
+        array (
+            'ext\\' => 4,
+        ),
         'a' => 
         array (
             'app\\' => 4,
@@ -35,6 +39,10 @@ class ComposerStaticInit043456b4a33884a68c211ef30b7ddc1c
         'think\\' => 
         array (
             0 => __DIR__ . '/..' . '/topthink/think-image/src',
+        ),
+        'ext\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/extend',
         ),
         'app\\' => 
         array (

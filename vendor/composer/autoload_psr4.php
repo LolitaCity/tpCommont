@@ -9,5 +9,6 @@ return array(
     'think\\composer\\' => array($vendorDir . '/topthink/think-installer/src'),
     'think\\captcha\\' => array($vendorDir . '/topthink/think-captcha/src'),
     'think\\' => array($vendorDir . '/topthink/think-image/src'),
+    'ext\\' => array($baseDir . '/extend'),
     'app\\' => array($baseDir . '/application'),
 );
