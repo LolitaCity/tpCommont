@@ -49,7 +49,7 @@ class Demo extends Controller{
             $keys['redirect_uri'] = env('SINACALLBACKURL');
             try {
                 $token = $this->authV2->getAccessToken( 'code', $keys ) ;
-            } catch (OAuthException $e) {}
+            } catch (\Exception $e) {}
         }
         if (!$token) {exit("授权失败");}
         $_SESSION['token'] = $token;
