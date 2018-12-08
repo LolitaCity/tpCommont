@@ -10,7 +10,7 @@ namespace app\index\controller;
 
 use think\Controller;
 
-class PhpInfo extends Controller{
+class Phpinfo extends Controller{
     /**
      * 构造函数
      * 
