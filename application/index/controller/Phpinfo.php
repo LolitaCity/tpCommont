@@ -28,4 +28,38 @@ class Phpinfo extends Controller{
     public function index(){
         phpinfo();exit;
     }
+    
+    /**
+     * redis 测试
+     * 
+     * @return #
+     */
+    public function testRedis1(){
+        $redis=new \Redis();
+        var_dump($redis);exit;
+    }
+    public function testRedis2(){
+        var_dump(redis());exit;
+    }
+    public function testRedis3(){
+        $redis= redis()->keys("*");
+        var_dump($redis);exit;
+    }
+    public function testRedis4(){
+        $redis= redis()->keys('name');
+        var_dump($redis);exit;
+    }
+    public function testRedis5(){
+        $redis= redis()->set('iphone','6sp');
+        var_dump($redis);exit;
+    }
+    public function testRedis6(){
+        $redis= redis()->get('iphone');
+        var_dump($redis);exit;
+    }
+    public function testRedis7(){
+        $model=new \ReflectionClass("redis");
+        $redis= $model->getMethod();
+        var_dump($redis);exit;
+    }
 }
