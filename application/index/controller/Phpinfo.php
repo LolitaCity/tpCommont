@@ -36,6 +36,11 @@ class Phpinfo extends Controller{
      */
     public function testRedis1(){
         $redis=new \Redis();
+        foreach ($redis as $v){
+            var_dump($v);
+            echo '<br/>----------<br/>';
+        }
+        exit;
         var_dump($redis);exit;
     }
     public function testRedis2(){
@@ -59,7 +64,7 @@ class Phpinfo extends Controller{
     }
     public function testRedis7(){
         $model=new \ReflectionClass("redis");
-        $redis= $model->getMethod();
+        $redis= $model->getMethods();
         var_dump($redis);exit;
     }
 }
