@@ -82,4 +82,21 @@ class Demo extends Controller{
 	}
 	$this->success("微博发送成功","demo/callback");
     }
+    
+    /**
+     * 类反射对象
+     * 
+     * @return #
+     */
+    public function getMethod1(){
+        $model=new \ReflectionClass("SaeTClientV2");
+        $SaeTClientV2= $model->getMethods();
+        var_dump($SaeTClientV2);exit;
+    }
+    
+    public function getMethod2(){
+        $model=new \ReflectionClass("SaeTOAuthV2");
+        $SaeTClientV2= $model->getMethods();
+        var_dump($SaeTClientV2);exit;
+    }
 }
