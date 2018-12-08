@@ -10,7 +10,7 @@
 	<h2 align="left">发送新微博</h2>
 	<form action="{:url('demo/sendWeibo')}" >
 		<input type="text" name="text" style="width:300px" />
-		<input type="submit" />
+		<input type="submit" value="发布"/>
 	</form>
 
 {if (isset($ms['statuses']) && is_array($ms['statuses']))}
