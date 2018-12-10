@@ -10,7 +10,7 @@ namespace app\index\controller;
 
 use think\Controller;
 
-class Phpinfo extends Controller{
+class Redis extends Controller{
     /**
      * 构造函数
      * 
