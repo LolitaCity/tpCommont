@@ -1,7 +1,7 @@
 <?php
 /**
  * phpinfo 显示
- * 
+ *
  * @author Lee<a605333742@gmail.com>
  * @date    2018-12-08
  */
@@ -13,25 +13,25 @@ use think\Controller;
 class Redis extends Controller{
     /**
      * 构造函数
-     * 
+     *
      * @return #
      */
     public function __construct(){
         parent::__construct();
     }
-    
+
     /**
      * 显示PHPinfo信息
-     * 
+     *
      * @return #
      */
     public function index(){
         phpinfo();exit;
     }
-    
+
     /**
      * redis 测试
-     * 
+     *
      * @return #
      */
     public function testRedis1(){
@@ -62,9 +62,9 @@ class Redis extends Controller{
         $redis= $model->getMethods();
         var_dump($redis);exit;
     }
-    
+
     public function testRedis8(){
-        
+
         $model=new \ReflectionClass("mysqli");
         $redis= $model->getMethods();
         var_dump($redis);exit;
