@@ -747,7 +747,7 @@ if (!function_exists('memcached')) {
     function memcached()
     {
         $con=new \memcached();
-        $con->connect(config('memcached.host'), config('memcached.port'));
+        $con->addserver(config('memcached.host'), config('memcached.port'));
         return $con;
     }
 }

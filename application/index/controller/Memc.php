@@ -57,13 +57,13 @@ class Memc extends Controller{
     
     public function memTest2(){
         $mem=new \Memcached();
-        $mem->connect(config('memcached.host'), config('memcached.port'));
+        $mem->addServer(config('memcached.host'), config('memcached.port'));
         var_dump($mem);exit;
     }
     
     public function memTest3(){
-        $mem=new \Memcache();
-        $mem->connect('127.0.0.1','11211');
+        $mem=new \Memcached();
+        $mem->addServer('127.0.0.1','11211');
         var_dump($mem);exit;
     }
     
