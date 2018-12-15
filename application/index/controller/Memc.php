@@ -46,4 +46,38 @@ class Memc extends Controller{
         $memcache->set($key, 'test_string', MEMCACHE_COMPRESSED, 50);
     }
     
+    /**
+     * memcached 链接测试
+     * 
+     * @return #
+     */
+    public function memTest1(){
+        var_dump(memcached());exit;
+    }
+    
+    public function memTest2(){
+        $mem=new \Memcached();
+        $mem->connect(config('memcached.host'), config('memcached.port'));
+        var_dump($mem);exit;
+    }
+    
+    public function memTest3(){
+        $mem=new \Memcache();
+        $mem->connect('127.0.0.1','11211');
+        var_dump($mem);exit;
+    }
+    
+    public function memTest4(){
+        $model  =new \ReflectionClass("memcached");
+        $method =$model->getMethods();
+        var_dump($method);exit;
+    }
+    
+    public function memTest5(){
+        $mem    =new \Memcached();
+        $model  =new \ReflectionClass($mem);
+        $method =$model->getMethods();
+        var_dump($method);exit;
+    }
+    
 }
