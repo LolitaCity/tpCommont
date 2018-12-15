@@ -64,7 +64,6 @@ class Redis extends Controller{
     }
 
     public function testRedis8(){
-
         $model=new \ReflectionClass("mysqli");
         $redis= $model->getMethods();
         var_dump($redis);exit;
