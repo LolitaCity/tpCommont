@@ -16,7 +16,7 @@ class Mem{
      * @return #
      */
     private function __construct(){
-        $this->memModel =new \Memcache();
+        $this->memModel =new \Memcached();
         $this->memModel->addServer(config('memcached.host'),config('memcached.port'));
     }
 

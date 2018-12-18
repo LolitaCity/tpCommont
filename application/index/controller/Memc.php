@@ -85,4 +85,11 @@ class Memc extends Controller{
         var_dump(Mem::memcached());exit;
     }
 
+    public function memTest7(){
+        $memd   =Mem::memcached();
+        $model  =new \ReflectionClass($memd);
+        $method =$model->getMethods();
+        var_dump($method);exit;
+    }
+
 }
