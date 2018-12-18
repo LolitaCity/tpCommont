@@ -89,9 +89,11 @@ class Sina extends Controller{
      * @return #
      */
     public function getMethod1(){
-        $model=new \ReflectionClass($this->authV2);
-        $SaeTClientV2= $model->getMethods();
-        var_dump($SaeTClientV2);exit;
+	$model	=new \ReflectionClass($this->authV2);
+	$SaeTClientV2= $model->getMethods();
+	$doc	=$model->newInstance();
+	//var_dump($SaeTClientV2);exit;
+	var_dump($doc);exit;
     }
 
     public function getMethod2(){
