@@ -721,7 +721,7 @@ if (!function_exists('yaconf')) {
 
 /**
  * redis 助手函数
- * 
+ *
  * @author  Lee<a605333742@gamil.com>
  * @date    2018-12-15
  */
@@ -739,15 +739,13 @@ if (!function_exists('redis')) {
 
 /**
  * memcached 助手函数
- * 
+ *
  * @author Lee<a605333742@gmail.com>
  * @date    2018-12-15
  */
 if (!function_exists('memcached')) {
     function memcached()
     {
-        $con=new \memcached();
-        $con->addserver(config('memcached.host'), config('memcached.port'));
-        return $con;
+        return \ext\mem\Mem::memcached();
     }
 }
