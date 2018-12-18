@@ -719,6 +719,12 @@ if (!function_exists('yaconf')) {
     }
 }
 
+/**
+ * redis 助手函数
+ * 
+ * @author  Lee<a605333742@gamil.com>
+ * @date    2018-12-15
+ */
 if (!function_exists('redis')) {
     /**
      * 获取容器对象实例
@@ -728,5 +734,20 @@ if (!function_exists('redis')) {
     function redis()
     {
         return \ext\redis\Redis::redis();
+    }
+}
+
+/**
+ * memcached 助手函数
+ * 
+ * @author Lee<a605333742@gmail.com>
+ * @date    2018-12-15
+ */
+if (!function_exists('memcached')) {
+    function memcached()
+    {
+        $con=new \memcached();
+        $con->addserver(config('memcached.host'), config('memcached.port'));
+        return $con;
     }
 }
