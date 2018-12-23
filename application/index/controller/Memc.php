@@ -92,4 +92,34 @@ class Memc extends Controller{
         var_dump($method);exit;
     }
 
+    public function memTest8(){
+        $mem=new \Memcache();
+        $mem->pconnect('127.0.0.1',11211);
+        for($i=1;$i<=100;$i++){
+            $mem->set('name'.$i,"张三".$i);
+        }
+        echo "OK";
+    }
+    public function memTest9(){
+        $mem=new \Memcache();
+        $mem->pconnect('127.0.0.1',11211);
+        $name   =[];
+        for($i=20;$i<84;$i++){
+            $name[]=$mem->get('name'.$i);
+        }
+        echo '<pre>';
+        var_dump($name);
+        echo '</pre>';
+    }
+
+    public function memTest10(){
+        $mem=new \Memcache();
+        $mem->addServer('127.0.0.1','11211');
+        var_dump($mem->getextendedstats());exit;
+        $model  =new \ReflectionClass($mem);
+        $method =$model->getMethods();
+        echo '<pre>';
+        var_dump($method);exit;
+        echo '</pre>';
+    }
 }

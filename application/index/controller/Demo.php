@@ -2,7 +2,7 @@
 /**
  * tp5测试
  *
- * @author  Lee<a605333742@gmail.com>callable
+ * @author  Lee<a605333742@gmail.com>
  * @date    2018-12-10
  */
 namespace app\index\controller;
@@ -57,6 +57,6 @@ class Demo extends Controller{
      * @return #
      */
     public function testHttp(){
-        
+
     }
 }
