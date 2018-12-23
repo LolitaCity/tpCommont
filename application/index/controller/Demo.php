@@ -27,4 +27,36 @@ class Demo extends Controller{
     public function index(){
 	phpinfo();
     }
+
+    /**
+     * 获取指定类的document注释
+     *
+     * @return #
+     */
+    public function getDocument(){
+	$class=new Sms();
+	$model2	=new \ReflectionObject($class);
+	foreach ($model2->getMethods(\ReflectionMethod::IS_PUBLIC) as $vo){
+	     /* @var $method ReflectionMethod */
+	    if (substr($vo->getName(), 0, 1) !== '_') {
+		$list[$vo->getName()] = array(
+		    'description' => $vo->getDocComment(),
+		    'parameters'  => $vo->getParameters(),
+		);
+	    }
+	}
+	ksort($list);
+	$this->assign('list',$list);
+        return $this->fetch();
+//	var_dump($list);exit;
+    }
+
+    /**
+     * 测试http
+     *
+     * @return #
+     */
+    public function testHttp(){
+        
+    }
 }

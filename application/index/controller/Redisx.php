@@ -9,8 +9,9 @@
 namespace app\index\controller;
 
 use think\Controller;
+use ext\redis\Redis;
 
-class Redis extends Controller{
+class Redisx extends Controller{
     /**
      * 构造函数
      *
@@ -68,4 +69,16 @@ class Redis extends Controller{
         $redis= $model->getMethods();
         var_dump($redis);exit;
     }
+
+    public function testRedis9(){
+        var_dump(redis()->get("iphone"));
+    }
+
+    public function testRedis10(){
+        $class=Redis::redis();
+        $model=new \ReflectionClass($class);
+        $redis= $model->getMethods();
+        var_dump($redis);exit;
+    }
+
 }
