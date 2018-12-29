@@ -27,9 +27,9 @@ class Exceldemo extends Controller{
      */
     public function index(){
         $dataResult = array();      //todo:导出数据（自行设置）
-        $headTitle = "XX保险公司 优惠券赠送记录";
+//        $headTitle = "XX保险公司 优惠券赠送记录";
         $title = "优惠券记录";
-        $headtitle= "<tr style='height:50px;border-style:none;><th border=\"0\" style='height:60px;width:270px;font-size:22px;' colspan='11' >{$headTitle}</th></tr>";
+//        $headtitle= "<tr style='height:50px;border-style:none;><th border=\"0\" style='height:60px;width:270px;font-size:22px;' colspan='11' >{$headTitle}</th></tr>";
         $titlename = "<tr>
                <th style='width:70px;' >合作商户</th>
                <th style='width:70px;' >会员卡号</th>
@@ -59,7 +59,7 @@ class Exceldemo extends Controller{
         }
         $filename = $title.".xls";
         $model   =new Excel();
-        $model->excelData($dataResult,$titlename.$content,$headtitle,$filename);
+        $model->excelData($dataResult,$titlename.$content,$filename);
     }
 
     /**

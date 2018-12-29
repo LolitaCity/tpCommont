@@ -115,11 +115,11 @@ class Memc extends Controller{
     public function memTest10(){
         $mem=new \Memcache();
         $mem->addServer('127.0.0.1','11211');
-        var_dump($mem->getextendedstats());exit;
+//        var_dump($mem->getextendedstats());exit;
         $model  =new \ReflectionClass($mem);
         $method =$model->getMethods();
         echo '<pre>';
-        var_dump($method);exit;
+        var_dump($method);
         echo '</pre>';
     }
 }

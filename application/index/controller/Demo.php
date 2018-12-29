@@ -57,6 +57,25 @@ class Demo extends Controller{
      * @return #
      */
     public function testHttp(){
-
+        $data   =db("node")->select();
+        return $data;
+    }
+    
+    
+    public function dd(){
+        $d=$this->testHttp();
+        var_dump($d[0]);exit;
+    }
+    
+    /**
+     * test
+     */
+    public function tableInfo(){
+        $class  = db();
+        $model  =new \ReflectionClass($class);
+        $method =$model->getMethods();
+        var_dump($class->getFieldsType('mh_node'));exit;
+        var_dump($class->getConfig('node'));exit;
+        var_dump($method);exit;
     }
 }

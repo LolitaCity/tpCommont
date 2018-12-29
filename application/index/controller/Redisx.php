@@ -47,8 +47,12 @@ class Redisx extends Controller{
         var_dump($redis);exit;
     }
     public function testRedis4(){
-        $redis= redis()->keys('name');
-        var_dump($redis);exit;
+        try {
+            $redis= redis()->keys('name');
+            var_dump($redis);exit;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
     }
     public function testRedis5(){
         $redis= redis()->set('iphone','6sp');

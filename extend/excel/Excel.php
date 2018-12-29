@@ -14,10 +14,10 @@ class Excel {
     *@param $titlename string 设置head
     *@param $title string 设置表头
     */
-    public function excelData($datas,$titlename,$title,$filename){
+    public function excelData($datas,$titlename,$filename){
         $str = "<html xmlns:o=\"urn:schemas-microsoft-com:office:office\"\r\nxmlns:x=\"urn:schemas-microsoft-com:office:excel\"\r\nxmlns=\"http://www.w3.org/TR/REC-html40\">\r\n<head>\r\n<meta http-equiv=Content-Type content=\"text/html; charset=utf-8\">\r\n</head>\r\n<body>";
         $str .="<table border=1><head>".$titlename."</head>";
-        $str .= $title;
+        $str .= '';
         foreach ($datas as $key=> $rt ){
             $str .= "<tr>";
             foreach ( $rt as $k => $v ){

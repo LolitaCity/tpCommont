@@ -245,4 +245,35 @@ function is_empty_dir($ddir){
     if($i>2){return false;}
     return true;
 }
+
+/**
+ * redis 助手函数
+ *
+ * @author  Lee<a605333742@gamil.com>
+ * @date    2018-12-15
+ */
+if (!function_exists('redis')) {
+    /**
+     * 获取容器对象实例
+     * redis 助手函数
+     * @return Container
+     */
+    function redis()
+    {
+        return \ext\redis\Redis::redis();
+    }
+}
+
+/**
+ * memcached 助手函数
+ *
+ * @author Lee<a605333742@gmail.com>
+ * @date    2018-12-15
+ */
+if (!function_exists('memcached')) {
+    function memcached()
+    {
+        return \ext\mem\Mem::memcached();
+    }
+}
   

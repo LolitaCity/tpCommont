@@ -18,7 +18,7 @@ class Redis{
     private function __construct() {
         $this->redisModel   =new \Redis();
         $this->redisModel->pconnect(config('redis.host'), config('redis.port'),5);
-	$this->redisModel->auth(config('redis.auth'));
+        $this->redisModel->auth(config('redis.auth'));
     }
     /**
      * 私有化clone函数
