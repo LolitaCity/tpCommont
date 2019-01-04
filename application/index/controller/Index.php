@@ -20,17 +20,17 @@ class Index extends Controller
     {
         return 'hello,' . $name;
     }
-    
+
     public function routes(){
         echo "这是路由规则";exit;
     }
-    
+
     public function redirectRoute(){
         echo '新的路由';
     }
-    
+
     public function demo(){
         return func_get_args();
     }
-    
+
 }
