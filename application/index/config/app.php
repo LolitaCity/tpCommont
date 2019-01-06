@@ -1,4 +1,4 @@
 <?php
 return array(
-    'default_return_type'   => 'json',
+    //'default_return_type'   => 'json',
 );
