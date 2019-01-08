@@ -42,7 +42,7 @@ class Memc extends Controller{
         $mem = explode(':', $memNode);
         $host = $mem[0];
         $port = $mem[1];
-        $memcache= new Memcache();
+        $memcache= new Memcached();
         $memcache->connect($host, $port);
         $memcache->set($key, 'test_string', MEMCACHE_COMPRESSED, 50);
     }

@@ -12,9 +12,11 @@ class Error extends Controller{
     /*
      * 默认空操作
      */
-    public function index(){
+    public function __construct(\think\App $app = null) {
+        parent::__construct($app);
         echo "<img src='/static/admin/img/404.jpg' width='60%' style='text-align:center;'>";exit;
     }
+            
 
     /*
      * Dwz默认错误操作
