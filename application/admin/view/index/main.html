@@ -2,7 +2,7 @@
     <div class="accordionContent">
         <ul class="tree treeFolder">
             {foreach $oneNodeList as $one}
-                <li><a {notempty name="one.action"} href="{:url($one['controller'].'/'.$one['action'])}" rel="{$one.controller}"  target="navTab" {/notempty} >{$one.name}</a>
+                <li><a {notempty name="one.action"} href="{:url($one['controller'].'/'.$one['action'])}" rel="{$one.controller}"  target="navTab" {/notempty}>{$one.name}</a>
                     <ul>                        
                         {foreach $twoNodeList as $two}
                                 {if ($two.p_id == $one.id)}

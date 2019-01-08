@@ -87,7 +87,7 @@ class Ucpaas
     }
 
     /**
-	单条发送短信的function，适用于注册/找回密码/认证/操作提醒等单个用户单条短信的发送场景
+     *单条发送短信的function，适用于注册/找回密码/认证/操作提醒等单个用户单条短信的发送场景
      * @param $appid        应用ID
      * @param $mobile       接收短信的手机号码
      * @param $templateid   短信模板，可在后台短信产品→选择接入的应用→短信模板-模板ID，查看该模板ID
@@ -112,8 +112,8 @@ class Ucpaas
         return $data;
     }
 	
-	 /**
-	 群发送短信的function，适用于运营/告警/批量通知等多用户的发送场景
+    /**
+     * 群发送短信的function，适用于运营/告警/批量通知等多用户的发送场景
      * @param $appid        应用ID
      * @param $mobileList   接收短信的手机号码，多个号码将用英文逗号隔开，如“18088888888,15055555555,13100000000”
      * @param $templateid   短信模板，可在后台短信产品→选择接入的应用→短信模板-模板ID，查看该模板ID

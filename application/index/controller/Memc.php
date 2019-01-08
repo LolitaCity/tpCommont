@@ -94,15 +94,16 @@ class Memc extends Controller{
 
     public function memTest8(){
         $mem=new \Memcache();
-        $mem->pconnect('127.0.0.1',11211);
+        $mem->pconnect('10.0.0.188',11211);
         for($i=1;$i<=100;$i++){
             $mem->set('name'.$i,"张三".$i);
         }
         echo "OK";
     }
+    
     public function memTest9(){
         $mem=new \Memcache();
-        $mem->pconnect('127.0.0.1',11211);
+        $mem->pconnect('10.0.0.188',11211);
         $name   =[];
         for($i=20;$i<84;$i++){
             $name[]=$mem->get('name'.$i);
@@ -121,5 +122,17 @@ class Memc extends Controller{
         echo '<pre>';
         var_dump($method);
         echo '</pre>';
+    }
+    
+    public function memTest11(){
+        $mem=new \Memcache();
+        $mem->pconnect('127.0.0.1',11211);
+        $a='';
+        for($i=1;$i<=100;$i++){
+            $a=$a.$i;
+            $mem->set('dm'.$i,$a);
+        }
+        //$mem->set('dm',$a);
+        echo "OK";
     }
 }
