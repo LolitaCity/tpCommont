@@ -27,7 +27,7 @@ class Web extends Common{
      */
     public function info(){
         $webInfo=db("Web")->where("status",'=',1)->find();
-        $this->assign("webInfo",$webInfo);
+        $this->assign("webInfo",$webInfo??"");
         return $this->fetch();
     }
     

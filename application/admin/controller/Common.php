@@ -178,9 +178,11 @@ class Common extends Controller{
      */
     public function edit(){
         if(input('id')){
-            return self::update()?json(jsonData('修改成功',201)):json(jsonData('修改失败',301));
+            $updateResult   =self::update();
+            return $updateResult['err']===0?json(jsonData($updateResult['msg'],201)):json(jsonData($updateResult['msg'],301));
         }
-        return self::insert()?json(jsonData('新增成功',201)):json(jsonData('新增失败',301));
+        $insertResult   =self::insert();
+        return $insertResult['err']===0?json(jsonData($insertResult['msg'],201)):json(jsonData($insertResult['msg'],301));
     }
 
     /*
@@ -191,23 +193,52 @@ class Common extends Controller{
     public function insert(){
         $dbName =input("db")? input("db"): request()->controller();
         $model  =Db::name($dbName);
+        $model->startTrans();
+        //文件上传
+        $uploadInfo =[];
+        if(request()->file()){
+            $uploadInfo =$this->upImg(request()->file());
+            if(isset($uploadInfo['err'])&&$uploadInfo['err']==1){
+                return [
+                    'err'   =>1,
+                    'msg'   =>$uploadInfo['msg']
+                ];
+            }
+        }
         //字段过滤
         $insData=array();
+        $tableFields=$model->getTableFields();
         foreach (array_filter(input()) as $k=>$v){
-            if(in_array($k,$model->getTableFields())){$insData[$k]=$v;}
+            if(in_array($k,$tableFields)){$insData[$k]=$v;}
             //更新添加时间
-            if(in_array('add_time',$model->getTableFields())){$insData['add_time']  =time();}
+            if(in_array('add_time',$tableFields)){$insData['add_time']  =time();}
             //更新添加人
-            if(in_array('add_a_id',$model->getTableFields())){$insData['add_a_id']  =session('user.id');}
+            if(in_array('add_a_id',$tableFields)){$insData['add_a_id']  =session('user.id');}
              //更新修改时间
-            if(in_array('edit_time',$model->getTableFields())){$insData['edit_time']=time();}
+            if(in_array('edit_time',$tableFields)){$insData['edit_time']=time();}
             //更新修改人
-            if(in_array('edit_a_id',$model->getTableFields())){$insData['edit_a_id']=session('user.id');}
+            if(in_array('edit_a_id',$tableFields)){$insData['edit_a_id']=session('user.id');}
         }
-        if (!$newId=$model->insertGetId($insData)){return FALSE;}
-        $content= session('user.name').'在数据库 '.$dbName.' 新增了一条数据';
-        if($this->auth->addLog(1,$dbName,$content)){return $newId;}
-        return FALSE;
+        if (!$newId=$model->insertGetId($insData)){
+            $model->rollback();
+            return [
+                'err'   =>1,
+                'msg'   =>'数据新增失败，请检查数据结构'
+            ];
+        }
+        $content= session('user.name').' 在数据库 '.$dbName.' 新增了一条数据';
+        if(!$this->auth->addLog(1,$dbName,$content)){
+            $model->rollback();
+            return [
+                'err'   =>1,
+                'msg'   =>'操作记录添加失败，请检查数据'
+            ];
+        }
+        $model->commit();
+        return [
+            'err'   =>0,
+            'msg'   =>'数据新增成功'
+        ];
     }
 
     /*
@@ -219,37 +250,54 @@ class Common extends Controller{
         $dbName =input("db")?input("db"):request()->controller();
         $model  =Db::name($dbName);
         $model->startTrans();
-        //判断是否有图片存在，标签图片是否更改
-        //$imageIcon  =$model->find(input('id'));
-        $condition  =[$model->getPk()=>input("id")];
-        if(self::invaImages($dbName,$condition)==FALSE){
-            $model->rollback();
-            return FALSE;
+        //文件上传
+        $uploadInfo =[];
+        $condition  =[$model->getPk()=>input("id")];    
+        if(request()->file()){
+            $uploadInfo =$this->upImg(request()->file());
+            if(isset($uploadInfo['err'])&&$uploadInfo['err']==1){
+                return [
+                    'err'   =>1,
+                    'msg'   =>$uploadInfo['msg']
+                ];
+            }
+            //判断是否有图片存在，标签图片是否更改
+            if(self::invaImages($dbName,$condition,array_keys($uploadInfo))===FALSE){
+                $model->rollback();
+                return FALSE;
+            }
         }
         // 更新数据
         $upData=array();
-        foreach(array_filter(input()) as $k=>$v){
-            if(in_array($k,$model->getTableFields())){$upData[$k]=$v;}
+        $tableFields=$model->getTableFields();
+        foreach(array_filter(array_merge(input(),$uploadInfo)) as $k=>$v){
+            if(in_array($k,$tableFields)){$upData[$k]=$v;}
             //更新修改时间
-            if(in_array('edit_time',$model->getTableFields())){$upData['edit_time'] =time();}
+            if(in_array('edit_time',$tableFields)){$upData['edit_time'] =time();}
             //更新修改人
-            if(in_array('edit_a_id',$model->getTableFields())){$upData['edit_a_id'] =session('user.id');}
+            if(in_array('edit_a_id',$tableFields)){$upData['edit_a_id'] =session('user.id');}
         }
         $result =$model->where($condition)->update($upData);
-        if (false == $result) {
+        if (!$result) {
             $model->rollback();
-            return FALSE;
+            return [
+                'err'   =>1,
+                'msg'   =>"数据编辑失败"
+            ];
         }
         $contents=session('user.name').'编辑的数据表'.$dbName.'中主键为'.$model->getPk().' 的数据';
         if(!$this->auth->addLog(1,$dbName,$contents)){
             $model->rollback();
-            return FALSE;
+            return [
+                'err'   =>1,
+                'msg'   =>"操作记录新增失败，请检查数据"
+            ];
         }
-        $imgPath     ='/static/public/upload/';
-        if(session("oldImg")!=null && file_exists($imgPath.session("oldImg"))){unlink($imgPath.session("oldImg"));}
-        if(session('oldSmallImg')!=null && file_exists($imgPath.session('oldSmallImg'))){unlink($imgPath.session("oldSmallImg"));}
         $model->commit();
-        return TRUE;
+        return [
+            'err'   =>0,
+            'msg'   =>"数据修改成功"
+        ];
     }
 
     /*
@@ -325,46 +373,33 @@ class Common extends Controller{
     }
 
     /*
-     * 图片上传
+     * 文件上传
      *
      * @return #
      */
-    public function upImg($rootPath=''){
+    public function upImg($file=''){
         $ext=array('ico','jpg','png','gif','jpeg','doc','docx','xls','xlsx','pdf','txt','ppt','pptx'); //允许上传的文件后缀
-        $file = request()->validate(['ext'=> implode(',',$ext)])->file('image');
-        if(!$file){
-            $file->getError();
+        $uploadInfo =[];
+        foreach ($file as $k=>$v){
+            $upPath ="./static/upload/".$k;
+            if(!is_dir($upPath)){
+                mkdir($upPath,0777,true);
+            }
+            $info =$file[$k]->validate(['ext'=> implode(',',$ext)])->move($upPath);
+            if(!$info){
+                return [
+                    'err'   =>1,
+                    'msg'   =>"不允许上传此类后缀文件"
+                ];
+            }
+            if(in_array($info->getExtension(),array("jpg,jpeg,png,gif"))){
+                $image = \think\Image::open($upPath.$info->getSaveName());
+                // 按照原图的比例生成一个最大为150*150的缩略图并保存为thumb.png
+                $image->thumb(150,150,\think\Image::THUMB_CENTER)->save($upPath.'/small/');
+            }
+            $uploadInfo[$k] =strtr(ltrim($upPath.'/'.$info->getSaveName(),'.'),'\\','/');
         }
-        if(input("ajax")==1){
-            $savePath   ='title/';
-        }else if(input("ajax")==2){
-            $savePath   ='top/';
-        }else if(input("ajax")==3){
-            $savePath   ='section/';
-        }else if(input("ajax")==4){
-            $savePath   ='user/';
-        }else if(input("ajax")==5){
-            $savePath   ='club/';
-        }else if(input("ajax")==6){
-            $savePath   ='data/';
-        }else if(input("ajax")==7){
-            $savePath   ='mod/';
-        }else if(input("ajax")==8){
-            $savePath   ="club_img/";
-        }else if(input("ajax")==9){
-            $savePath   ="answer/";
-        }else{
-            $savePath   ='common/';
-        }
-        $rootPath=$rootPath?$rootPath:'/static/admin/file/';
-        $info=$file->move($rootPath.$savePath);
-        if(!$info){return FALSE;}
-        if(in_array($info->getExtension(),array("jpg,jpeg,png,gif"))){
-            $image = \think\Image::open($rootPath.$savePath.$info->getSaveName());
-            // 按照原图的比例生成一个最大为150*150的缩略图并保存为thumb.png
-            $image->thumb(150,150,\think\Image::THUMB_CENTER)->save($rootPath.'small/'.$savePath);
-        }
-        return $info?$info:FALSE;
+        return $uploadInfo;        
     }
 
     /*
@@ -390,35 +425,37 @@ class Common extends Controller{
      *
      * @return #
      */
-    public function invaImages($dbName,$condition){
+    public function invaImages($dbName,$condition,$key){
         $imaPath    =array();
         $smallImg   =array();
         //查询被删除的数据中省份存在图片，如果存在图片，则把图片路径提出来，以便将来清理
-        $delList=Db::name($dbName)->where($condition)->select();
-        if(!$delList){  return TRUE;  }
-        foreach($delList as $vo){
-            if(isset($vo['image']) && !empty($vo['image'])){$imaPath[]  =$vo['image'];  }
-            if(isset ($vo['img']) && !empty ($vo['img'])){$imaPath[]    =$vo['img']; }
-            if(isset ($vo['icon'])&& !empty ($vo['icon'])){$imaPath[]   =$vo['icon']; }
-            if(isset ($vo['photo'])&& !empty ($vo['photo'])){$imaPath[] =$vo['photo']; }
-            if(isset ($vo['logo'])&&!empty ($vo['logo'])){$imaPath[]    =$vo['logo']; }
-            if(isset($vo['small_image'])&& !empty($vo['small_image'])){$smallImg[]  =$vo['small_image']; }
-            if(isset($vo['small_img'])&&!empty($vo['small_img'])){$smallImg[]       =$vo['small_img']; }
-            if(isset($vo['small_photo'])&&!empty($vo['small_photo'])){$smallImg[]   =$vo['small_photo'];}
-        }
-        $imaPaths   =array_merge($imaPath,$smallImg);
-        if($imaPaths){
-            $invaImg=Db::name("Invaimg");
-            for($i=0;$i<count($imaPaths);$i++){
-                $map["db_name"]     =$dbName;
-                $map['imagepath']   =$imaPaths[$i];
-                if(!$invaImg->insert($map)){
-                    continue;
-                }
+        $field=[];
+        foreach ($key as $v){
+            if(in_array($v,['image','img','photo'])){
+                $field[]="small_".$v;
             }
-            return TRUE;
+        }
+        $delList=Db::name($dbName)->where($condition)->column(implode(',',array_merge($key,$field)));
+        if(count($delList)==0){return TRUE;}
+        $invaImg=Db::name("Invaimg");
+        foreach ($delList as $vo){
+            $map["db_name"]     =$dbName;
+            $map['imagepath']   =$vo;
+            $map['add_time']    =time();
+            if($invaImg->insert($map)===false){
+                return false;
+            }
         }
         return TRUE;
+    }
+    
+    /**
+     * 图片替换
+     * 
+     * @return #
+     */
+    public function changeImg(){
+        return json(jsonData('清除成功',200));
     }
 }
 

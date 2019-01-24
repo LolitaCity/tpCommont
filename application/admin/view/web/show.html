@@ -20,101 +20,17 @@
 </style>
 <script src="/static/imgbox.js"></script>
 <div class="pageContent" style="width:800px;height:600px">	
-    <form method="post" action="/admin/web/edit?callbackType=closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+    <form method="post" action="/admin/web/edit?callbackType=closeCurrent"  class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
         <input type='hidden' name='id' value="{$vo.id|default=''}"/>
         {if ($_sign==1)}
-            <input type='hidden' name='icon' value="{$vo.icon|default=''}"  id='img1'/>
-            <input type='hidden' name='logo' value="{$vo.logo|default=''}"  id='img2'/>
-             <input type='hidden' name='image' value="{$vo.image|default=''}" id='img3'/>
-            <input type='hidden' name='img'  value="{$vo.img|default=''}"   id='img4'/>
-            <div class="pageFormContent" layoutH="58"> 
+            <div class="pageFormContent" layoutH="56">
                 <div class="unit">
                     <label>网站名：</label>
-                    <textarea name="name" rows="1" cols="35" style="resize: none;" class="required">{$vo.name}</textarea>
+                    <input type="text" name="name" value="{$vo.name|default=''}" class="required" size="60" style="height:25px"/>
                 </div>
-                <div class="unit">
-                    <label>英文网站名：</label>
-                    <textarea name="en_name" rows="1" cols="35" style="resize: none;" class="required">{$vo.en_name}</textarea>
-                </div>
-                <div id="preview1" ><img src="/static/upload/{$vo.icon|default=''}" id='topPhpto'/></div>
-                <div class="unit">
-                    <label>上传图标：</label>  
-                    <input id="testFileInput2" type="file" name="images"                                        
-                        uploaderOption="{
-                            swf:'{$Think.const.DWZ_URL}uploadify/scripts/uploadify.swf',
-                            uploader:'__MODULE__/Common/upImg',
-                            formData:{authId:<?php echo $_SESSION['authId'];?>, ajax:1},
-                            buttonText:'请选择文件',
-                            fileSizeLimit:'20000KB',
-                            fileTypeDesc:'*.ico;',
-                            fileTypeExts:'*.ico;',
-                            auto:true,
-                            onUploadSuccess:function(file,data,respore){
-                                $('#topPhpto').attr('src','/static/'+'upload/'+data);
-                                $('#img1').val(data);
-                            }
-                        }"
-                    />
-                </div>
-                <div id="preview2" ><img src="/static/upload/{$vo.logo|default=''}" id='topPhpto2'/></div>
-                <div class="unit">
-                    <label>上传LOGO：</label>  
-                    <input id="testFileInput3" type="file" name="images"                                        
-                        uploaderOption="{
-                            swf:'{$Think.const.DWZ_URL}uploadify/scripts/uploadify.swf',
-                            uploader:'__MODULE__/Common/upImg&aid={$Think.session.ad_image}',
-                            formData:{authId:<?php echo $_SESSION['authId'];?>, ajax:1},
-                            buttonText:'请选择文件',
-                            fileSizeLimit:'20000KB',
-                            fileTypeDesc:'*.JPEG;*.jpg;*.png;*.gif;',
-                            fileTypeExts:'*.JPEG;*.jpg;*.png;*.gif;',
-                            auto:true,
-                            onUploadSuccess:function(file,data,respore){
-                                $('#topPhpto2').attr('src','/static/'+'upload/'+data);
-                                $('#img2').val(data);
-                            }
-                        }"
-                    />
-                </div>
-                <div id="preview3" ><img src="/static/upload/{$vo.image|default=''}" id='topPhpto3'/></div>
-                <div class="unit">
-                    <label>公众号二维码：</label>  
-                    <input id="testFileInput4" type="file" name="images"                                        
-                        uploaderOption="{
-                            swf:'{$Think.const.DWZ_URL}uploadify/scripts/uploadify.swf',
-                            uploader:'__MODULE__/Common/upImg&aid={$Think.session.ad_image}',
-                            formData:{authId:<?php echo $_SESSION['authId'];?>, ajax:1},
-                            buttonText:'请选择文件',
-                            fileSizeLimit:'20000KB',
-                            fileTypeDesc:'*.JPEG;*.jpg;*.png;*.gif;',
-                            fileTypeExts:'*.JPEG;*.jpg;*.png;*.gif;',
-                            auto:true,
-                            onUploadSuccess:function(file,data,respore){
-                                $('#topPhpto3').attr('src','/static/'+'upload/'+data);
-                                $('#img3').val(data);
-                            }
-                        }"
-                    />
-                </div>
-                <div id="preview4" ><img src="/static/upload/{$vo.img|default=''}" id='topPhpto4'/></div>
-                <div class="unit">
-                    <label>关于我们图片：</label>  
-                    <input id="testFileInput5" type="file" name="images"                                        
-                        uploaderOption="{
-                            swf:'{$Think.const.DWZ_URL}uploadify/scripts/uploadify.swf',
-                            uploader:'__MODULE__/Common/upImg&aid={$Think.session.ad_image}',
-                            formData:{authId:<?php echo $_SESSION['authId'];?>, ajax:1},
-                            buttonText:'请选择文件',
-                            fileSizeLimit:'20000KB',
-                            fileTypeDesc:'*.JPEG;*.jpg;*.png;*.gif;',
-                            fileTypeExts:'*.JPEG;*.jpg;*.png;*.gif;',
-                            auto:true,
-                            onUploadSuccess:function(file,data,respore){
-                                $('#topPhpto4').attr('src','/static/'+'upload/'+data);
-                                $('#img4').val(data);
-                            }
-                        }"
-                    />
+                 <div class="unit">
+                    <label>公司名称：</label>
+                    <input type="text" name="name" value="{$vo.company|default=''}" class="required" size="60" style="height:25px"/>
                 </div>
                 <div class="unit">
                     <label>联系电话1：</label>
@@ -125,60 +41,32 @@
                     <input type="text" name="tel" value="{$vo.tel_1|default=''}" class="phone" size="25" />
                 </div>
                 <div class="unit">
-                    <label>联系电话3：</label>
-                    <input type="text" name="tel" value="{$vo.tel_2|default=''}" class="phone" size="25" />
-                </div>
-                <div class="unit">
-                    <label>网址1：</label>
-                    <input type="text" name="weburl" value="{$vo.weburl|default=''}" class="" size="25" />
-                </div>
-                <div class="unit">
-                    <label>网址2：</label>
-                    <input type="text" name="weburl_2" value="{$vo.weburl_2|default=''}" class="" size="25" />
+                    <label>网址：</label>
+                    <input type="text" name="weburl" value="{$vo.weburl|default=''}" class="url required" size="25" />
                 </div>
                 <div class="unit">
                     <label>邮箱：</label>
                     <input type="text" name="email" value="{$vo.email|default=''}" class="email" size="25"/>
                 </div>
                 <div class="unit">
-                    <label>公司简介（中文）：</label>
-                    <textarea name="company_profile" rows="8" cols="60" style="resize: none;" class="required">{$vo.company_profile}</textarea>
-                </div>
-                <div class="unit">
-                    <label>公司简介（英文）：</label>
-                    <textarea name="en_company_profile" rows="8" cols="60" style="resize: none;" class="required">{$vo.en_company_profile}</textarea>
-                </div>
-                <div class="unit">
                     <label>SEO关键字：</label>
                     <textarea name="keywords" rows="4" cols="60" style="resize: none;" class="required">{$vo.keywords}</textarea>
                 </div>
                 <div class="unit">
-                    <label>SEO英文关键字：</label>
-                    <textarea name="en_keywords" rows="4" cols="60" style="resize: none;" class="required">{$vo.en_keywords}</textarea>
-                </div>
-                <div class="unit">
                     <label>网站描述：</label>
                     <textarea name="desc_" rows="6" cols="60" style="resize: none;" class="required">{$vo.desc_}</textarea>
+                </div>       
+                <div class="unit">
+                    <label>公司简介：</label>
+                    <textarea name="company_profile" rows="6" cols="60" style="resize: none;" class="">{$vo.desc_}</textarea>
                 </div>
                 <div class="unit">
-                    <label>网站英文描述：</label>
-                    <textarea name="en_desc_" rows="6" cols="60" style="resize: none;" class="required">{$vo.en_desc_}</textarea>
-                </div>                
-                <div class="unit">
-                    <label>地址：</label>
+                    <label>公司地址：</label>
                     <textarea name="address" rows="4" cols="60" style="resize: none;" class="">{$vo.address}</textarea>
                 </div>
                 <div class="unit">
-                    <label>英文地址：</label>
-                    <textarea name="en_address" rows="4" cols="60" style="resize: none;" class="">{$vo.en_address}</textarea>
-                </div>
-                <div class="unit">
                     <label>版权信息：</label>
-                    <textarea name="copyright" rows="6" cols="60" style="resize: none;" class="required">{$vo.copyright}</textarea>
-                </div>
-                <div class="unit">
-                    <label>英文版权信息：</label>
-                    <textarea name="en_copyright" rows="6" cols="60" style="resize: none;" class="required">{$vo.en_copyright}</textarea>
+                    <textarea name="copyright" rows="2" cols="60" style="resize: none;" class="required">{$vo.copyright}</textarea>
                 </div>
             </div>
         {elseif $_sign == 2/}
@@ -200,22 +88,7 @@
                 <div id="preview1" ><img src="/static/upload/{$vo.image|default=''}" id='topPhpto'/></div>
                 <div class="unit">
                     <label>上传图标：</label>  
-                    <input id="testFileInput2" type="file" name="images"                                        
-                        uploaderOption="{
-                            swf:'{$Think.const.DWZ_URL}uploadify/scripts/uploadify.swf',
-                            uploader:'__MODULE__/Common/upImg',
-                            formData:{authId:<?php echo $_SESSION['authId'];?>, ajax:2},
-                            buttonText:'请选择文件',
-                            fileSizeLimit:'20000KB',
-                            fileTypeDesc:'*.jpg;*.jpeg;*.gif;*.png;',
-                            fileTypeExts:'*.jpg;*.jpeg;*.gif;*.png;',
-                            auto:true,
-                            onUploadSuccess:function(file,data,respore){
-                                $('#topPhpto').attr('src','/static/'+'upload/'+data);
-                                $('#img1').val(data);
-                            }
-                        }"
-                    />
+                    <input id="testFileInput2" type="file" name="images"  />
                 </div>
                 <div class="unit">
                     <label>超链接：</label>

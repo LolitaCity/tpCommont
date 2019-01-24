@@ -77,8 +77,7 @@
 			if ($(element).is(":hidden")) {
 				$(element).css({visibility: 'hidden', display: 'block'});
 				if(isZero)$(element).css("height","");
-				if ($.browser.opera)
-					refElement.focus();
+				// if ($.browser.opera) refElement.focus();
 			}
 			dimensions.height = $(element).outerHeight();
 			dimensions.width = $(element).outerWidth();
@@ -94,4 +93,15 @@
 		this.height = 0;
 		this.unit = "px";
 	}
+
+	$.extend(DWZ, {
+		_randomColorFactor:function() {
+			//return Math.round(Math.random() * 255);
+			return Math.round(Math.random() * 223);
+		},
+
+		randomColor:function(opacity) {
+			return 'rgba(' + this._randomColorFactor() + ',' + this._randomColorFactor() + ',' + this._randomColorFactor() + ',' + (opacity || '.3') + ')';
+		}
+	});
 })(jQuery);

@@ -147,6 +147,10 @@ if(!function_exists('code')){
  */
 if(!function_exists('jsonData')){
     function jsonData($content='操作成功',$status=200){
+        $data['navTabId']       ='';
+        $data['rel']            ='';
+        $data['forwardUrl']     ="";
+        $data['confirmMsg']     ="";
         $data['statusCode']     =200;
         $data['message']        =$content;  
         $data['callbackType']   =($status==201)?"closeCurrent":'';
