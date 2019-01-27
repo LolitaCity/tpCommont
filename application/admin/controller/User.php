@@ -25,15 +25,6 @@ class User extends Common{
     }
 
     /*
-     * 前台用户管理
-     *
-     * @return #
-     */
-//    public function index($db = 'Admin', $sort = 'id', $sortBy = TRUE) {
-//        parent::index($db, $sort, $sortBy, $where, $view);
-//    }
-
-    /*
      * 后台用户管理
      *
      * @return #

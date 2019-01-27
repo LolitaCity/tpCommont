@@ -51,10 +51,13 @@ class Node extends Common{
      *
      * @return #
      */
-    public function edit(){
-        if(!input('id')){
-            $addNodeNewId= Common::insert();
-            $path   =self::changPath($addNodeNewId,input('p_id'));
+    public function edit(){  
+        if(empty(input('id'))){
+            $addNode= Common::insert();
+            if(isset($addNode['err'])&& $addNode['err']!=0){
+                return json(jsonData($addNode['msg'],301));
+            }
+            $path   =self::changPath($addNode['data'],input('p_id'));
             if($path){
                 session('nodeList_s',null);
                 session('nodeList_t',null);
@@ -62,8 +65,9 @@ class Node extends Common{
             }
             return json(jsonData("节点新增失败",301));
         }
-        if(Common::update()==FALSE){
-            return json(jsonData('节点编辑失败',301));
+        $editNode   =Common::update();
+        if(isset($editNode['err'])&&$editNode['err']!=0){
+            return json(jsonData($editNode['msg'],301));
         }
         if(self::changPath(\input("id"),\input("p_id"),1)){
             session('nodeList_s',null);

@@ -14,7 +14,11 @@ class BusinessManagement extends Common{
     public function __construct(\think\App $app = null) {
         parent::__construct($app);
     }
-
+    
+    /**
+     * 企业用户列表
+     * 
+     */
     public function index($db='Admin',$sort='id',$sortBy=TRUE,$condition=['company_id','>',0]){
         $model  =db("Admin");
         $map    =$this->_search($model);

@@ -1,0 +1,77 @@
+<div class="pageContent">	
+    <form method="post" action="/admin/node/edit?callbackType=closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+        <input type="hidden"  id='hidden'  name='id' value="{$vo.id|default=''}"/>        
+        <div class="pageFormContent" layoutH="58">
+            <div class="unit">
+                <label>菜单名称：</label>
+                <input type="text" name="name" size="15" maxlength="30" value="{$vo.name|default=''}" class='required' />
+            </div>
+            <div class="unit">
+                <label>菜单层级：</label>
+                <select class="" name="level" id='level' style="width: 101px;">
+                    <option value='0' {if (isset($vo.level)&&$vo.level==0)} selected="selected" {/if}>顶级菜单</option>
+                    {if(!empty($menuList))}
+                        <option value='1' {if (isset($vo.level)&&$vo.level==1)} selected="selected" {/if}>二级菜单</option>
+                        <option value='2' {if (isset($vo.level)&&$vo.level==2)} selected="selected" {/if}>三级菜单</option>  
+                    {/if}                    
+                </select>                
+            </div>            
+            <div class="unit" id='parent'>
+                <label>父级菜单：</label>
+                <select class="p_id" name="p_id" id='p_id' style="width: 101px;">
+                    {if(!empty($menuList))}                        
+                        <span class="two">
+                            {foreach $menuList as $v}
+                                {if ($v['level']===0)}
+                                    <option value="{$v['id']}" {if ($v['id']==$vo['p_id'])} selected="selected" {/if}>{$v['name']}</option>                                     
+                                {/if}
+                            {/foreach}
+                        </span>
+                        <span class="three">
+                            {foreach $menuList as $v}
+                                {if ($v['level']===1)}
+                                    <option value="{$v['id']}" {if ($v['id']==$vo['p_id'])} selected="selected" {/if}>{$v['name']}</option>                                     
+                                {/if}
+                            {/foreach}
+                        </span>        
+                    {/if}
+                </select>
+            </div>                
+            <div class="unit">
+                <label>排序：</label>
+                <input type="text" name="ord" size="15" value="{$vo.order|default=''}" class="digits"/>
+            </div>
+        </div>
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+        
+    </form>	
+    
+</div>
+<script>
+    $(function(){
+        if($("#level option:selected").text()==="顶级菜单"){
+            $("#parent").hide();
+        }
+        $("#level").change(function(){
+            if($("#level option:selected").text()==="顶级菜单"){
+                $("#parent").hide();
+            }
+            if($("#level option:selected").text()==="二级菜单"){
+                $("#parent").show();
+                $("#p_id .two").show();
+                $("#p_id .three").hide();
+            }
+            if($("#level option:selected").text()==="三级菜单"){
+                $("#parent").show();
+                $("#p_id .two").hide();
+                $("#p_id .three").show();
+            }            
+        });
+    });
+    
+</script>

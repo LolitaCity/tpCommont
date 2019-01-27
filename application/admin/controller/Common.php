@@ -237,7 +237,8 @@ class Common extends Controller{
         $model->commit();
         return [
             'err'   =>0,
-            'msg'   =>'数据新增成功'
+            'msg'   =>'数据新增成功',
+            'data'  =>$newId
         ];
     }
 
@@ -425,14 +426,14 @@ class Common extends Controller{
      *
      * @return #
      */
-    public function invaImages($dbName,$condition,$key){
-        $imaPath    =array();
-        $smallImg   =array();
+    public function invaImages($dbName,$condition,$key=''){
         //查询被删除的数据中省份存在图片，如果存在图片，则把图片路径提出来，以便将来清理
         $field=[];
-        foreach ($key as $v){
-            if(in_array($v,['image','img','photo'])){
-                $field[]="small_".$v;
+        if(!empty($key)){
+            foreach ($key as $v){
+                if(in_array($v,['image','img','photo'])){
+                    $field[]="small_".$v;
+                }
             }
         }
         $delList=Db::name($dbName)->where($condition)->column(implode(',',array_merge($key,$field)));

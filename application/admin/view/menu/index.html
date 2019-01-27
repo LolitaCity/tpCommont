@@ -1,0 +1,72 @@
+{include file="public::pagerForm"/}
+<div class="pageHeader">
+    <form rel="pagerForm" onsubmit="return navTabSearch(this);" action="{:url('')}" method="post">
+	<div class="searchBar">
+            <table class="searchContent">
+                <tr>
+                    <td>
+                        名称：<input type="text" name="name"  value="{$Think.post.name}"/>
+                    </td>
+                </tr>
+            </table>
+            <div class="subBar">
+                <ul>
+                    <li><div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div></li>
+                </ul>
+            </div>
+	</div>
+    </form>
+</div>
+<div class="pageContent">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><a class="add" href="{:url('Menu/show',array('db'=>code('Menu',1)))}" target="dialog" mask="true" width='600' height='400'><span>添加菜单</span></a></li>
+            <li><a title="确实要删除这些记录吗?" target="selectedTodo" rel="id[]" href="{:url('Menu/del',array('db'=>code('Menu',1)))}" class="delete"><span>批量删除</span></a></li>
+            <li><a class="edit" href="/admin/menu/show/id/{l_id}/db/<?php echo code('Menu',1)?>" target="dialog" mask="true" warn="请选择一条信息" width='600' height='400'><span>修改菜单</span></a></li>
+            <li class="line">line</li>
+        </ul>
+    </div>
+    <table class="table" width="45%" layoutH="138">
+        <thead>
+            <tr>
+                <th width="22"><input type="checkbox" group="id[]" class="checkboxCtrl"></th>
+                <th width="40"  align="center">序号</th>
+                <th width="100" align="center">菜单名称</th>
+                <th width="100" align="center">层级</th>
+                <th width="100" align="center">排序</th>
+                <th width="100" align="center">父级菜单</th>
+                <th width="140" align="center" orderField='add_time' {if (input('_order')=='add_time')} class="{$Think.post._order}" {/if} >创建时间</th>
+                <th width="150" align="center">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {foreach $list as $k=>$vo}
+                <tr target="l_id" rel="{$vo.id}">
+                    <td><input name="id[]" value="{$vo.id}" type="checkbox"></td>
+                    <td>{$k+1}</td>
+                    <td style='color:blue'>{$vo.name}</td>
+                    <td style='color:blue'>{$vo.level}</td>
+                    <td style='color:blue'>{$vo.order}</td>
+                    <td style='color:blue'>{$vo.p_id}</td>
+                    <td>{$vo.add_time|date='Y-m-d H:i:s'}</td>
+                    <td>
+                        <a title="确定删除该用户" target="ajaxTodo" href="{:url('Menu/del',array('id'=>code($vo['id'],1),'db'=>code('Menu',1)))}" style='color:red'>删除</a>
+                    </td>
+                </tr>
+            {/foreach}
+        </tbody>
+    </table>
+    <div class="panelBar">
+        <div class="pages">
+            <span>显示</span>
+            <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+            </select>
+            <span>条，共{$totalCount}条</span>
+        </div>
+        <div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="6"  currentPage="{$currentPage}"></div>
+    </div>
+</div>
