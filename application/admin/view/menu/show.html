@@ -1,5 +1,5 @@
 <div class="pageContent">	
-    <form method="post" action="/admin/node/edit?callbackType=closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+    <form method="post" action="/admin/menu/edit?callbackType=closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
         <input type="hidden"  id='hidden'  name='id' value="{$vo.id|default=''}"/>        
         <div class="pageFormContent" layoutH="58">
             <div class="unit">
@@ -20,17 +20,17 @@
                 <label>父级菜单：</label>
                 <select class="p_id" name="p_id" id='p_id' style="width: 101px;">
                     {if(!empty($menuList))}                        
-                        <span class="two">
+                        <span >
                             {foreach $menuList as $v}
                                 {if ($v['level']===0)}
-                                    <option value="{$v['id']}" {if ($v['id']==$vo['p_id'])} selected="selected" {/if}>{$v['name']}</option>                                     
+                                    <option class="two"  value="{$v['id']}" {if ($v['id']==$vo['p_id'])} selected="selected" {/if}>{$v['name']}</option>                                     
                                 {/if}
                             {/foreach}
                         </span>
-                        <span class="three">
+                        <span>
                             {foreach $menuList as $v}
                                 {if ($v['level']===1)}
-                                    <option value="{$v['id']}" {if ($v['id']==$vo['p_id'])} selected="selected" {/if}>{$v['name']}</option>                                     
+                                    <option  class="three" value="{$v['id']}" {if ($v['id']==$vo['p_id'])} selected="selected" {/if}>{$v['name']}</option>                                     
                                 {/if}
                             {/foreach}
                         </span>        
@@ -39,7 +39,7 @@
             </div>                
             <div class="unit">
                 <label>排序：</label>
-                <input type="text" name="ord" size="15" value="{$vo.order|default=''}" class="digits"/>
+                <input type="text" name="order" size="15" value="{$vo.order|default=''}" class="digits"/>
             </div>
         </div>
         <div class="formBar">

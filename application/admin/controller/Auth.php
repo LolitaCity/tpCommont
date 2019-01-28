@@ -95,7 +95,7 @@ class Auth extends Controller{
      *
      * @return #
      */
-    public function addLog($type=0,$db='',$content=''){
+    public static function addLog($type=0,$db='',$content=''){
         $map=array(
             'user_id'   =>session('user.id'),
             'add_time'  =>time(),

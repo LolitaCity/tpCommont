@@ -34,8 +34,8 @@
                 <th width="100" align="center">菜单名称</th>
                 <th width="100" align="center">层级</th>
                 <th width="100" align="center">排序</th>
-                <th width="100" align="center">父级菜单</th>
-                <th width="140" align="center" orderField='add_time' {if (input('_order')=='add_time')} class="{$Think.post._order}" {/if} >创建时间</th>
+                <th width="100" align="center">父级菜单</th>                
+                <th width="130" align="center" orderField="add_time" {if (input('_order')=='add_time')} class="{$Think.post._sort}" {/if} >添加时间</th>
                 <th width="150" align="center">操作</th>
             </tr>
         </thead>
@@ -45,9 +45,9 @@
                     <td><input name="id[]" value="{$vo.id}" type="checkbox"></td>
                     <td>{$k+1}</td>
                     <td style='color:blue'>{$vo.name}</td>
-                    <td style='color:blue'>{$vo.level}</td>
-                    <td style='color:blue'>{$vo.order}</td>
-                    <td style='color:blue'>{$vo.p_id}</td>
+                    <td style='color:royalblue'>{$vo.level==0?'顶层菜单':($vo.level==1?"<div style='color: green'>二级菜单</div>":"<div style='color:sienna'>三级菜单</div>")}</td>
+                    <td style='color:teal'>{$vo.order}</td>
+                    <td style='color:lightseagreen'>{$vo.p_id|getMenuName}</td>
                     <td>{$vo.add_time|date='Y-m-d H:i:s'}</td>
                     <td>
                         <a title="确定删除该用户" target="ajaxTodo" href="{:url('Menu/del',array('id'=>code($vo['id'],1),'db'=>code('Menu',1)))}" style='color:red'>删除</a>

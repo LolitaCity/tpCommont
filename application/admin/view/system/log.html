@@ -43,7 +43,7 @@
                 <th width="50"  align="center">序号</th>
                 {if isset($type)&&$type==1}
                     <th width="60" orderField='user_id' {if (input('_order')=='user_id')} class="{$Think.post._sort}" {/if}  align="center">操作人</th>
-                    <th width="60" align="center">数据库</th>
+                    <th width="60" align="center">数据表</th>
                     <th width="240" >内容</th>
                     <th width="120"  orderField='add_time' {if (input('_order')=='add_time')} class="{$Think.post._sort}" {/if} align="center">添加时间</th>
                 {else/}

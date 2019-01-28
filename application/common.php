@@ -280,4 +280,18 @@ if (!function_exists('memcached')) {
         return \ext\mem\Mem::memcached();
     }
 }
+
+/**
+ * 获取菜单名称
+ * 
+ * @param int $id 需要查询的菜单id
+ * 
+ * @return str $name
+ */
+if(!function_exists('getMenuName')){
+    function getMenuName($id){
+        return Db::name("menu")->where('id','=',$id)->value('name')??"顶级菜单";
+    }
+}
+
   

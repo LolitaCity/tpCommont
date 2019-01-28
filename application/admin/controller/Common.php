@@ -247,9 +247,10 @@ class Common extends Controller{
      *
      * $return #
      */
-    public function update(){
+    public function update(){        
         $dbName =input("db")?input("db"):request()->controller();
         $model  =Db::name($dbName);
+        
         $model->startTrans();
         //文件上传
         $uploadInfo =[];
@@ -321,7 +322,13 @@ class Common extends Controller{
             return json(jsonData('非法操作',300));
         }
         $condition  =[$pk=>$id];
-        $setField   =$model->where($condition)->update(['status'=>0]);
+        $setField   =$model->where(function($query)use($condition,$pk){
+            if(is_array($condition[$pk])){
+                $query->whereIn($pk, implode(',',$condition[$pk]));
+            }else{
+                $query->where($condition);
+            }
+        })->update(['status'=>0]);
         if($setField==FALSE){
             $model->rollback();
             return json(jsonData('删除失败！',300));
@@ -427,7 +434,7 @@ class Common extends Controller{
      * @return #
      */
     public function invaImages($dbName,$condition,$key=''){
-        //查询被删除的数据中省份存在图片，如果存在图片，则把图片路径提出来，以便将来清理
+        //查询被删除的数据中是否存在图片，如果存在图片，则把图片路径提出来，以便将来清理           
         $field=[];
         if(!empty($key)){
             foreach ($key as $v){
@@ -436,7 +443,11 @@ class Common extends Controller{
                 }
             }
         }
-        $delList=Db::name($dbName)->where($condition)->column(implode(',',array_merge($key,$field)));
+        $model  =Db::name($dbName);
+        if(count(array_intersect($model->getTableFields(),array_merge($key,$field)))<1){
+            return true;
+        }
+        $delList=$model->where($condition)->column(implode(',',array_merge($key,$field)));
         if(count($delList)==0){return TRUE;}
         $invaImg=Db::name("Invaimg");
         foreach ($delList as $vo){
