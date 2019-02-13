@@ -76,7 +76,7 @@ class Sina extends Controller{
 	    $this->error('微博内容不能为空');
 	}
 	$clientModel=new SaeTClientV2(env("SINAAPPKEY"), env("SINAAPPSERCET"),session('token.access_token'));
-	$sendweibo	=$clientModel->share(input('text').'| http://www.plumsoft.club');
+	$sendweibo	=$clientModel->share(input('text').'| http://www.titmom.com');
 	if(isset($sendweibo['error_code'])&&$sendweibo['error_code']>0){
 	    echo "微波发送失败,",$sendweibo['error_code'].':'.$sendweibo['error'];exit;
 	}
