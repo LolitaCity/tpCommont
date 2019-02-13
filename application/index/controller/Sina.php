@@ -80,7 +80,7 @@ class Sina extends Controller{
 	if(isset($sendweibo['error_code'])&&$sendweibo['error_code']>0){
 	    echo "微波发送失败,",$sendweibo['error_code'].':'.$sendweibo['error'];exit;
 	}
-	$this->success("微博发送成功","demo/callback");
+	$this->success("微博发送成功","Sina/callback");
     }
 
     /**
