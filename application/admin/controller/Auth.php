@@ -104,7 +104,7 @@ class Auth extends Controller{
         if($type==0){
             //$ipInfo =ip2Area($this->request->ip());
             $map['content'] =session('user.name').' 登录成功';
-            $map['ip']      =$this->request->ip();
+            $map['ip']      =request()->ip();
             //$map['addr']    =$ipInfo['province'].'-'.$ipInfo['city'];
             $map['addr']    =json_decode(trim(substr(file_get_contents('http://pv.sohu.com/cityjson?ie=utf-8'),strpos(file_get_contents('http://pv.sohu.com/cityjson?ie=utf-8'),'=')+1),';'))->cname;
         }else{
