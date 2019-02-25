@@ -8,6 +8,7 @@
 namespace app\index\controller;
 
 use think\Controller;
+use ext\tool\Tool;
 
 class Demo extends Controller{
     /**
@@ -25,7 +26,24 @@ class Demo extends Controller{
      * @return #
      */
     public function index(){
-	phpinfo();
+        $rule=[
+            "id"    =>"require|integer",
+            "name"  =>"require|upper",
+        ];
+        $message=[
+            "id.require"    =>"id必须填写",
+            "id.integer"    =>"id必须为整数",
+            "name.require"  =>"name必须填写",
+            "name.upper"    =>"name必须是大写"
+        ];
+        $item=[
+            "id"=>999,
+            "name"=>"SD",
+            'age'=>90,
+            "tel"=>'1235214211'
+        ];
+        $data   =Tool::validate($item,$rule,$message);
+        var_dump($data);exit;
     }
 
     /**
