@@ -8,7 +8,10 @@
 namespace app\index\controller;
 
 use think\Controller;
-use ext\tool\Tool;
+use ext\tool\Tools;
+use ext\exc\BaseException;
+
+
 
 class Demo extends Controller{
     /**
@@ -42,7 +45,7 @@ class Demo extends Controller{
             'age'=>90,
             "tel"=>'1235214211'
         ];
-        $data   =Tool::validate($item,$rule,$message);
+        $data   =Tools::validate($item,$rule,$message);
         var_dump($data);exit;
     }
 
@@ -95,5 +98,18 @@ class Demo extends Controller{
         var_dump($class->getFieldsType('mh_node'));exit;
         var_dump($class->getConfig('node'));exit;
         var_dump($method);exit;
+    }
+    
+    /**
+     * 异常测试
+     * 
+     * @return #
+     */
+    public function excep(){
+        $a= \think\Db::name("user")->find(31);
+        if(!$a){
+            throw new BaseException('用户不存在',1);
+        }
+        return Tools::json($a);
     }
 }

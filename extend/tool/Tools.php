@@ -9,7 +9,7 @@ namespace ext\tool;
 
 use think\Validate;
 
-class Tool{
+class Tools{
     /**
      * 数据验证
      * 
@@ -28,9 +28,17 @@ class Tool{
         $err=$validate->getError();
         if($err){
             //抛出异常,（应该抛出异常）
-            return $err;            
+            return $err;
         }
         return array_intersect_key($item, $rule);
+    }
+    
+    public static function json($data){
+        return [
+            'err'   =>0,
+            'msg'   =>'ok',
+            'data'  =>$data
+        ];
     }
     
 }
